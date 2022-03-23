@@ -13,7 +13,6 @@ The Volto Slider Block allows editors to add sliders to a Volto page.
 
 ![slider-block_grey_left_gradient-green](https://user-images.githubusercontent.com/632105/158999025-3f7c0de3-6541-4b9e-9887-95e8c46e558e.jpg)
 
-
 ## Screencast
 
 todo
@@ -28,7 +27,7 @@ yo @plone/volto my-volto-project --addon @kitconcept/volto-slider-block
 cd my-volto-project
 ```
 
-Add `@kitconcept-volto-slider-block`to your package.json:
+Add `@kitconcept-volto/slider-block`to your package.json:
 
 ```
 "addons": [
@@ -53,6 +52,45 @@ yarn start
 ```
 
 Go to http://localhost:3000, login, create a new page. The slider block will show up in the Volto blocks chooser.
+
+## Customization
+
+More fields can be added to either the block itself or to each slide. You can use the configuration settings to do so:
+
+```
+config.blocks.blocksConfig.slider.extensions = {
+  blockSchema: {
+    fieldsets: [
+      {
+        id: 'default',
+        title: 'Default',
+        fields: ['new_field'],
+      },
+    ],
+    properties: {
+      new_field: {
+        title: 'New Slider Field',
+      },
+    },
+  },
+  slideSchema: {
+    fieldsets: [
+      {
+        id: 'default',
+        title: 'Default',
+        fields: ['new_field'],
+      },
+    ],
+    properties: {
+      new_field: {
+        title: 'New Slide Field',
+      },
+    },
+  },
+};
+```
+
+The block and slide schemas will be merged with the existing ones.
 
 # Credits
 

@@ -1,4 +1,6 @@
 import { defineMessages } from 'react-intl';
+import config from '@plone/volto/registry';
+import { mergeSchemas } from '../helpers';
 
 const messages = defineMessages({
   Source: {
@@ -39,69 +41,79 @@ const messages = defineMessages({
   },
 });
 
-const itemSchema = (props) => {
-  const { intl } = props;
-
-  return {
-    title: intl.formatMessage(messages.item),
-    addMessage: intl.formatMessage(messages.addItem),
-    fieldsets: [
-      {
-        id: 'default',
-        title: 'Default',
-        fields: ['href', 'head_title', 'title', 'description', 'preview_image'],
-      },
-    ],
-
-    properties: {
-      href: {
-        title: intl.formatMessage(messages.Source),
-        widget: 'object_browser',
-        mode: 'link',
-        selectedItemAttrs: [
-          'Title',
-          'Description',
-          'hasPreviewImage',
-          'head_title',
-        ],
-        allowExternals: true,
-      },
-      head_title: {
-        title: intl.formatMessage(messages.head_title),
-      },
-      title: {
-        title: intl.formatMessage(messages.title),
-      },
-      description: {
-        title: intl.formatMessage(messages.description),
-      },
-      preview_image: {
-        title: intl.formatMessage(messages.imageOverride),
-        widget: 'object_browser',
-        mode: 'image',
-        allowExternals: true,
-      },
-    },
-    required: [],
-  };
-};
-
-export const SliderSchema = (props) => ({
-  title: props.intl.formatMessage(messages.Slider),
-  block: 'sliderNew',
-  fieldsets: [
+export const itemSchema = (props) =>
+  mergeSchemas(
     {
-      id: 'default',
-      title: 'Default',
-      fields: ['slides'],
+      title: props.intl.formatMessage(messages.item),
+      addMessage: props.intl.formatMessage(messages.addItem),
+      fieldsets: [
+        {
+          id: 'default',
+          title: 'Default',
+          fields: [
+            'href',
+            'head_title',
+            'title',
+            'description',
+            'preview_image',
+          ],
+        },
+      ],
+
+      properties: {
+        href: {
+          title: props.intl.formatMessage(messages.Source),
+          widget: 'object_browser',
+          mode: 'link',
+          selectedItemAttrs: [
+            'Title',
+            'Description',
+            'hasPreviewImage',
+            'head_title',
+          ],
+          allowExternals: true,
+        },
+        head_title: {
+          title: props.intl.formatMessage(messages.head_title),
+        },
+        title: {
+          title: props.intl.formatMessage(messages.title),
+        },
+        description: {
+          title: props.intl.formatMessage(messages.description),
+        },
+        preview_image: {
+          title: props.intl.formatMessage(messages.imageOverride),
+          widget: 'object_browser',
+          mode: 'image',
+          allowExternals: true,
+        },
+      },
+      required: [],
     },
-  ],
-  properties: {
-    slides: {
-      widget: 'object_list',
-      title: props.intl.formatMessage(messages.items),
-      schema: itemSchema,
+    config.blocks.blocksConfig.slider.extensions?.slideSchema || {},
+  );
+
+export const SliderSchema = (props) =>
+  mergeSchemas(
+    {
+      title: props.intl.formatMessage(messages.Slider),
+      block: 'slider',
+      fieldsets: [
+        {
+          id: 'default',
+          title: 'Default',
+          fields: ['slides'],
+        },
+      ],
+      properties: {
+        slides: {
+          widget: 'object_list',
+          title: props.intl.formatMessage(messages.items),
+          schema: itemSchema,
+        },
+      },
+      required: [],
     },
-  },
-  required: [],
-});
+    config.blocks.blocksConfig.slider.extensions?.blockSchema || {},
+  );

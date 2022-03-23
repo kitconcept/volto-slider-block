@@ -3,8 +3,8 @@ import View from './components/View';
 import sliderSVG from '@plone/volto/icons/slider.svg';
 
 const applyConfig = (config) => {
-  config.blocks.blocksConfig.sliderNew = {
-    id: 'sliderNew',
+  config.blocks.blocksConfig.slider = {
+    id: 'slider',
     title: 'Portal Slider',
     group: 'common',
     icon: sliderSVG,
@@ -16,6 +16,36 @@ const applyConfig = (config) => {
     security: {
       addPermission: [],
       view: [],
+    },
+    extensions: {
+      blockSchema: {
+        fieldsets: [
+          {
+            id: 'default',
+            title: 'Default',
+            fields: ['new_field'],
+          },
+        ],
+        properties: {
+          new_field: {
+            title: 'New Slider Field',
+          },
+        },
+      },
+      slideSchema: {
+        fieldsets: [
+          {
+            id: 'default',
+            title: 'Default',
+            fields: ['new_field'],
+          },
+        ],
+        properties: {
+          new_field: {
+            title: 'New Slide Field',
+          },
+        },
+      },
     },
   };
   return config;

@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@plone/scripts": "*",
+    "deepmerge": "4.2.2",
     "react-slick": "0.25.2",
     "slick-carousel": "1.8.1"
   }
