@@ -11,11 +11,11 @@ The Volto Slider Block allows editors to add sliders to a Volto page.
 
 ## Screenshot
 
-![slider-block_grey_left_gradient-green](https://user-images.githubusercontent.com/632105/158999025-3f7c0de3-6541-4b9e-9887-95e8c46e558e.jpg)
+![Slider-Block](https://github.com/kitconcept/volto-slider-block/raw/master/screenshot.png)
 
 ## Screencast
 
-todo
+![Slider-Block](https://github.com/kitconcept/volto-slider-block/raw/master/screencast.gif)
 
 ## Installation
 

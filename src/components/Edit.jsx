@@ -1,7 +1,7 @@
 import React from 'react';
 import View from './View';
 import { SidebarPortal } from '@plone/volto/components';
-import SliderSidebar from './SliderSidebar';
+import Sidebar from './Sidebar';
 
 const Edit = (props) => {
   const { data, onChangeBlock, block, selected } = props;
@@ -10,11 +10,7 @@ const Edit = (props) => {
     <>
       <View {...props} isEditMode />
       <SidebarPortal selected={selected}>
-        <SliderSidebar
-          data={data}
-          block={block}
-          onChangeBlock={onChangeBlock}
-        />
+        <Sidebar data={data} block={block} onChangeBlock={onChangeBlock} />
       </SidebarPortal>
     </>
   );

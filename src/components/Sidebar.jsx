@@ -1,12 +1,12 @@
 import React from 'react';
 import { Segment } from 'semantic-ui-react';
 
-import SliderData from './SliderData';
+import Data from './Data';
 
 const SliderSidebar = (props) => {
   return (
     <Segment.Group raised>
-      <SliderData {...props} />
+      <Data {...props} />
     </Segment.Group>
   );
 };

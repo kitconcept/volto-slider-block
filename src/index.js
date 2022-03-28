@@ -1,6 +1,7 @@
 import Edit from './components/Edit';
 import View from './components/View';
 import sliderSVG from '@plone/volto/icons/slider.svg';
+import './theme/main.less';
 
 const applyConfig = (config) => {
   config.blocks.blocksConfig.slider = {
@@ -16,36 +17,6 @@ const applyConfig = (config) => {
     security: {
       addPermission: [],
       view: [],
-    },
-    extensions: {
-      blockSchema: {
-        fieldsets: [
-          {
-            id: 'default',
-            title: 'Default',
-            fields: ['new_field'],
-          },
-        ],
-        properties: {
-          new_field: {
-            title: 'New Slider Field',
-          },
-        },
-      },
-      slideSchema: {
-        fieldsets: [
-          {
-            id: 'default',
-            title: 'Default',
-            fields: ['new_field'],
-          },
-        ],
-        properties: {
-          new_field: {
-            title: 'New Slide Field',
-          },
-        },
-      },
     },
   };
   return config;
