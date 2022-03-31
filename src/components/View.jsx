@@ -37,7 +37,14 @@ const NextArrow = ({ className, style, onClick }) => (
 );
 
 const View = (props) => {
-  const { data, isEditMode } = props;
+  const {
+    data,
+    isEditMode,
+    index,
+    block,
+    openObjectBrowser,
+    onChangeBlock,
+  } = props;
   const intl = useIntl();
 
   return (
@@ -62,8 +69,17 @@ const View = (props) => {
             prevArrow={<PrevArrow />}
           >
             {data.slides &&
-              data.slides.map((item) => (
-                <Body key={item['@id']} data={item} isEditMode={isEditMode} />
+              data.slides.map((item, index) => (
+                <Body
+                  key={item['@id']}
+                  data={item}
+                  isEditMode={isEditMode}
+                  dataBlock={data}
+                  index={index}
+                  block={block}
+                  openObjectBrowser={openObjectBrowser}
+                  onChangeBlock={onChangeBlock}
+                />
               ))}
           </Slider>
         )}
