@@ -6,13 +6,13 @@ import './theme/main.less';
 const applyConfig = (config) => {
   config.blocks.blocksConfig.slider = {
     id: 'slider',
-    title: 'Portal Slider',
+    title: 'Slider',
     group: 'common',
     icon: sliderSVG,
     view: View,
     edit: Edit,
     restricted: false,
-    mostUsed: false,
+    mostUsed: true,
     sidebarTab: 1,
     security: {
       addPermission: [],

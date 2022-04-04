@@ -57,6 +57,7 @@ msgstr "Bitte wählen sie einen existierenden Inhalt als Quelle für dieses Elem
 msgid "Slider"
 msgstr "Schieberegler"
 
+#: components/Body
 #: components/schema
 # defaultMessage: Source
 msgid "Source"

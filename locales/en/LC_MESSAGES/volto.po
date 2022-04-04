@@ -52,6 +52,7 @@ msgstr ""
 msgid "Slider"
 msgstr ""
 
+#: components/Body
 #: components/schema
 # defaultMessage: Source
 msgid "Source"
