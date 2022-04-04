@@ -7,6 +7,7 @@
 ### Feature
 
 - Initial release @sneridagh @tisto
+- Change Screencast Gif for README @kindermann
 
 ### Bugfix
 
