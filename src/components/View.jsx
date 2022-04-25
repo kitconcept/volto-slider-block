@@ -37,14 +37,7 @@ const NextArrow = ({ className, style, onClick }) => (
 );
 
 const View = (props) => {
-  const {
-    data,
-    isEditMode,
-    index,
-    block,
-    openObjectBrowser,
-    onChangeBlock,
-  } = props;
+  const { data, isEditMode, block, openObjectBrowser, onChangeBlock } = props;
   const intl = useIntl();
 
   return (

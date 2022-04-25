@@ -3,7 +3,6 @@ import { useIntl, defineMessages, injectIntl } from 'react-intl';
 import { getTeaserImageURL } from '../helpers';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon, MaybeWrap, UniversalLink } from '@plone/volto/components';
-import teaserHeroTopTemplate from '../icons/teaser-template.svg';
 import { Input, Button, Message } from 'semantic-ui-react';
 import navTreeSVG from '@plone/volto/icons/nav.svg';
 import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
