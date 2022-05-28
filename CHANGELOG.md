@@ -2,8 +2,6 @@
 
 ## 1.0.1 (unreleased)
 
-### Breaking
-
 ### Feature
 
 - Add extension support @sneridagh
@@ -14,8 +12,6 @@
 
 - Fix display bug in big screens @sneridagh
 - Fix internal slide schema to allow extension @sneridagh
-
-### Internal
 
 ## 1.0.0 (2022-04-25)
 
