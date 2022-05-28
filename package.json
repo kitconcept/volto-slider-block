@@ -1,6 +1,6 @@
 {
   "name": "@kitconcept/volto-slider-block",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "volto-slider-block: Volto add-on",
   "main": "src/index.js",
   "license": "MIT",
