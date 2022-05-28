@@ -56,6 +56,66 @@ Go to http://localhost:3000, login, create a new page. The slider block will sho
 
 ## Customization
 
+You can use a Volto `schemaEnhancer` to modify the existing block schema. The block also can be extended using Volto's block variations.
+
+```
+import { defineMessages } from 'react-intl';
+import { pull } from 'lodash';
+
+import SliderDefaultBody from './components/Blocks/Slider/DefaultBody'; // My custom view component for slides
+
+const messages = defineMessages({
+  color: {
+    id: 'Color',
+    defaultMessage: 'Color',
+  },
+  slideBackgroundColor: {
+    id: 'Slide Background Color',
+    defaultMessage: 'Slide Background Color',
+  },
+  flagColor: {
+    id: 'Flag color',
+    defaultMessage: 'Flag color',
+  },
+});
+
+const BG_COLORS = [
+  { name: 'transparent', label: 'Transparent' },
+  { name: 'grey', label: 'Grey' },
+];
+
+// The schemaEnhancer
+const sliderBlockSchemaEnhancer = ({ formData, schema, intl }) => {
+  schema.properties.slides.schema.fieldsets[0].fields.push(
+    'slideBackgroundColor',
+  );
+  schema.properties.slides.schema.properties.slideBackgroundColor = {
+    widget: 'color_picker',
+    title: intl.formatMessage(messages.slideBackgroundColor),
+    colors: BG_COLORS,
+    default: 'transparent',
+  };
+  pull(schema.properties.slides.schema.fieldsets[0].fields, 'description'); // You can remove fields as well
+  return schema; // You should return the schema back
+};
+
+const applyConfig = (config) => {
+
+  config.blocks.blocksConfig.slider = {
+    schemaEnhancer: sliderBlockSchemaEnhancer,
+    variations: [
+      {
+        id: 'default',
+        isDefault: true,
+        title: 'Default',
+        view: SliderDefaultBody,
+      },
+    ],
+  }
+```
+
+## Extra Customization
+
 More fields can be added to either the block itself or to each slide. You can use the configuration settings to do so:
 
 ```
