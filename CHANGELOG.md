@@ -2,13 +2,9 @@
 
 ## 1.1.2 (unreleased)
 
-### Breaking
-
-### Feature
-
-### Bugfix
-
 ### Internal
+
+- Remove yet another video from npm package @sneridagh
 
 ## 1.1.1 (2022-05-28)
 
