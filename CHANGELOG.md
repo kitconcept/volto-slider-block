@@ -2,13 +2,9 @@
 
 ## 1.1.1 (unreleased)
 
-### Breaking
-
-### Feature
-
-### Bugfix
-
 ### Internal
+
+- Remove screenshot and video from npm package @sneridagh
 
 ## 1.1.0 (2022-05-28)
 
