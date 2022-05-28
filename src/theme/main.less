@@ -1,11 +1,31 @@
 @import (less) '~slick-carousel/slick/slick.css';
 @import (less) '~slick-carousel/slick/slick-theme.css';
 
-@computerWidth: 940px;
+@toolbarWidth: 80px;
+@sidebarWidth: 375px;
+@collapsedWidth: 20px;
 
 .block.slider {
   &:not(.inner):not([role='presentation']) {
-    padding-bottom: 2em;
+    padding-bottom: 4em;
+  }
+
+  .slick-dots {
+    bottom: -40px;
+
+    li {
+      margin: 0 7px;
+    }
+
+    div {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #fefefe;
+    }
+  }
+
+  .slick-dots li button:before {
+    font-size: 24px;
   }
 
   .slick-arrow {
@@ -50,9 +70,42 @@
   }
 }
 
-#page-edit,
-#page-add {
-  .block.slider {
-    max-width: @computerWidth;
+.addContentWidthStyling(@offset) {
+  #page-add,
+  #page-edit {
+    // The slider does not behave well, and pushes the container out,
+    // It's required to constrain it from the inside :(
+    .block.slider .slick-slider {
+      width: calc(100vw - @offset - 200px) !important;
+      max-width: 1440px !important;
+    }
   }
+}
+
+body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed) {
+  .addContentWidthStyling(0px);
+}
+
+body.has-toolbar:not(.has-sidebar):not(.has-sidebar-collapsed) {
+  .addContentWidthStyling(@toolbarWidth);
+}
+
+body.has-toolbar.has-sidebar {
+  .addContentWidthStyling(@toolbarWidth + @sidebarWidth);
+}
+
+body.has-toolbar.has-sidebar-collapsed {
+  .addContentWidthStyling(@toolbarWidth + @collapsedWidth);
+}
+
+body.has-toolbar-collapsed:not(.has-sidebar):not(.has-sidebar-collapsed) {
+  .addContentWidthStyling(@collapsedWidth);
+}
+
+body.has-toolbar-collapsed.has-sidebar {
+  .addContentWidthStyling(@collapsedWidth + @sidebarWidth);
+}
+
+body.has-toolbar-collapsed.has-sidebar-collapsed {
+  .addContentWidthStyling(@collapsedWidth + @collapsedWidth);
 }
