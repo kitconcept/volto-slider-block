@@ -110,7 +110,7 @@ export const SliderSchema = (props) =>
         slides: {
           widget: 'object_list',
           title: props.intl.formatMessage(messages.items),
-          schema: itemSchema,
+          schema: itemSchema(props),
         },
       },
       required: [],

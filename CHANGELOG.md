@@ -6,7 +6,14 @@
 
 ### Feature
 
+- Add extension support @sneridagh
+- Allow body component to be extended via variations @sneridagh
+- Add default variation @sneridagh
+
 ### Bugfix
+
+- Fix display bug in big screens @sneridagh
+- Fix internal slide schema to allow extension @sneridagh
 
 ### Internal
 

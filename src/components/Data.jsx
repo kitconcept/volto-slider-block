@@ -15,6 +15,7 @@ const SliderData = (props) => {
   const intl = useIntl();
   const { slides } = props.data;
   const previous = usePrevious(slides);
+  const schema = SliderSchema({ ...props, intl });
 
   React.useEffect(() => {
     if (previous) {
@@ -37,8 +38,8 @@ const SliderData = (props) => {
 
   return (
     <BlockDataForm
-      schema={SliderSchema({ ...props, intl })}
-      title={SliderSchema({ ...props, intl }).title}
+      schema={schema}
+      title={schema.title}
       onChangeField={(id, value) => {
         onChangeBlock(block, {
           ...data,
@@ -46,9 +47,6 @@ const SliderData = (props) => {
         });
       }}
       formData={data}
-      fieldIndex={data.index}
-      basic
-      unwrapped
       block={block}
     />
   );
