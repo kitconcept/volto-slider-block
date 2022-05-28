@@ -41,7 +41,7 @@ msgstr ""
 msgid "Items"
 msgstr ""
 
-#: components/Body
+#: components/DefaultBody
 #: components/View
 # defaultMessage: Please choose an existing content as source for this element
 msgid "Please choose an existing content as source for this element"
@@ -52,7 +52,7 @@ msgstr ""
 msgid "Slider"
 msgstr ""
 
-#: components/Body
+#: components/DefaultBody
 #: components/schema
 # defaultMessage: Source
 msgid "Source"
@@ -63,7 +63,7 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: components/Body
+#: components/DefaultBody
 # defaultMessage: More info
 msgid "moreInfo"
 msgstr ""
