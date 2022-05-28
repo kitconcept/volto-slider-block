@@ -1,6 +1,8 @@
 @import (less) '~slick-carousel/slick/slick.css';
 @import (less) '~slick-carousel/slick/slick-theme.css';
 
+@computerWidth: 940px;
+
 .block.slider {
   &:not(.inner):not([role='presentation']) {
     padding-bottom: 2em;
@@ -45,5 +47,12 @@
 
   .toolbar-inner input {
     max-width: 80px;
+  }
+}
+
+#page-edit,
+#page-add {
+  .block.slider {
+    max-width: @computerWidth;
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { withBlockExtensions } from '@plone/volto/helpers';
 import { v4 as uuid } from 'uuid';
 import View from './View';
 import { SidebarPortal } from '@plone/volto/components';
@@ -29,4 +30,4 @@ const Edit = (props) => {
   );
 };
 
-export default Edit;
+export default withBlockExtensions(Edit);
