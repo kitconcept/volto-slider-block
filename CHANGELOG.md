@@ -6,9 +6,13 @@
 
 ### Feature
 
+- Sync the sidebar widget with the current slide state @sneridagh
+
 ### Bugfix
 
 ### Internal
+
+- New internal `slider_object_list` widget that takes care of the sync with the current slide in edit mode @sneridagh
 
 ## 1.1.2 (2022-05-28)
 
