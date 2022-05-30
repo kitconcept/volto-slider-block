@@ -2,13 +2,9 @@
 
 ## 1.1.3 (unreleased)
 
-### Breaking
-
 ### Feature
 
 - Sync the sidebar widget with the current slide state @sneridagh
-
-### Bugfix
 
 ### Internal
 
