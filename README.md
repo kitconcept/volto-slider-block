@@ -17,7 +17,6 @@ The Volto Slider Block allows editors to add sliders to a Volto page.
 
 https://user-images.githubusercontent.com/486927/170819371-6284d8e7-e5df-4893-9dab-cd06b1054505.mov
 
-
 ## Installation
 
 Create a new Volto project (you can skip this step if you already have one):
