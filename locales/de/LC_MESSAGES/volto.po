@@ -16,15 +16,30 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
 
+#: components/ObjectListWidget
+# defaultMessage: Add
+msgid "Add (object list)"
+msgstr ""
+
 #: components/schema
 # defaultMessage: Add item
 msgid "Add item"
 msgstr "Element hinzufügen"
 
+#: components/ObjectListWidget
+# defaultMessage: Collapse item
+msgid "Collapse item"
+msgstr ""
+
 #: components/schema
 # defaultMessage: Description
 msgid "Description"
 msgstr "Beschreibung"
+
+#: components/ObjectListWidget
+# defaultMessage: Empty object list
+msgid "Empty object list"
+msgstr ""
 
 #: components/schema
 # defaultMessage: Headtitle
@@ -51,6 +66,16 @@ msgstr "Elemente"
 # defaultMessage: Please choose an existing content as source for this element
 msgid "Please choose an existing content as source for this element"
 msgstr "Bitte wählen sie einen existierenden Inhalt als Quelle für dieses Element aus"
+
+#: components/ObjectListWidget
+# defaultMessage: Remove item
+msgid "Remove item"
+msgstr ""
+
+#: components/ObjectListWidget
+# defaultMessage: Show item
+msgid "Show item"
+msgstr ""
 
 #: components/schema
 # defaultMessage: Slider
