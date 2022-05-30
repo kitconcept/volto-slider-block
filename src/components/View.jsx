@@ -53,7 +53,7 @@ const View = (props) => {
 
   const sliderRef = React.useRef();
 
-  if (sliderRef.current) {
+  if (sliderRef.current && isEditMode) {
     // This syncs the current slide with the objectwidget (or other sources
     // able to access the slider context)
     // that can modify the SliderContext (and come here via props slideIndex)
@@ -86,7 +86,7 @@ const View = (props) => {
           // (the dots or the arrows)
           // There's also the option of doing it before instead than after:
           // beforeChange={(current, next) => setSlideIndex(next)}
-          afterChange={(current) => setSlideIndex(current)}
+          afterChange={(current) => isEditMode && setSlideIndex(current)}
         >
           {data.slides &&
             data.slides.map((item, index) => (
