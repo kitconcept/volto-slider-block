@@ -46,8 +46,19 @@ const View = (props) => {
     block,
     openObjectBrowser,
     onChangeBlock,
+    slideIndex,
+    setSlideIndex,
   } = props;
   const intl = useIntl();
+
+  const sliderRef = React.useRef();
+
+  if (sliderRef.current) {
+    // This syncs the current slide with the objectwidget (or other sources
+    // able to access the slider context)
+    // that can modify the SliderContext (and come here via props slideIndex)
+    sliderRef.current.slickGoTo(slideIndex);
+  }
 
   return (
     <div className={cx('block slider', className)}>
@@ -61,6 +72,7 @@ const View = (props) => {
       )}
       {data.slides?.length > 0 && (
         <Slider
+          ref={sliderRef}
           dots
           infinite
           speed={500}
@@ -69,6 +81,12 @@ const View = (props) => {
           nextArrow={<NextArrow />}
           prevArrow={<PrevArrow />}
           slideWidth="1200px"
+          // This syncs the current slide with the SliderContext state
+          // responding to the slide change event from the slider itself
+          // (the dots or the arrows)
+          // There's also the option of doing it before instead than after:
+          // beforeChange={(current, next) => setSlideIndex(next)}
+          afterChange={(current) => setSlideIndex(current)}
         >
           {data.slides &&
             data.slides.map((item, index) => (
