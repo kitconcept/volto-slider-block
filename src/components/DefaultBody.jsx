@@ -4,6 +4,7 @@ import { getTeaserImageURL } from '../helpers';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon, MaybeWrap, UniversalLink } from '@plone/volto/components';
 import { Input, Button, Message } from 'semantic-ui-react';
+import cx from 'classnames';
 import navTreeSVG from '@plone/volto/icons/nav.svg';
 import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
 
@@ -58,7 +59,11 @@ const SliderBody = ({
   };
 
   return (
-    <div className="grid-teaser-item top">
+    <div
+      className={cx('grid-teaser-item top', {
+        'empty-slide': !href && isEditMode,
+      })}
+    >
       {!href && isEditMode && (
         <Message>
           <div className="grid-teaser-item default">
