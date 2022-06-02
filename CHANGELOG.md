@@ -2,10 +2,6 @@
 
 ## 1.2.1 (unreleased)
 
-### Breaking
-
-### Feature
-
 ### Bugfix
 
 - Fix empty slide @sneridagh
