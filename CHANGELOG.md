@@ -8,6 +8,8 @@
 
 ### Bugfix
 
+- Fix empty slide @sneridagh
+
 ### Internal
 
 - Rename the internal component name to one more descriptive @sneridagh
