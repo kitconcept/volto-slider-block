@@ -10,7 +10,7 @@ export const SliderContext = React.createContext({
   setSlideIndex: () => {},
 });
 
-const Edit = (props) => {
+const SliderEdit = (props) => {
   const { onChangeBlock, block, selected } = props;
   const data = {
     slides: [{ '@id': uuid() }],
@@ -45,4 +45,4 @@ const Edit = (props) => {
   );
 };
 
-export default withBlockExtensions(Edit);
+export default withBlockExtensions(SliderEdit);

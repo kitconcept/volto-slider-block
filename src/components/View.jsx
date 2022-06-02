@@ -38,7 +38,7 @@ const NextArrow = ({ className, style, onClick }) => (
   </button>
 );
 
-const View = (props) => {
+const SliderView = (props) => {
   const {
     className,
     data,
@@ -90,7 +90,7 @@ const View = (props) => {
         >
           {data.slides &&
             data.slides.map((item, index) => (
-              <div>
+              <div key={item['@id']}>
                 <Body
                   {...props}
                   key={item['@id']}
@@ -110,4 +110,4 @@ const View = (props) => {
   );
 };
 
-export default withBlockExtensions(View);
+export default withBlockExtensions(SliderView);

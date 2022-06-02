@@ -10,6 +10,8 @@
 
 ### Internal
 
+- Rename the internal component name to one more descriptive @sneridagh
+
 ## 1.2.0 (2022-05-30)
 
 ### Feature
