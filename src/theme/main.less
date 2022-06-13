@@ -5,6 +5,9 @@
 @sidebarWidth: 375px;
 @collapsedWidth: 20px;
 
+@slider-images-aspect-ratio: var(--slider-images-aspect-ratio, 16/9);
+@slider-images-object-position: var(--slider-images-object-position, top left);
+
 .block.slider {
   &:not(.inner):not([role='presentation']) {
     padding-bottom: 4em;
@@ -52,16 +55,11 @@
   }
 
   .highlight-image-wrapper {
-    position: relative;
-    padding-top: 60%;
-
     img {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
+      aspect-ratio: @slider-images-aspect-ratio;
       object-fit: cover;
+      object-position: @slider-images-object-position;
     }
   }
 
