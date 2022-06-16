@@ -4,6 +4,8 @@
 
 ### Breaking
 
+- Fix ally for slider (header level). So the inner heading changed from `h3` to `h2`. Update your CSS if required. @sneridagh
+
 ### Feature
 
 - Use `aspect-ratio` CSS property in the slider images @sneridagh

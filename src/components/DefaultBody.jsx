@@ -107,7 +107,7 @@ const SliderBody = ({
                 {data?.head_title && (
                   <span className="supertitle">{data?.head_title}</span>
                 )}
-                <h3>{data?.nav_title || data?.title}</h3>
+                <h2>{data?.nav_title || data?.title}</h2>
               </div>
               <p>{data?.description}</p>
             </div>
