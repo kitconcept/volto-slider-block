@@ -11,10 +11,6 @@
 - Use `aspect-ratio` CSS property in the slider images @sneridagh
 - `@slider-images-aspect-ratio` `@slider-images-object-position` CSS properties are available for fine tuning customization @sneridagh
 
-### Bugfix
-
-### Internal
-
 ## 1.2.1 (2022-06-02)
 
 ### Bugfix
