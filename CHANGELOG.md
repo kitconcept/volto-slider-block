@@ -6,6 +6,8 @@
 
 ### Feature
 
+- disable dragging for desktop devices to prevent link activation on drag @ThomasKindermann
+
 ### Bugfix
 
 ### Internal
