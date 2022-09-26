@@ -2,15 +2,9 @@
 
 ## 2.0.1 (unreleased)
 
-### Breaking
-
 ### Feature
 
-- disable dragging for desktop devices to prevent link activation on drag @ThomasKindermann
-
-### Bugfix
-
-### Internal
+- `react-slick` enables dragging in desktop as well by default, although might be handy in some situations, disable dragging for desktop devices seems the most appropiate to prevent links activations on desktop drag @ThomasKindermann
 
 ## 2.0.0 (2022-07-28)
 
