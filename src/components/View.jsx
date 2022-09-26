@@ -78,6 +78,7 @@ const SliderView = (props) => {
           speed={500}
           slidesToShow={1}
           slidesToScroll={1}
+          draggable={false}
           nextArrow={<NextArrow />}
           prevArrow={<PrevArrow />}
           slideWidth="1200px"
