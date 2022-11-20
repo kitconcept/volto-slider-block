@@ -6,12 +6,6 @@
 
 - Compatibility with Volto 16 RC2 onwards. The defaults now are handled by Volto itself, not the add-on code. @sneridagh
 
-### Feature
-
-### Bugfix
-
-### Internal
-
 ## 2.1.0 (2022-09-26)
 
 ### Feature
