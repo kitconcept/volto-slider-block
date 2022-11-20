@@ -40,7 +40,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Install yo and @plone/generator-volto
-        run: npm i -g yo @plone/generator-volto@alpha
+        run: npm i -g yo @plone/generator-volto
 
       - name: Setup addon testing environment
         run: npx -p @plone/scripts addon clone https://github.com/${{env.GIT_USER}}/${{env.GIT_NAME}}.git --branch ${{env.GIT_BRANCH}}
