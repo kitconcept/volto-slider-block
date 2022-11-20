@@ -95,12 +95,15 @@
     }
   },
   "devDependencies": {
+    "@plone/scripts": "^2.1.2",
     "release-it": "^14.14.2"
   },
   "dependencies": {
-    "@plone/scripts": "*",
     "deepmerge": "4.2.2",
     "react-slick": "0.29.0",
     "slick-carousel": "1.8.1"
+  },
+  "peerDependencies": {
+    "@plone/volto": "16.0.0-rc.2"
   }
 }

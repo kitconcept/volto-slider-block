@@ -1,6 +1,7 @@
 import { defineMessages } from 'react-intl';
 import config from '@plone/volto/registry';
 import { mergeSchemas } from '../helpers';
+import { v4 as uuid } from 'uuid';
 
 const messages = defineMessages({
   Source: {
@@ -111,6 +112,7 @@ export const SliderSchema = (props) =>
           widget: 'slider_object_list',
           title: props.intl.formatMessage(messages.items),
           schema: itemSchema(props),
+          default: [{ '@id': uuid() }],
         },
       },
       required: [],
