@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.0.1 (unreleased)
+
+### Breaking
+
+### Feature
+
+### Bugfix
+
+### Internal
+
 ## 3.0.0 (2022-11-20)
 
 ### Breaking
