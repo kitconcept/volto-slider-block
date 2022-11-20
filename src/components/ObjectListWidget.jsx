@@ -5,6 +5,7 @@ import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import { Accordion, Button, Segment } from 'semantic-ui-react';
 import { DragDropList, FormFieldWrapper, Icon } from '@plone/volto/components';
+import { applySchemaDefaults } from '@plone/volto/helpers';
 import ObjectWidget from '@plone/volto/components/manage/Widgets/ObjectWidget';
 
 import upSVG from '@plone/volto/icons/up-key.svg';
@@ -104,12 +105,19 @@ const SliderObjectListWidget = (props) => {
             }
             onClick={(e) => {
               e.preventDefault();
-              onChange(id, [
-                ...value,
-                {
-                  '@id': uuid(),
-                },
-              ]);
+              const data = {
+                '@id': uuid(),
+              };
+              const objSchema = schemaExtender
+                ? schemaExtender(schema, data, intl)
+                : objectSchema;
+              const dataWithDefaults = applySchemaDefaults({
+                data,
+                schema: objSchema,
+                intl,
+              });
+
+              onChange(id, [...value, dataWithDefaults]);
               setSlideIndex(value.length);
             }}
           >

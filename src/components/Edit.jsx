@@ -1,6 +1,5 @@
 import React from 'react';
 import { withBlockExtensions } from '@plone/volto/helpers';
-import { v4 as uuid } from 'uuid';
 import View from './View';
 import { SidebarPortal } from '@plone/volto/components';
 import Sidebar from './Sidebar';
@@ -11,14 +10,8 @@ export const SliderContext = React.createContext({
 });
 
 const SliderEdit = (props) => {
-  const { onChangeBlock, block, selected } = props;
-  const data = {
-    slides: [{ '@id': uuid() }],
-    ...props.data,
-  };
-  if (!props.data.slides) {
-    onChangeBlock(block, data);
-  }
+  const { onChangeBlock, block, selected, data } = props;
+
   const [slideIndex, setSlideIndex] = React.useState(0);
 
   const contextValue = React.useMemo(() => ({ slideIndex, setSlideIndex }), [
