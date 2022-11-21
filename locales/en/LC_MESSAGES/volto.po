@@ -12,8 +12,8 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: components/ObjectListWidget
-# defaultMessage: Add
-msgid "Add (object list)"
+# defaultMessage: Add Slide
+msgid "Add Slide"
 msgstr ""
 
 #: components/schema

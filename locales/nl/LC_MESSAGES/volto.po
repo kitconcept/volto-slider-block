@@ -16,8 +16,8 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 
 #: components/ObjectListWidget
-# defaultMessage: Add
-msgid "Add (object list)"
+# defaultMessage: Add Slide
+msgid "Add Slide"
 msgstr ""
 
 #: components/schema

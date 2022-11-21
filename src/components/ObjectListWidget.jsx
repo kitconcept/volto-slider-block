@@ -34,8 +34,8 @@ const messages = defineMessages({
     defaultMessage: 'Empty object list',
   },
   add: {
-    id: 'Add (object list)',
-    defaultMessage: 'Add',
+    id: 'Add Slide',
+    defaultMessage: 'Add Slide',
   },
 });
 

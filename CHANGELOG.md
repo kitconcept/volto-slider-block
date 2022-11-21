@@ -2,13 +2,9 @@
 
 ## 3.0.1 (unreleased)
 
-### Breaking
-
-### Feature
-
 ### Bugfix
 
-### Internal
+- Disambiguation of an i18n msgid with one in core @sneridagh
 
 ## 3.0.0 (2022-11-20)
 
