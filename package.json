@@ -1,6 +1,6 @@
 {
   "name": "@kitconcept/volto-slider-block",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Slider block for Plone 6 (Volto)",
   "main": "src/index.js",
   "license": "MIT",
