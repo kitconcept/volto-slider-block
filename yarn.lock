@@ -1470,7 +1470,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@kitconcept/volto-slider-block@workspace:."
   dependencies:
-    "@plone/scripts": ^2.1.4
+    "@plone/scripts": ^2.1.5
     deepmerge: 4.2.2
     react-slick: 0.29.0
     release-it: ^14.14.2
@@ -1654,9 +1654,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone/scripts@npm:^2.1.4":
-  version: 2.1.4
-  resolution: "@plone/scripts@npm:2.1.4"
+"@plone/scripts@npm:^2.1.5":
+  version: 2.1.5
+  resolution: "@plone/scripts@npm:2.1.5"
   dependencies:
     babel-plugin-react-intl: 5.1.17
     babel-preset-razzle: 4.2.17
@@ -1671,7 +1671,7 @@ __metadata:
     addon: addon/index.js
     changelogupdater: changelogupdater.cjs
     i18n: i18n.cjs
-  checksum: 555e6bcc50c9fc47b3de2fc89c2a68e37b370c9d02a20505e49cf979d1213b957a97d1870cef968fcf6af6cf1152bd2880ba34f9efc143318c9690d00fbe08ae
+  checksum: 1249cb8150c622ae4de277d4de01b9a07ca3ba80daf7b86017f13a83263582f72a79621ff4872109fa4c186005e73c06a00a25aecba1a9d8e147007bf7bc3fbd
   languageName: node
   linkType: hard
 
