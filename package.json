@@ -104,6 +104,6 @@
     "slick-carousel": "1.8.1"
   },
   "peerDependencies": {
-    "@plone/volto": "16.0.0-rc.2"
+    "@plone/volto": "^16.1.0"
   }
 }
