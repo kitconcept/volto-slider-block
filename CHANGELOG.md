@@ -4,6 +4,10 @@
 
 ### Breaking
 
+- Moved to use the Volto 16.1.0 `object_list` feature to sync the current slide in both the block UI and in the sidebar block settings.
+Removed the custom widget with a custom React context that enabled this feature.
+If you have any customizations on the slider block, might need update to the new schema. @sneridagh
+
 ### Feature
 
 ### Bugfix
