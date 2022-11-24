@@ -8,12 +8,6 @@
 Removed the custom widget with a custom React context that enabled this feature.
 If you have any customizations on the slider block, might need update to the new schema. @sneridagh
 
-### Feature
-
-### Bugfix
-
-### Internal
-
 ## 3.0.1 (2022-11-21)
 
 ### Bugfix
