@@ -15,30 +15,15 @@ msgstr ""
 "Language-Name: Nederlands\n"
 "Preferred-Encodings: utf-8\n"
 
-#: components/ObjectListWidget
-# defaultMessage: Add Slide
-msgid "Add Slide"
-msgstr ""
-
 #: components/schema
 # defaultMessage: Add item
 msgid "Add item"
 msgstr "Item toevoegen"
 
-#: components/ObjectListWidget
-# defaultMessage: Collapse item
-msgid "Collapse item"
-msgstr ""
-
 #: components/schema
 # defaultMessage: Description
 msgid "Description"
 msgstr "Omschrijving"
-
-#: components/ObjectListWidget
-# defaultMessage: Empty object list
-msgid "Empty object list"
-msgstr ""
 
 #: components/schema
 # defaultMessage: Headtitle
@@ -65,16 +50,6 @@ msgstr "Items"
 # defaultMessage: Please choose an existing content as source for this element
 msgid "Please choose an existing content as source for this element"
 msgstr "Kies een bestaand item als bron voor dit element"
-
-#: components/ObjectListWidget
-# defaultMessage: Remove item
-msgid "Remove item"
-msgstr ""
-
-#: components/ObjectListWidget
-# defaultMessage: Show item
-msgid "Show item"
-msgstr ""
 
 #: components/schema
 # defaultMessage: Slider

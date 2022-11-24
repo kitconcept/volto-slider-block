@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-11-21T14:20:21.791Z\n"
+"POT-Creation-Date: 2022-11-24T15:56:27.444Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -13,29 +13,14 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
 
-#: components/ObjectListWidget
-# defaultMessage: Add Slide
-msgid "Add Slide"
-msgstr ""
-
 #: components/schema
 # defaultMessage: Add item
 msgid "Add item"
 msgstr ""
 
-#: components/ObjectListWidget
-# defaultMessage: Collapse item
-msgid "Collapse item"
-msgstr ""
-
 #: components/schema
 # defaultMessage: Description
 msgid "Description"
-msgstr ""
-
-#: components/ObjectListWidget
-# defaultMessage: Empty object list
-msgid "Empty object list"
 msgstr ""
 
 #: components/schema
@@ -62,16 +47,6 @@ msgstr ""
 #: components/View
 # defaultMessage: Please choose an existing content as source for this element
 msgid "Please choose an existing content as source for this element"
-msgstr ""
-
-#: components/ObjectListWidget
-# defaultMessage: Remove item
-msgid "Remove item"
-msgstr ""
-
-#: components/ObjectListWidget
-# defaultMessage: Show item
-msgid "Show item"
 msgstr ""
 
 #: components/schema
