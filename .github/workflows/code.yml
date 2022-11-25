@@ -31,8 +31,12 @@ jobs:
       - name: Install yo and @plone/generator-volto
         run: npm i -g yo @plone/generator-volto
 
+      - name: Extract branch name
+        run: echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+        id: extract_branch
+
       - name: Setup addon testing environment
-        run: npx -p @plone/scripts addon clone https://github.com/${{env.GIT_USER}}/${{env.GIT_NAME}}.git --branch ${{env.GIT_BRANCH}}
+        run: npx -p @plone/scripts addon clone https://github.com/${{env.GIT_USER}}/${{env.GIT_NAME}}.git --branch ${{ steps.extract_branch.outputs.branch }}
 
       # ESlint
       - name: ESlint
