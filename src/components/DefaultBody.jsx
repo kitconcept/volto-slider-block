@@ -96,7 +96,7 @@ const SliderBody = ({
             {(href?.hasPreviewImage || image) && (
               <div className="highlight-image-wrapper gradient">
                 <img
-                  src={flattenToAppURL(getTeaserImageURL(href, image, 'great'))}
+                  src={flattenToAppURL(getTeaserImageURL({ href, image }))}
                   alt=""
                   loading="lazy"
                 />
