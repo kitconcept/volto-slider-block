@@ -9,7 +9,8 @@ import { Icon } from '@plone/volto/components';
 import rightArrowSVG from '@plone/volto/icons/right-key.svg';
 import leftArrowSVG from '@plone/volto/icons/left-key.svg';
 import teaserTemplate from '../icons/teaser-template.svg';
-import { useNodeDimensions } from '../helpers';
+import { SlidesWidthFix, useNodeDimensions } from '../helpers';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   PleaseChooseContent: {
@@ -64,25 +65,17 @@ const SliderView = (props) => {
   const [headerNode, setHeaderNode] = React.useState(null);
 
   React.useEffect(() => {
-    setHeaderNode(document.querySelector('header .container .header'));
+    setHeaderNode(
+      document.querySelector(
+        config.blocks.blocksConfig.slider.referenceContainerQuery,
+      ),
+    );
   }, []);
-
   const { width } = useNodeDimensions(headerNode);
 
   return (
     <>
-      <style>
-        {/* This is needed because the limitation on react-slick and the
-            Volto Block Engine containers. We workaround it by measuring the
-            layout container (and has to be an external one) and force this
-            width to the main slider container one with an inline style. */}
-        {`
-#page-add .block.slider .slick-slider,
-#page-edit .block.slider .slick-slider {
-    width: ${width}px !important;
-    max-width: 1440px !important;
-}`}
-      </style>
+      <SlidesWidthFix width={width} />
       <div className={cx('block slider', className)}>
         {(data.slides?.length === 0 || !data.slides) && isEditMode && (
           <Message>

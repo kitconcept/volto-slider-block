@@ -14,6 +14,7 @@ const applyConfig = (config) => {
     restricted: false,
     mostUsed: true,
     sidebarTab: 1,
+    referenceContainerQuery: '.container .header',
   };
   return config;
 };

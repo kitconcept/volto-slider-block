@@ -163,6 +163,18 @@ config.blocks.blocksConfig.slider.extensions = {
 
 The block and slide schemas will be merged with the existing ones.
 
+## Fix for the limitation in `react-slick`
+
+The underlying library used in this add-on is `react-slick`. This library has a limitation when used in the Volto Blocks Engine that prevents to enclose properly the slides in the block wrapper.
+
+To workaround it, it's required to anchor the width to an external element that has the same desired size than the block wrapper. This is set to the default Volto header using a CSS selector ('.container .header') which is the most common use case and can be overriden using the block setting: `referenceContainerQuery` like:
+
+```js
+  config.blocks.blocksConfig.slider = {
+    referenceContainerQuery: '.container .header',
+  };
+```
+
 # Credits
 
 <img alt="Forschungszentrum Jülich" src="https://github.com/kitconcept/volto-blocks/raw/master/fz-juelich.svg" width="200px" />
