@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 function getDimensionObject(node) {
   const rect = node.getBoundingClientRect();
@@ -19,13 +19,8 @@ function getDimensionObject(node) {
   }
 }
 
-function useDimensions(mynode) {
+function useNodeDimensions(node) {
   const [dimensions, setDimensions] = useState({});
-  const [node, setNode] = useState(mynode);
-
-  const ref = useCallback((node) => {
-    setNode(node);
-  }, []);
 
   useEffect(() => {
     if (node) {
@@ -45,7 +40,7 @@ function useDimensions(mynode) {
     }
   }, [node]);
 
-  return [ref, dimensions, node];
+  return dimensions;
 }
 
-export default useDimensions;
+export default useNodeDimensions;

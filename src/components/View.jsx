@@ -9,7 +9,7 @@ import { Icon } from '@plone/volto/components';
 import rightArrowSVG from '@plone/volto/icons/right-key.svg';
 import leftArrowSVG from '@plone/volto/icons/left-key.svg';
 import teaserTemplate from '../icons/teaser-template.svg';
-import { useDimensions } from '../helpers';
+import { useNodeDimensions } from '../helpers';
 
 const messages = defineMessages({
   PleaseChooseContent: {
@@ -61,15 +61,13 @@ const SliderView = (props) => {
     sliderRef.current.slickGoTo(slideIndex);
   }
 
-  const [isClient, setIsClient] = React.useState(null);
+  const [headerNode, setHeaderNode] = React.useState(null);
 
-  React.useEffect(() => setIsClient(true), []);
+  React.useEffect(() => {
+    setHeaderNode(document.querySelector('header .container .header'));
+  }, []);
 
-  let headerNode;
-  if (document) {
-    headerNode = document.querySelector('header .container .header');
-  }
-  const [, { width }] = useDimensions(headerNode);
+  const { width } = useNodeDimensions(headerNode);
 
   return (
     <>
