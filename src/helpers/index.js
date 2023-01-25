@@ -7,6 +7,8 @@
 
 import { getTeaserImageURL } from './Image/Image';
 import { mergeSchemas } from './Schema/Schema';
+import useDimensions from './useDimensions/useDimensions';
 
 export { getTeaserImageURL };
 export { mergeSchemas };
+export { useDimensions };

@@ -9,6 +9,7 @@ import { Icon } from '@plone/volto/components';
 import rightArrowSVG from '@plone/volto/icons/right-key.svg';
 import leftArrowSVG from '@plone/volto/icons/left-key.svg';
 import teaserTemplate from '../icons/teaser-template.svg';
+import { useDimensions } from '../helpers';
 
 const messages = defineMessages({
   PleaseChooseContent: {
@@ -60,54 +61,78 @@ const SliderView = (props) => {
     sliderRef.current.slickGoTo(slideIndex);
   }
 
+  const [isClient, setIsClient] = React.useState(null);
+
+  React.useEffect(() => setIsClient(true), []);
+
+  let headerNode;
+  if (document) {
+    headerNode = document.querySelector('header .container .header');
+  }
+  const [, { width }] = useDimensions(headerNode);
+
   return (
-    <div className={cx('block slider', className)}>
-      {(data.slides?.length === 0 || !data.slides) && isEditMode && (
-        <Message>
-          <div className="teaser-item default">
-            <img src={teaserTemplate} alt="" />
-            <p>{intl.formatMessage(messages.PleaseChooseContent)}</p>
-          </div>
-        </Message>
-      )}
-      {data.slides?.length > 0 && (
-        <Slider
-          ref={sliderRef}
-          dots
-          infinite
-          speed={500}
-          slidesToShow={1}
-          slidesToScroll={1}
-          draggable={false}
-          nextArrow={<NextArrow />}
-          prevArrow={<PrevArrow />}
-          slideWidth="1200px"
-          // This syncs the current slide with the SliderContext state
-          // responding to the slide change event from the slider itself
-          // (the dots or the arrows)
-          // There's also the option of doing it before instead than after:
-          // beforeChange={(current, next) => setSlideIndex(next)}
-          afterChange={(current) => isEditMode && setSlideIndex(current)}
-        >
-          {data.slides &&
-            data.slides.map((item, index) => (
-              <div key={item['@id']}>
-                <Body
-                  {...props}
-                  key={item['@id']}
-                  data={item}
-                  isEditMode={isEditMode}
-                  dataBlock={data}
-                  index={index}
-                  block={block}
-                  openObjectBrowser={openObjectBrowser}
-                  onChangeBlock={onChangeBlock}
-                />
-              </div>
-            ))}
-        </Slider>
-      )}
-    </div>
+    <>
+      <style>
+        {/* This is needed because the limitation on react-slick and the
+            Volto Block Engine containers. We workaround it by measuring the
+            layout container (and has to be an external one) and force this
+            width to the main slider container one with an inline style. */}
+        {`
+#page-add .block.slider .slick-slider,
+#page-edit .block.slider .slick-slider {
+    width: ${width}px !important;
+    max-width: 1440px !important;
+}`}
+      </style>
+      <div className={cx('block slider', className)}>
+        {(data.slides?.length === 0 || !data.slides) && isEditMode && (
+          <Message>
+            <div className="teaser-item default">
+              <img src={teaserTemplate} alt="" />
+              <p>{intl.formatMessage(messages.PleaseChooseContent)}</p>
+            </div>
+          </Message>
+        )}
+        {data.slides?.length > 0 && (
+          <Slider
+            ref={sliderRef}
+            dots
+            infinite
+            speed={500}
+            slidesToShow={1}
+            slidesToScroll={1}
+            draggable={false}
+            nextArrow={<NextArrow />}
+            prevArrow={<PrevArrow />}
+            slideWidth="1200px"
+            // This syncs the current slide with the SliderContext state
+            // responding to the slide change event from the slider itself
+            // (the dots or the arrows)
+            // There's also the option of doing it before instead than after:
+            // beforeChange={(current, next) => setSlideIndex(next)}
+            afterChange={(current) => isEditMode && setSlideIndex(current)}
+          >
+            {data.slides &&
+              data.slides.map((item, index) => (
+                <div key={item['@id']}>
+                  <Body
+                    {...props}
+                    key={item['@id']}
+                    data={item}
+                    isEditMode={isEditMode}
+                    dataBlock={data}
+                    index={index}
+                    block={block}
+                    openObjectBrowser={openObjectBrowser}
+                    onChangeBlock={onChangeBlock}
+                  />
+                </div>
+              ))}
+          </Slider>
+        )}
+      </div>
+    </>
   );
 };
 
