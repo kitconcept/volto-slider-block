@@ -8,6 +8,18 @@
 
 <!-- towncrier release notes start -->
 
+## 4.1.0 (2023-01-26)
+
+### Feature
+
+- Support for stored catalog `image_scales` @sneridagh [#16](https://github.com/kitconcept/volto-export/pull/16)
+
+### Internal
+
+- Deprecate set-output in GHA @sneridagh [#14](https://github.com/kitconcept/volto-export/pull/14)
+- Add towncrier @sneridagh [#17](https://github.com/kitconcept/volto-export/pull/17)
+
+
 ## 4.0.0 (2022-11-24)
 
 ### Breaking
