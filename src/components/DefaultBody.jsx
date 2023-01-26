@@ -7,6 +7,7 @@ import { Input, Button, Message } from 'semantic-ui-react';
 import cx from 'classnames';
 import navTreeSVG from '@plone/volto/icons/nav.svg';
 import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   PleaseChooseContent: {
@@ -24,6 +25,8 @@ const messages = defineMessages({
   },
 });
 
+const DefaultImage = (props) => <img {...props} alt={props.alt || ''} />;
+
 const SliderBody = ({
   index,
   onChangeBlock,
@@ -36,6 +39,11 @@ const SliderBody = ({
   const intl = useIntl();
   const href = data.href?.[0];
   const image = data.preview_image?.[0];
+
+  const hasImageComponent = config.getComponent('Image').component;
+  const Image = config.getComponent('Image').component || DefaultImage;
+  const defaultImageSrc =
+    href && flattenToAppURL(getTeaserImageURL({ href, image }));
 
   const handleClick = () => {
     openObjectBrowser({
@@ -95,8 +103,8 @@ const SliderBody = ({
           >
             {(href?.hasPreviewImage || image) && (
               <div className="highlight-image-wrapper gradient">
-                <img
-                  src={flattenToAppURL(getTeaserImageURL(href, image, 'great'))}
+                <Image
+                  src={hasImageComponent ? href : defaultImageSrc}
                   alt=""
                   loading="lazy"
                 />

@@ -7,6 +7,10 @@
 
 import { getTeaserImageURL } from './Image/Image';
 import { mergeSchemas } from './Schema/Schema';
+import useNodeDimensions from './useNodeDimensions/useNodeDimensions';
+import SlidesWidthFix from './SlidesWidthFix/SlidesWidthFix';
 
 export { getTeaserImageURL };
 export { mergeSchemas };
+export { useNodeDimensions };
+export { SlidesWidthFix };

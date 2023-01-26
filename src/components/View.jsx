@@ -9,6 +9,8 @@ import { Icon } from '@plone/volto/components';
 import rightArrowSVG from '@plone/volto/icons/right-key.svg';
 import leftArrowSVG from '@plone/volto/icons/left-key.svg';
 import teaserTemplate from '../icons/teaser-template.svg';
+import { SlidesWidthFix, useNodeDimensions } from '../helpers';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   PleaseChooseContent: {
@@ -60,54 +62,68 @@ const SliderView = (props) => {
     sliderRef.current.slickGoTo(slideIndex);
   }
 
+  const [headerNode, setHeaderNode] = React.useState(null);
+
+  React.useEffect(() => {
+    setHeaderNode(
+      document.querySelector(
+        config.blocks.blocksConfig.slider.referenceContainerQuery,
+      ),
+    );
+  }, []);
+  const { width } = useNodeDimensions(headerNode);
+
   return (
-    <div className={cx('block slider', className)}>
-      {(data.slides?.length === 0 || !data.slides) && isEditMode && (
-        <Message>
-          <div className="teaser-item default">
-            <img src={teaserTemplate} alt="" />
-            <p>{intl.formatMessage(messages.PleaseChooseContent)}</p>
-          </div>
-        </Message>
-      )}
-      {data.slides?.length > 0 && (
-        <Slider
-          ref={sliderRef}
-          dots
-          infinite
-          speed={500}
-          slidesToShow={1}
-          slidesToScroll={1}
-          draggable={false}
-          nextArrow={<NextArrow />}
-          prevArrow={<PrevArrow />}
-          slideWidth="1200px"
-          // This syncs the current slide with the SliderContext state
-          // responding to the slide change event from the slider itself
-          // (the dots or the arrows)
-          // There's also the option of doing it before instead than after:
-          // beforeChange={(current, next) => setSlideIndex(next)}
-          afterChange={(current) => isEditMode && setSlideIndex(current)}
-        >
-          {data.slides &&
-            data.slides.map((item, index) => (
-              <div key={item['@id']}>
-                <Body
-                  {...props}
-                  key={item['@id']}
-                  data={item}
-                  isEditMode={isEditMode}
-                  dataBlock={data}
-                  index={index}
-                  block={block}
-                  openObjectBrowser={openObjectBrowser}
-                  onChangeBlock={onChangeBlock}
-                />
-              </div>
-            ))}
-        </Slider>
-      )}
-    </div>
+    <>
+      <SlidesWidthFix width={width} />
+      <div className={cx('block slider', className)}>
+        {(data.slides?.length === 0 || !data.slides) && isEditMode && (
+          <Message>
+            <div className="teaser-item default">
+              <img src={teaserTemplate} alt="" />
+              <p>{intl.formatMessage(messages.PleaseChooseContent)}</p>
+            </div>
+          </Message>
+        )}
+        {data.slides?.length > 0 && (
+          <Slider
+            ref={sliderRef}
+            dots
+            infinite
+            speed={500}
+            slidesToShow={1}
+            slidesToScroll={1}
+            draggable={false}
+            nextArrow={<NextArrow />}
+            prevArrow={<PrevArrow />}
+            slideWidth="1200px"
+            // This syncs the current slide with the SliderContext state
+            // responding to the slide change event from the slider itself
+            // (the dots or the arrows)
+            // There's also the option of doing it before instead than after:
+            // beforeChange={(current, next) => setSlideIndex(next)}
+            afterChange={(current) => isEditMode && setSlideIndex(current)}
+          >
+            {data.slides &&
+              data.slides.map((item, index) => (
+                <div key={item['@id']}>
+                  <Body
+                    {...props}
+                    key={item['@id']}
+                    data={item}
+                    isEditMode={isEditMode}
+                    dataBlock={data}
+                    index={index}
+                    block={block}
+                    openObjectBrowser={openObjectBrowser}
+                    onChangeBlock={onChangeBlock}
+                  />
+                </div>
+              ))}
+          </Slider>
+        )}
+      </div>
+    </>
   );
 };
 
