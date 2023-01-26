@@ -42,7 +42,8 @@ const SliderBody = ({
 
   const hasImageComponent = config.getComponent('Image').component;
   const Image = config.getComponent('Image').component || DefaultImage;
-  const defaultImageSrc = flattenToAppURL(getTeaserImageURL({ href, image }));
+  const defaultImageSrc =
+    href && flattenToAppURL(getTeaserImageURL({ href, image }));
 
   const handleClick = () => {
     openObjectBrowser({
