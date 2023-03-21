@@ -69,8 +69,11 @@ export const itemSchema = (props) =>
           selectedItemAttrs: [
             'Title',
             'Description',
-            'hasPreviewImage',
             'head_title',
+            'hasPreviewImage',
+            'image_field',
+            'image_scales',
+            '@type',
           ],
           allowExternals: true,
         },

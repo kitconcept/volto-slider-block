@@ -163,6 +163,54 @@ config.blocks.blocksConfig.slider.extensions = {
 
 The block and slide schemas will be merged with the existing ones.
 
+## Data adapter
+
+The Teaser has a data adapter function that allows you to both tap into the changes in the settings and issue changes in other settings fields.
+This is valuable in the Teaser block because it saves an internal cache of the target element.
+If you select the target, these values are updated.
+When you update the target, by default these values remain, but you can issue another behavior.
+
+The data adapter function is defined in the block's setting `dataAdapter`.
+You can override it and add your own function, if required.
+The following is the default adapter.
+You should stick to this signature in your custom adapters.
+
+```js
+import { difference } from '@plone/volto/helpers';
+import { replaceItemOfArray } from '@plone/volto/helpers';
+
+export const SliderBlockDataAdapter = ({
+  block,
+  data,
+  id,
+  onChangeBlock,
+  value,
+}) => {
+  let dataSaved = {
+    ...data,
+    [id]: value,
+  };
+
+  if (id === 'slides') {
+    const diff = difference(value, data[id]);
+    const index = diff.findIndex((val) => val);
+    if (diff[index]?.href?.[0]) {
+      dataSaved = {
+        ...dataSaved,
+        slides: replaceItemOfArray(value, index, {
+          ...value[index],
+          title: diff[index].href[0].Title,
+          description: diff[index].href[0].Description,
+          head_title: diff[index].href[0].head_title,
+        }),
+      };
+    }
+  }
+
+  onChangeBlock(block, dataSaved);
+};
+```
+
 ## Fix for the limitation in `react-slick`
 
 The underlying library used in this add-on is `react-slick`. This library has a limitation when used in the Volto Blocks Engine that prevents to enclose properly the slides in the block wrapper.
