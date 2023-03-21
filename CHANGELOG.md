@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 4.2.0 (2023-03-21)
+
+### Feature
+
+- Use a `dataAdapter` for the slider instead of an `useEffect`. Fix the `image_scales` problem in edit. @sneridagh [#18](https://github.com/kitconcept/volto-export/pull/18)
+
+
 ## 4.1.0 (2023-01-26)
 
 ### Feature
