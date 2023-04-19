@@ -1,5 +1,6 @@
 import { difference } from '@plone/volto/helpers';
 import { replaceItemOfArray } from '@plone/volto/helpers';
+import { compact } from 'lodash';
 
 export const SliderBlockDataAdapter = ({
   block,
@@ -15,17 +16,27 @@ export const SliderBlockDataAdapter = ({
 
   if (id === 'slides') {
     const diff = difference(value, data[id]);
-    const index = diff.findIndex((val) => val);
-    if (diff[index]?.href?.[0]) {
-      dataSaved = {
-        ...dataSaved,
-        slides: replaceItemOfArray(value, index, {
-          ...value[index],
-          title: diff[index].href[0].Title,
-          description: diff[index].href[0].Description,
-          head_title: diff[index].href[0].head_title,
-        }),
-      };
+    // If we are moving two items in the array, the changeset is > 1
+    // then we do not do any sync
+    const isReordering = compact(diff).length > 1;
+    if (!isReordering) {
+      const index = diff.findIndex((val) => val);
+      if (diff[index]?.href?.[0]) {
+        dataSaved = {
+          ...dataSaved,
+          slides: replaceItemOfArray(value, index, {
+            ...value[index],
+            // Conditionally overwrite the values only if they are not already overridden
+            ...(!value[index].title && { title: diff[index].href[0].Title }),
+            ...(!value[index].description && {
+              description: diff[index].href[0].Description,
+            }),
+            ...(!value[index].head_title && {
+              head_title: diff[index].href[0].head_title,
+            }),
+          }),
+        };
+      }
     }
   }
 
