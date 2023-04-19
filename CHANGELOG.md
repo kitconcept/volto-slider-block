@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 4.2.1 (2023-04-19)
+
+### Bugfix
+
+- Fix adapter now that the ObjectListWidget works well in Volto @sneridagh [#19](https://github.com/kitconcept/volto-export/pull/19)
+
+
 ## 4.2.0 (2023-03-21)
 
 ### Feature
