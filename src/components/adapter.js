@@ -14,7 +14,7 @@ export const SliderBlockDataAdapter = ({
     [id]: value,
   };
 
-  if (id === 'slides') {
+  if (id === 'slides' && data[id]) {
     const diff = difference(value, data[id]);
     // If we are moving two items in the array, the changeset is > 1
     // then we do not do any sync
