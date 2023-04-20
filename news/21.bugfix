@@ -1,1 +1,0 @@
-Fix edge case in adapter when the object is null or undefined @sneridagh

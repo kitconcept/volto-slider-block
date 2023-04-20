@@ -8,6 +8,17 @@
 
 <!-- towncrier release notes start -->
 
+## 4.3.0 (2023-04-20)
+
+### Feature
+
+- New docker based testing infrastructure @sneridagh [#20](https://github.com/kitconcept/volto-slider-block/pull/20)
+
+### Bugfix
+
+- Fix edge case in adapter when the object is null or undefined @sneridagh [#21](https://github.com/kitconcept/volto-slider-block/pull/21)
+
+
 ## 4.2.1 (2023-04-19)
 
 ### Bugfix
