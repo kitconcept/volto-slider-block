@@ -23,10 +23,10 @@ Due to a change on how Volto handles defaults, this add-on changed the way of de
 
 This are the recommended versions:
 
-|Version   |Volto version |
-|----------|--------------|
-|>=3.0.0   |>=16.0.0-rc.2 |
-|<=2.1.0   |<=16.0.0-a50  |
+| Version | Volto version |
+| ------- | ------------- |
+| >=3.0.0 | >=16.0.0-rc.2 |
+| <=2.1.0 | <=16.0.0-a50  |
 
 ## Installation
 
@@ -218,16 +218,18 @@ The underlying library used in this add-on is `react-slick`. This library has a 
 To workaround it, it's required to anchor the width to an external element that has the same desired size than the block wrapper. This is set to the default Volto header using a CSS selector ('.container .header') which is the most common use case and can be overriden using the block setting: `referenceContainerQuery` like:
 
 ```js
-  config.blocks.blocksConfig.slider = {
-    referenceContainerQuery: '.container .header',
-  };
+config.blocks.blocksConfig.slider = {
+  referenceContainerQuery: '.container .header',
+};
 ```
 
 # Credits
 
-<img alt="Forschungszentrum Jülich" src="https://github.com/kitconcept/volto-blocks/raw/master/fz-juelich.svg" width="200px" />
+<img alt="Forschungszentrum Jülich" src="https://github.com/kitconcept/volto-slider-block/raw/master/fz-juelich.svg" width="200px" />
 
-The development of this plugin has been kindly sponsored by [Forschungszentrum Jülich](https://fz-juelich.de).
+<img alt="Deutsches Zentrum für Luft- und Raumfahrt" src="https://github.com/kitconcept/volto-slider-block/raw/master/dlr.svg" width="200px" />
+
+The development of this plugin has been kindly sponsored by [Forschungszentrum Jülich](https://fz-juelich.de) and the [German Aerospace Center (DLR)](https://dlr.de).
 
 # License
 
