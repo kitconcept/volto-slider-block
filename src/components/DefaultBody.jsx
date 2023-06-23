@@ -23,6 +23,10 @@ const messages = defineMessages({
     id: 'Source',
     defaultMessage: 'Source',
   },
+  ButtonText: {
+    id: 'Button Text',
+    defaultMessage: 'Button Text',
+  },
 });
 
 const DefaultImage = (props) => <img {...props} alt={props.alt || ''} />;
@@ -117,7 +121,10 @@ const SliderBody = ({
                 )}
                 <h2>{data?.nav_title || data?.title}</h2>
               </div>
-              <p>{data?.description}</p>
+              <p className="description">{data?.description}</p>
+              <Button tabIndex={'-1'}>
+                {data.buttonText || intl.formatMessage(messages.ButtonText)}
+              </Button>
             </div>
           </MaybeWrap>
         </div>

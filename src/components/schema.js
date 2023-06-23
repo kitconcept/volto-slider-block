@@ -40,6 +40,10 @@ const messages = defineMessages({
     id: 'Headtitle',
     defaultMessage: 'Headtitle',
   },
+  buttonText: {
+    id: 'Button text',
+    defaultMessage: 'Button text',
+  },
 });
 
 export const itemSchema = (props) =>
@@ -57,6 +61,7 @@ export const itemSchema = (props) =>
             'title',
             'description',
             'preview_image',
+            'buttonText',
           ],
         },
       ],
@@ -91,6 +96,9 @@ export const itemSchema = (props) =>
           widget: 'object_browser',
           mode: 'image',
           allowExternals: true,
+        },
+        buttonText: {
+          title: props.intl.formatMessage(messages.buttonText),
         },
       },
       required: [],
