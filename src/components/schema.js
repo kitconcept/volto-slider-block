@@ -44,6 +44,10 @@ const messages = defineMessages({
     id: 'Button text',
     defaultMessage: 'Button text',
   },
+  hideButton: {
+    id: 'Hide Button',
+    defaultMessage: 'Hide Button',
+  },
 });
 
 export const itemSchema = (props) =>
@@ -62,6 +66,7 @@ export const itemSchema = (props) =>
             'description',
             'preview_image',
             'buttonText',
+            'hideButton',
           ],
         },
       ],
@@ -99,6 +104,10 @@ export const itemSchema = (props) =>
         },
         buttonText: {
           title: props.intl.formatMessage(messages.buttonText),
+        },
+        hideButton: {
+          title: props.intl.formatMessage(messages.hideButton),
+          type: 'boolean',
         },
       },
       required: [],

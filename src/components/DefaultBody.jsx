@@ -122,9 +122,11 @@ const SliderBody = ({
                 <h2>{data?.nav_title || data?.title}</h2>
               </div>
               <p className="description">{data?.description}</p>
-              <Button tabIndex={'-1'}>
-                {data.buttonText || intl.formatMessage(messages.ButtonText)}
-              </Button>
+              {!data.hideButton && (
+                <Button tabIndex={'-1'}>
+                  {data.buttonText || intl.formatMessage(messages.ButtonText)}
+                </Button>
+              )}
             </div>
           </MaybeWrap>
         </div>
