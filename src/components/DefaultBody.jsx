@@ -24,8 +24,8 @@ const messages = defineMessages({
     defaultMessage: 'Source',
   },
   ButtonText: {
-    id: 'Button Text',
-    defaultMessage: 'Button Text',
+    id: 'Continue reading',
+    defaultMessage: 'Continue reading',
   },
 });
 
@@ -120,8 +120,8 @@ const SliderBody = ({
                   <span className="supertitle">{data?.head_title}</span>
                 )}
                 <h2>{data?.nav_title || data?.title}</h2>
+                <p className="description">{data?.description}</p>
               </div>
-              <p className="description">{data?.description}</p>
               {!data.hideButton && (
                 <Button tabIndex={'-1'}>
                   {data.buttonText || intl.formatMessage(messages.ButtonText)}
