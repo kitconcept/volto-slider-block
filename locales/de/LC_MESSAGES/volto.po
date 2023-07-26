@@ -22,6 +22,16 @@ msgid "Add item"
 msgstr "Element hinzufügen"
 
 #: components/schema
+# defaultMessage: Button text
+msgid "Button text"
+msgstr ""
+
+#: components/DefaultBody
+# defaultMessage: Continue reading
+msgid "Continue reading"
+msgstr "mehr erfahren"
+
+#: components/schema
 # defaultMessage: Description
 msgid "Description"
 msgstr "Beschreibung"
@@ -30,6 +40,11 @@ msgstr "Beschreibung"
 # defaultMessage: Headtitle
 msgid "Headtitle"
 msgstr "Überschrift"
+
+#: components/schema
+# defaultMessage: Hide Button
+msgid "Hide Button"
+msgstr "kein Button anzeigen"
 
 #: components/schema
 # defaultMessage: Image override

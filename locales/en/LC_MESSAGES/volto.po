@@ -17,6 +17,16 @@ msgid "Add item"
 msgstr ""
 
 #: components/schema
+# defaultMessage: Button text
+msgid "Button text"
+msgstr ""
+
+#: components/DefaultBody
+# defaultMessage: Continue reading
+msgid "Continue reading"
+msgstr ""
+
+#: components/schema
 # defaultMessage: Description
 msgid "Description"
 msgstr ""
@@ -24,6 +34,11 @@ msgstr ""
 #: components/schema
 # defaultMessage: Headtitle
 msgid "Headtitle"
+msgstr ""
+
+#: components/schema
+# defaultMessage: Hide Button
+msgid "Hide Button"
 msgstr ""
 
 #: components/schema
