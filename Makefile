@@ -24,8 +24,8 @@ YELLOW=`tput setaf 3`
 PLONE_VERSION=6
 VOLTO_VERSION=16.20.3
 
-ADDON_NAME='@kitconcept/volto-light-theme'
-ADDON_PATH='volto-light-theme'
+ADDON_NAME='@kitconcept/volto-slider-block'
+ADDON_PATH='volto-slider-block'
 COMPOSE_FILE=dockerfiles/docker-compose.yml
 ACCEPTANCE_COMPOSE=acceptance/docker-compose.yml
 CMD=CURRENT_DIR=${CURRENT_DIR} ADDON_NAME=${ADDON_NAME} ADDON_PATH=${ADDON_PATH} VOLTO_VERSION=${VOLTO_VERSION} PLONE_VERSION=${PLONE_VERSION} docker compose
