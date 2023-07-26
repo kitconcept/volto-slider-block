@@ -1,5 +1,6 @@
 node_modules
 build
+.changelog.draft
 
 # yarn 3
 .pnp.*
