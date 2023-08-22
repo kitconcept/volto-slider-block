@@ -7,7 +7,7 @@
 
 ![kitconcept GmbH](https://github.com/kitconcept/volto-blocks/raw/master/kitconcept.png)
 
-The Volto Slider Block allows editors to add sliders to a Volto page.
+The Volto Slider Block allows editors to add sliders to a Volto page. You can see it in action under [www.dlr.de](https://www.dlr.de/de) and [www.fz-juelich.de](https://www.fz-juelich.de/de).
 
 ## Screenshot
 
@@ -227,7 +227,7 @@ config.blocks.blocksConfig.slider = {
 
 <img alt="Forschungszentrum Jülich" src="https://github.com/kitconcept/volto-slider-block/raw/master/fz-juelich.svg" width="200px" />
 
-<img alt="Deutsches Zentrum für Luft- und Raumfahrt" src="https://github.com/kitconcept/volto-slider-block/raw/master/dlr.svg" width="200px" />
+<img alt="Deutsches Zentrum für Luft- und Raumfahrt" src="https://github.com/kitconcept/volto-slider-block/raw/master/dlr.svg" width="210px" />
 
 The development of this plugin has been kindly sponsored by [Forschungszentrum Jülich](https://fz-juelich.de) and the [German Aerospace Center (DLR)](https://dlr.de).
 
