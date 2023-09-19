@@ -59,7 +59,7 @@ msgstr "Elija un contenido existente como fuente para este elemento"
 #: components/schema
 # defaultMessage: Slider
 msgid "Slider"
-msgstr "Deslizador"
+msgstr "Slider"
 
 #: components/DefaultBody
 #: components/schema
