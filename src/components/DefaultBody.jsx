@@ -42,8 +42,7 @@ const SliderBody = ({
 
   const hasImageComponent = config.getComponent('Image').component;
   const Image = config.getComponent('Image').component || DefaultImage;
-  const defaultImageSrc =
-    href && flattenToAppURL(getTeaserImageURL({ href, image }));
+  const { openExternalLinkInNewTab } = config.settings;
 
   const handleClick = () => {
     openObjectBrowser({
@@ -98,15 +97,22 @@ const SliderBody = ({
             condition={!isEditMode}
             as={UniversalLink}
             href={href['@id']}
-            target={data.openLinkInNewTab ? '_blank' : null}
+            target={
+              data.openLinkInNewTab ||
+              (openExternalLinkInNewTab && !isInternalURL(href['@id']))
+                ? '_blank'
+                : null
+            }
             tabIndex="-1"
           >
-            {(href?.hasPreviewImage || image) && (
+            {(href?.hasPreviewImage || href.image_field || image) && (
               <div className="highlight-image-wrapper gradient">
                 <Image
-                  src={hasImageComponent ? href : defaultImageSrc}
+                  item={image || href}
+                  imageField={image ? image.image_field : href.image_field}
                   alt=""
                   loading="lazy"
+                  responsive={true}
                 />
               </div>
             )}

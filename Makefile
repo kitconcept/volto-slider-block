@@ -22,10 +22,10 @@ RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
 PLONE_VERSION=6
-VOLTO_VERSION=16.20.3
+VOLTO_VERSION=17.0.0-alpha.27
 
-ADDON_NAME='@kitconcept/volto-light-theme'
-ADDON_PATH='volto-light-theme'
+ADDON_NAME='@kitconcept/volto-slider-block'
+ADDON_PATH='volto-slider-block'
 COMPOSE_FILE=dockerfiles/docker-compose.yml
 ACCEPTANCE_COMPOSE=acceptance/docker-compose.yml
 CMD=CURRENT_DIR=${CURRENT_DIR} ADDON_NAME=${ADDON_NAME} ADDON_PATH=${ADDON_PATH} VOLTO_VERSION=${VOLTO_VERSION} PLONE_VERSION=${PLONE_VERSION} docker compose
@@ -75,6 +75,12 @@ dev: ## Develop the addon
 .PHONY: help
 help:		## Show this help.
 	@echo -e "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\x1b[36m\1\\x1b[m:\2/' | column -c2 -t -s :)"
+
+## Setup the local environment
+.PHONY: install
+install: ## Install the local environment, Cypress, build acceptance containers
+	yarn
+	make install-acceptance
 
 # Dev Helpers
 .PHONY: i18n
