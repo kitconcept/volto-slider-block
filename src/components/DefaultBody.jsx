@@ -1,9 +1,8 @@
 import React from 'react';
 import { useIntl, defineMessages } from 'react-intl';
-import { getTeaserImageURL } from '../helpers';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon, MaybeWrap, UniversalLink } from '@plone/volto/components';
 import { Input, Button, Message } from 'semantic-ui-react';
+import { isInternalURL } from '@plone/volto/helpers';
 import cx from 'classnames';
 import navTreeSVG from '@plone/volto/icons/nav.svg';
 import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
@@ -40,7 +39,6 @@ const SliderBody = ({
   const href = data.href?.[0];
   const image = data.preview_image?.[0];
 
-  const hasImageComponent = config.getComponent('Image').component;
   const Image = config.getComponent('Image').component || DefaultImage;
   const { openExternalLinkInNewTab } = config.settings;
 
