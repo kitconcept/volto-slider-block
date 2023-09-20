@@ -8,6 +8,18 @@
 
 <!-- towncrier release notes start -->
 
+## 5.0.0 (2023-09-20)
+
+### Breaking
+
+- Added compatibility with the Volto 17 Image component @sneridagh
+  If a external URL is provided, then the anchor is set to open in new window if `openExternalLinkInNewTab` from global settings is set @sneridagh [#28](https://github.com/kitconcept/volto-slider-block/pull/28)
+
+### Feature
+
+- Update docker environment @sneridagh [#23](https://github.com/kitconcept/volto-slider-block/pull/23)
+
+
 ## 4.3.0 (2023-04-20)
 
 ### Feature
