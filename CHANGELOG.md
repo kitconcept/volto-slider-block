@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 5.1.0 (2023-09-20)
+
+### Feature
+
+- Add adjustment option for the width of the slider container via CSS custom property. @sneridagh [#29](https://github.com/kitconcept/volto-slider-block/pull/29)
+
+
 ## 5.0.0 (2023-09-20)
 
 ### Breaking
