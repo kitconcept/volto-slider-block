@@ -24,9 +24,9 @@ context('Block Acceptance Tests', () => {
     cy.get('#toolbar-save').click();
   });
 
-  it.only('As editor I can add a Slider block and teaser another content', () => {
+  it('As editor I can add a Slider block and teaser another content', () => {
     cy.intercept('PATCH', '/**').as('save');
-    cy.intercept('GET', '/**/document').as('content');
+    cy.intercept('GET', `/**/*?expand*`).as('content');
 
     cy.visit('/document/edit');
     cy.addNewBlock('slider');
