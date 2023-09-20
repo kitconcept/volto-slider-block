@@ -8,7 +8,7 @@ export const SlidesWidthFix = ({ width }) => {
       {`
 #page-add .block.slider .slick-slider,
 #page-edit .block.slider .slick-slider {
-width: ${width}px !important;
+width: calc(${width}px - var(slider-block-edit-width-adjustment, 0px)) !important;
 max-width: 1440px !important;
 }`}
     </style>

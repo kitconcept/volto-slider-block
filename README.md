@@ -218,8 +218,17 @@ To workaround it, it's required to anchor the width to an external element that 
 
 ```js
 config.blocks.blocksConfig.slider = {
-  referenceContainerQuery: '.container .header',
+  referenceContainerQuery: 'body.has-sidebar .container .header',
 };
+```
+
+This fix has an option to adjust this width given a fixed value of pixels via a CSS custom property called `--slider-block-edit-width-adjustment`.
+So you can add it in your custom theme, as follows:
+
+```css
+:root {
+  --slider-block-edit-adjustment: 40px;
+}
 ```
 
 # Credits
