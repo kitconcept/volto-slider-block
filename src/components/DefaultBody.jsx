@@ -1,9 +1,8 @@
 import React from 'react';
 import { useIntl, defineMessages } from 'react-intl';
-import { getTeaserImageURL } from '../helpers';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon, MaybeWrap, UniversalLink } from '@plone/volto/components';
 import { Input, Button, Message } from 'semantic-ui-react';
+import { isInternalURL } from '@plone/volto/helpers';
 import cx from 'classnames';
 import navTreeSVG from '@plone/volto/icons/nav.svg';
 import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
@@ -40,10 +39,8 @@ const SliderBody = ({
   const href = data.href?.[0];
   const image = data.preview_image?.[0];
 
-  const hasImageComponent = config.getComponent('Image').component;
   const Image = config.getComponent('Image').component || DefaultImage;
-  const defaultImageSrc =
-    href && flattenToAppURL(getTeaserImageURL({ href, image }));
+  const { openExternalLinkInNewTab } = config.settings;
 
   const handleClick = () => {
     openObjectBrowser({
@@ -98,15 +95,22 @@ const SliderBody = ({
             condition={!isEditMode}
             as={UniversalLink}
             href={href['@id']}
-            target={data.openLinkInNewTab ? '_blank' : null}
+            target={
+              data.openLinkInNewTab ||
+              (openExternalLinkInNewTab && !isInternalURL(href['@id']))
+                ? '_blank'
+                : null
+            }
             tabIndex="-1"
           >
-            {(href?.hasPreviewImage || image) && (
+            {(href?.hasPreviewImage || href.image_field || image) && (
               <div className="highlight-image-wrapper gradient">
                 <Image
-                  src={hasImageComponent ? href : defaultImageSrc}
+                  item={image || href}
+                  imageField={image ? image.image_field : href.image_field}
                   alt=""
                   loading="lazy"
+                  responsive={true}
                 />
               </div>
             )}

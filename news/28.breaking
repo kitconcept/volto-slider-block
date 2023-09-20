@@ -1,0 +1,2 @@
+Added compatibility with the Volto 17 Image component @sneridagh
+If a external URL is provided, then the anchor is set to open in new window if `openExternalLinkInNewTab` from global settings is set @sneridagh

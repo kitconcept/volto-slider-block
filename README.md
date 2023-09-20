@@ -17,14 +17,13 @@ The Volto Slider Block allows editors to add sliders to a Volto page. You can se
 
 https://user-images.githubusercontent.com/486927/170819371-6284d8e7-e5df-4893-9dab-cd06b1054505.mov
 
-## Compatibility
+## Volto Compatibility
 
-Due to a change on how Volto handles defaults, this add-on changed the way of dealing with them, since the release of Volto 16.0.0 RC2.
-
-This are the recommended versions:
+These are the recommended versions:
 
 | Version | Volto version |
 | ------- | ------------- |
+| >=5.0.0 | >=17.0.0-alpha.27 |
 | >=3.0.0 | >=16.0.0-rc.2 |
 | <=2.1.0 | <=16.0.0-a50  |
 
