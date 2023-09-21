@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 5.1.1 (2023-09-21)
+
+### Bugfix
+
+- Fix typo in variable name @sneridagh [#30](https://github.com/kitconcept/volto-slider-block/pull/30)
+
+
 ## 5.1.0 (2023-09-20)
 
 ### Feature
