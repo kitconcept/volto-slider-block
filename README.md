@@ -7,7 +7,7 @@
 
 ![kitconcept GmbH](https://github.com/kitconcept/volto-blocks/raw/master/kitconcept.png)
 
-The Volto Slider Block allows editors to add sliders to a Volto page.
+The Volto Slider Block allows editors to add sliders to a Volto page. You can see it in action under [www.dlr.de](https://www.dlr.de/de) and [www.fz-juelich.de](https://www.fz-juelich.de/de).
 
 ## Screenshot
 
@@ -17,14 +17,13 @@ The Volto Slider Block allows editors to add sliders to a Volto page.
 
 https://user-images.githubusercontent.com/486927/170819371-6284d8e7-e5df-4893-9dab-cd06b1054505.mov
 
-## Compatibility
+## Volto Compatibility
 
-Due to a change on how Volto handles defaults, this add-on changed the way of dealing with them, since the release of Volto 16.0.0 RC2.
-
-This are the recommended versions:
+These are the recommended versions:
 
 | Version | Volto version |
 | ------- | ------------- |
+| >=5.0.0 | >=17.0.0-alpha.27 |
 | >=3.0.0 | >=16.0.0-rc.2 |
 | <=2.1.0 | <=16.0.0-a50  |
 
@@ -219,15 +218,24 @@ To workaround it, it's required to anchor the width to an external element that 
 
 ```js
 config.blocks.blocksConfig.slider = {
-  referenceContainerQuery: '.container .header',
+  referenceContainerQuery: 'body.has-sidebar .container .header',
 };
+```
+
+This fix has an option to adjust this width given a fixed value of pixels via a CSS custom property called `--slider-block-edit-width-adjustment`.
+So you can add it in your custom theme, as follows:
+
+```css
+:root {
+  --slider-block-edit-adjustment: 40px;
+}
 ```
 
 # Credits
 
 <img alt="Forschungszentrum Jülich" src="https://github.com/kitconcept/volto-slider-block/raw/master/fz-juelich.svg" width="200px" />
 
-<img alt="Deutsches Zentrum für Luft- und Raumfahrt" src="https://github.com/kitconcept/volto-slider-block/raw/master/dlr.svg" width="200px" />
+<img alt="Deutsches Zentrum für Luft- und Raumfahrt" src="https://github.com/kitconcept/volto-slider-block/raw/master/dlr.svg" width="230px" />
 
 The development of this plugin has been kindly sponsored by [Forschungszentrum Jülich](https://fz-juelich.de) and the [German Aerospace Center (DLR)](https://dlr.de).
 

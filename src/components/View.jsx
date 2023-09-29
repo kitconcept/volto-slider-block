@@ -44,7 +44,7 @@ const SliderView = (props) => {
   const {
     className,
     data,
-    isEditMode,
+    isEditMode = false,
     block,
     openObjectBrowser,
     onChangeBlock,
@@ -63,6 +63,26 @@ const SliderView = (props) => {
   }
 
   const [headerNode, setHeaderNode] = React.useState(null);
+
+  React.useEffect(() => {
+    // Unfortunately, we need to go with this ugly hack above the
+    // dimensions hack for make the slide width work in edit mode as
+    // we want it.
+    // The reason is behind how React Portals work and the timing
+    // around when they are updated.
+    // What happens is that when the edit route kicks in, this
+    // component renders and checks for the size of the element slightly
+    // before the Portal kicks in and renders itself, then the sidebar is
+    // rendered with its dimensions and pushes the rest to its right position.
+    // When this happens is late, and the dimensions have been calculated already
+    // thus the dimensions are wrong (they are the ones before the portal kicks
+    // is, so they are wider than expected).
+    if (isEditMode) {
+      setTimeout(() => {
+        window.scroll(0, 1);
+      }, 100);
+    }
+  }, [isEditMode]);
 
   React.useEffect(() => {
     setHeaderNode(

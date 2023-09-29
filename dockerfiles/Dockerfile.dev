@@ -7,6 +7,9 @@ ARG ADDON_PATH
 
 COPY --chown=node:node package.json /app/src/addons/${ADDON_PATH}/
 
+# Copy linter / prettier configs
+COPY --chown=node:node .eslintignore* .prettierignore* /app/
+
 RUN <<EOT
     /setupAddon
     yarn install --network-timeout 1000000
