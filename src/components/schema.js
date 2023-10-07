@@ -85,6 +85,7 @@ export const itemSchema = (props) =>
         },
         description: {
           title: props.intl.formatMessage(messages.description),
+          widget: 'textarea',
         },
         preview_image: {
           title: props.intl.formatMessage(messages.imageOverride),
