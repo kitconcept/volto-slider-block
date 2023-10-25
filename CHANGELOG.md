@@ -8,6 +8,18 @@
 
 <!-- towncrier release notes start -->
 
+## 5.2.0 (2023-10-25)
+
+### Feature
+
+- Add Spanish translation @macagua [#25](https://github.com/kitconcept/volto-slider-block/pull/25)
+
+### Bugfix
+
+- Fix description field to use a textarea widget. @iFlameing [#31](https://github.com/kitconcept/volto-slider-block/pull/31)
+- Fix a11y issues @ichim-david @sneridagh [#34](https://github.com/kitconcept/volto-slider-block/pull/34)
+
+
 ## 5.1.1 (2023-09-21)
 
 ### Bugfix
