@@ -78,3 +78,16 @@
     flex-direction: column;
   }
 }
+
+// a11y hide the ones that are not visible
+.slick-slide {
+  visibility: hidden;
+
+  &:not(.slick-cloned) .slide-visible {
+    visibility: visible;
+  }
+}
+
+.slick-active {
+  visibility: visible;
+}

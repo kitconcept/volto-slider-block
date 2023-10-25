@@ -25,6 +25,7 @@ const PrevArrow = ({ className, style, onClick }) => (
     className={className}
     style={{ ...style, display: 'block' }}
     onClick={onClick}
+    aria-label="previous"
   >
     <Icon name={leftArrowSVG} size="48px" />
   </button>
@@ -35,6 +36,7 @@ const NextArrow = ({ className, style, onClick }) => (
     className={className}
     style={{ ...style, display: 'block' }}
     onClick={onClick}
+    aria-label="next"
   >
     <Icon name={rightArrowSVG} size="48px" />
   </button>
@@ -52,6 +54,11 @@ const SliderView = (props) => {
     setSlideIndex,
   } = props;
   const intl = useIntl();
+
+  // These are the local state in case of view mode
+  // The ones that control the edit need to be above since they have
+  // to be drilled down to here AND to the sidebar
+  const [slideViewIndex, setSlideViewIndex] = React.useState(0);
 
   const sliderRef = React.useRef();
 
@@ -120,26 +127,28 @@ const SliderView = (props) => {
             // This syncs the current slide with the SliderContext state
             // responding to the slide change event from the slider itself
             // (the dots or the arrows)
-            // There's also the option of doing it before instead than after:
-            // beforeChange={(current, next) => setSlideIndex(next)}
             afterChange={(current) => isEditMode && setSlideIndex(current)}
+            beforeChange={(current) => setSlideViewIndex(current)}
           >
             {data.slides &&
-              data.slides.map((item, index) => (
-                <div key={item['@id']}>
-                  <Body
-                    {...props}
-                    key={item['@id']}
-                    data={item}
-                    isEditMode={isEditMode}
-                    dataBlock={data}
-                    index={index}
-                    block={block}
-                    openObjectBrowser={openObjectBrowser}
-                    onChangeBlock={onChangeBlock}
-                  />
-                </div>
-              ))}
+              data.slides.map((item, index) => {
+                return (
+                  <div key={item['@id']}>
+                    <Body
+                      {...props}
+                      key={item['@id']}
+                      data={item}
+                      isEditMode={isEditMode}
+                      dataBlock={data}
+                      index={index}
+                      block={block}
+                      openObjectBrowser={openObjectBrowser}
+                      onChangeBlock={onChangeBlock}
+                      isActive={slideViewIndex === index}
+                    />
+                  </div>
+                );
+              })}
           </Slider>
         )}
       </div>

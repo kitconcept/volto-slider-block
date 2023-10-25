@@ -116,9 +116,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone/volto-testing@npm:4.0.0-alpha.1":
-  version: 4.0.0-alpha.1
-  resolution: "@plone/volto-testing@npm:4.0.0-alpha.1"
+"@plone/volto-testing@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@plone/volto-testing@npm:4.0.0"
   dependencies:
     "@testing-library/cypress": 9.0.0
     "@testing-library/jest-dom": 5.16.4
@@ -127,7 +127,7 @@ __metadata:
     cypress: 13.1.0
     cypress-axe: 1.5.0
     cypress-file-upload: 5.0.8
-  checksum: 576d99915ef87fbbfd68c4669ea8354866a94eade1662780d156ca5cb3baff6215123fb3483d1da9e36d98ceb3086ab46164070f43f1a8f6a392b035c21d2fe0
+  checksum: ce4f3149177e3314cc6cff7cfad03637dde512cc5f4a689fb43e88f56b2aadc93c9b8283092a9b40139d4846e0f741f20a080405bfde7706873067219fec1a4d
   languageName: node
   linkType: hard
 
@@ -2196,7 +2196,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@plone/volto-testing": 4.0.0-alpha.1
+    "@plone/volto-testing": ^4.0.0
   languageName: unknown
   linkType: soft
 
