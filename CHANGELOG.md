@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 5.2.1 (2023-11-27)
+
+### Bugfix
+
+- Renamed the German Translation of the Slider Block from "Schieberegler" into "Slider" @Molochem [#36](https://github.com/kitconcept/volto-slider-block/pull/36)
+
 ## 5.2.0 (2023-10-25)
 
 ### Feature
