@@ -135,6 +135,7 @@ const SliderView = (props) => {
               {scrollSnaps.map((_, index) => (
                 <DotButton
                   key={index}
+                  index={index}
                   onClick={() => scrollTo(index)}
                   className={'embla__dot'.concat(
                     index === selectedIndex ? ' embla__dot--selected' : '',
