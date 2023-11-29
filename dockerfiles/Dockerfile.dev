@@ -9,6 +9,7 @@ COPY --chown=node:node package.json /app/src/addons/${ADDON_PATH}/
 
 # Copy linter / prettier configs
 COPY --chown=node:node .eslintignore* .prettierignore* /app/
+COPY --chown=node:node .eslintrc-patch.js /app/.eslintrc.js
 
 RUN <<EOT
     /setupAddon
