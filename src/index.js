@@ -16,7 +16,6 @@ const applyConfig = (config) => {
     restricted: false,
     mostUsed: true,
     sidebarTab: 1,
-    referenceContainerQuery: 'body.has-sidebar .container .header',
     dataAdapter: SliderBlockDataAdapter,
   };
   return config;

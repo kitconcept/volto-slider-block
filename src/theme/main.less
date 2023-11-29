@@ -34,17 +34,17 @@
   position: absolute;
   z-index: 10;
   width: 50px;
-  height: calc(var(--slider-container-width) * 9 / 16);
+  // Since we are forcing the aspect ratio, if we know the slider container width (we do)
+  // (we are injecting the CSS property in the main slider wrapper)
+  // we can infer the height of the image, by using:
+  height: calc(var(--slider-container-width) * 1 / @slider-images-aspect-ratio);
   padding: 0;
   border: 0;
   margin: 0;
   -webkit-appearance: none;
-  // Equal to the space we give at the bottom to place the buttons
-  // height: calc(100% - $spacing-xlarge);
   background-color: rgba(0, 0, 0, 0.15);
   color: #fff;
   cursor: pointer;
-  // border: 2px solid red;
   opacity: 0;
   text-decoration: none;
   touch-action: manipulation;
@@ -66,6 +66,7 @@
 
 .slider-button-next {
   right: 0;
+  // In case you want to remove the buttons from the mobile view
   // @media only screen and (max-width: $computer-width) {
   //   display: none !important;
   // }
