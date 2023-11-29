@@ -34,7 +34,7 @@ const SliderView = (props) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
 
-  const [emblaRef, emblaApi] = useEmblaCarousel();
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) {
