@@ -109,16 +109,16 @@ const SliderView = (props) => {
         )}
         {data.slides?.length > 0 && (
           <>
-            <div className="embla">
+            <div className="slider-wrapper">
               <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
               <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
 
-              <div className="embla__viewport" ref={emblaRef}>
-                <div className="embla__container">
+              <div className="slider-viewport" ref={emblaRef}>
+                <div className="slider-container">
                   {data.slides &&
                     data.slides.map((item, index) => {
                       return (
-                        <div key={item['@id']} className="embla__slide">
+                        <div key={item['@id']} className="slider-slide">
                           <Body
                             {...props}
                             key={item['@id']}
@@ -137,14 +137,15 @@ const SliderView = (props) => {
                 </div>
               </div>
             </div>
-            <div className="embla__dots">
+
+            <div className="slider-dots">
               {scrollSnaps.map((_, index) => (
                 <DotButton
                   key={index}
                   index={index}
                   onClick={() => scrollTo(index)}
-                  className={'embla__dot'.concat(
-                    index === selectedIndex ? ' embla__dot--selected' : '',
+                  className={'slider-dot'.concat(
+                    index === selectedIndex ? ' slider-dot--selected' : '',
                   )}
                 />
               ))}

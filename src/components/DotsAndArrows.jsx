@@ -47,25 +47,3 @@ export const NextButton = (props) => {
     </button>
   );
 };
-
-const PrevArrow = ({ className, style, onClick }) => (
-  <button
-    className={className}
-    style={{ ...style, display: 'block' }}
-    onClick={onClick}
-    aria-label="previous"
-  >
-    <Icon name={leftArrowSVG} size="48px" />
-  </button>
-);
-
-const NextArrow = ({ className, style, onClick }) => (
-  <button
-    className={className}
-    style={{ ...style, display: 'block' }}
-    onClick={onClick}
-    aria-label="next"
-  >
-    <Icon name={rightArrowSVG} size="48px" />
-  </button>
-);
