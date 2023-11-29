@@ -89,9 +89,16 @@ const SliderView = (props) => {
     }
   }, [slideIndex, scrollTo, isEditMode]);
 
+  const sliderContainerWidth = emblaApi
+    ?.rootNode()
+    .getBoundingClientRect().width;
+
   return (
     <>
-      <div className={cx('block slider', className)}>
+      <div
+        className={cx('block slider', className)}
+        style={{ '--slider-container-width': `${sliderContainerWidth}px` }}
+      >
         {(data.slides?.length === 0 || !data.slides) && isEditMode && (
           <Message>
             <div className="teaser-item default">
@@ -103,6 +110,9 @@ const SliderView = (props) => {
         {data.slides?.length > 0 && (
           <>
             <div className="embla">
+              <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
+              <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
+
               <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
                   {data.slides &&
@@ -125,10 +135,6 @@ const SliderView = (props) => {
                       );
                     })}
                 </div>
-              </div>
-              <div className="embla__buttons">
-                <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
-                <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
               </div>
             </div>
             <div className="embla__dots">

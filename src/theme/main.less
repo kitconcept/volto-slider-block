@@ -13,7 +13,11 @@
 }
 
 .embla {
+  position: relative;
   overflow: hidden;
+}
+
+.embla__viewport {
 }
 
 .embla__container {
@@ -25,16 +29,39 @@
   flex: 0 0 100%;
 }
 
-.embla__button {
-  display: inline-flex;
+.slider-button {
+  position: absolute;
+  z-index: 10;
+  width: 50px;
+  height: calc(var(--slider-container-width) * 9 / 16);
   padding: 0;
   border: 0;
   margin: 0;
   -webkit-appearance: none;
-  background-color: transparent;
+  // Equal to the space we give at the bottom to place the buttons
+  // height: calc(100% - $spacing-xlarge);
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #fff;
   cursor: pointer;
+  // border: 2px solid red;
+  opacity: 0;
   text-decoration: none;
   touch-action: manipulation;
+  transition: opacity 0.2s ease-in;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.slider-button-prev {
+}
+
+.slider-button-next {
+  right: 0;
+  // @media only screen and (max-width: $computer-width) {
+  //   display: none !important;
+  // }
 }
 
 .embla__buttons {
