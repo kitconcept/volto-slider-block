@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 6.0.0-alpha.0 (2023-11-30)
+
+### Breaking
+
+- Change the underlying library from react-slick to embla-carousel-react @sneridagh
+  See Upgrade Guide section in README [#37](https://github.com/kitconcept/volto-slider-block/pull/37)
+
 ## 5.2.1 (2023-11-27)
 
 ### Bugfix
