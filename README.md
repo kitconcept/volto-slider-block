@@ -63,6 +63,31 @@ yarn start
 
 Go to http://localhost:3000, login, create a new page. The slider block will show up in the Volto blocks chooser.
 
+## Upgrade Guide
+
+### `volto-slider-block` 6.0.0
+
+The underlying library used by this block has been changed.
+Now it uses [Embla Caroussel](https://www.embla-carousel.com).
+Embla Caroussel has a similar API and has all the features that `react-slick` had.
+Embla is more modern and supported, uses hooks to configure itself and it's extensible using plugins.
+It solves all the problems that `react-slick` had, specially in the simplification of the containers and wrappers, and the way it handles the CSS transformations and the width of the elements.
+
+If you've made any CSS customization, the classNames changed, so you'll need to update the CSS following this table.
+
+| Old className   | New className    |
+| --------------- | ---------------- |
+| slick-slider    | slider-wrapper   |
+| slick-list      | slider-viewport  |
+| slick-track     | slider-container |
+| slick-slide     | slider-slide     |
+| slick-arrow     | slider-button    |
+| slick-prev      | slider-button-prev |
+| slick-next      | slider-slide-next  |
+| slick-next      | slider-slide-next  |
+| slick-dots      | slider-dots      |
+| slick-dot       | slider-dot       |
+
 ## Customization
 
 You can use a Volto `schemaEnhancer` to modify the existing block schema. The block also can be extended using Volto's block variations.
@@ -208,27 +233,6 @@ export const SliderBlockDataAdapter = ({
 
   onChangeBlock(block, dataSaved);
 };
-```
-
-## Fix for the limitation in `react-slick`
-
-The underlying library used in this add-on is `react-slick`. This library has a limitation when used in the Volto Blocks Engine that prevents to enclose properly the slides in the block wrapper.
-
-To workaround it, it's required to anchor the width to an external element that has the same desired size than the block wrapper. This is set to the default Volto header using a CSS selector ('.container .header') which is the most common use case and can be overriden using the block setting: `referenceContainerQuery` like:
-
-```js
-config.blocks.blocksConfig.slider = {
-  referenceContainerQuery: 'body.has-sidebar .container .header',
-};
-```
-
-This fix has an option to adjust this width given a fixed value of pixels via a CSS custom property called `--slider-block-edit-width-adjustment`.
-So you can add it in your custom theme, as follows:
-
-```css
-:root {
-  --slider-block-edit-adjustment: 40px;
-}
 ```
 
 # Credits

@@ -22,7 +22,7 @@ RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
 PLONE_VERSION=6
-VOLTO_VERSION=17.2.0
+VOLTO_VERSION=17.6.0
 
 ADDON_NAME='@kitconcept/volto-slider-block'
 ADDON_PATH='volto-slider-block'

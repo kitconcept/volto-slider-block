@@ -1,12 +1,109 @@
-@import (less) '~slick-carousel/slick/slick.css';
-@import (less) '~slick-carousel/slick/slick-theme.css';
-
 @toolbarWidth: 80px;
 @sidebarWidth: 375px;
 @collapsedWidth: 20px;
 
 @slider-images-aspect-ratio: var(--slider-images-aspect-ratio, 16/9);
 @slider-images-object-position: var(--slider-images-object-position, top left);
+
+:root {
+  --brand-primary: rgb(47, 112, 193);
+  --brand-secondary: rgb(116, 97, 195);
+  --slider-dots-selected-bg: #000;
+  --slider-dots-bg: #ececec;
+}
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-viewport {
+  margin-bottom: 24px;
+}
+
+.slider-container {
+  display: flex;
+}
+
+.slider-slide {
+  min-width: 0;
+  flex: 0 0 100%;
+}
+
+.slider-button {
+  position: absolute;
+  z-index: 10;
+  width: 50px;
+  // Since we are forcing the aspect ratio, if we know the slider container width (we do)
+  // (we are injecting the CSS property in the main slider wrapper)
+  // we can infer the height of the image, by using:
+  height: calc(var(--slider-container-width) * 1 / @slider-images-aspect-ratio);
+  padding: 0;
+  border: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: opacity 0.2s ease-in;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:disabled {
+    svg {
+      opacity: 0.3;
+    }
+  }
+}
+
+.slider-button-prev {
+}
+
+.slider-button-next {
+  right: 0;
+  // In case you want to remove the buttons from the mobile view
+  // @media only screen and (max-width: $computer-width) {
+  //   display: none !important;
+  // }
+}
+
+.slider-dot {
+  display: flex;
+  width: 46px;
+  height: 20px;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  margin-right: 13px;
+  -webkit-appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  touch-action: manipulation;
+}
+
+.slider-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-dot:after {
+  width: 100%;
+  height: 6px;
+  background: var(--slider-dots-bg);
+  content: '';
+}
+
+.slider-dot--selected:after {
+  background: var(--slider-dots-selected-bg);
+}
 
 .block.slider {
   &:not(.inner):not([role='presentation']) {
