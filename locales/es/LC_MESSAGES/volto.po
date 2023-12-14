@@ -30,6 +30,11 @@ msgstr "Añadir elemento"
 msgid "Description"
 msgstr "Descripción"
 
+#: components/DotsAndArrows
+# defaultMessage: Go to slide
+msgid "Go to slide"
+msgstr ""
+
 #: components/schema
 # defaultMessage: Headtitle
 msgid "Headtitle"
@@ -50,11 +55,21 @@ msgstr "Elemento"
 msgid "Items"
 msgstr "Elementos"
 
+#: components/DotsAndArrows
+# defaultMessage: Next slide
+msgid "Next slide"
+msgstr ""
+
 #: components/DefaultBody
 #: components/View
 # defaultMessage: Please choose an existing content as source for this element
 msgid "Please choose an existing content as source for this element"
 msgstr "Elija un contenido existente como fuente para este elemento"
+
+#: components/DotsAndArrows
+# defaultMessage: Previous slide
+msgid "Previous slide"
+msgstr ""
 
 #: components/schema
 # defaultMessage: Slider
