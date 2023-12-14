@@ -29,7 +29,7 @@ msgstr "Beschreibung"
 #: components/DotsAndArrows
 # defaultMessage: Go to slide
 msgid "Go to slide"
-msgstr ""
+msgstr "Gehe zu Slide"
 
 #: components/schema
 # defaultMessage: Headtitle
@@ -54,7 +54,7 @@ msgstr "Elemente"
 #: components/DotsAndArrows
 # defaultMessage: Next slide
 msgid "Next slide"
-msgstr ""
+msgstr "Nächster Slide"
 
 #: components/DefaultBody
 #: components/View
@@ -65,7 +65,7 @@ msgstr "Bitte wählen sie einen existierenden Inhalt als Quelle für dieses Elem
 #: components/DotsAndArrows
 # defaultMessage: Previous slide
 msgid "Previous slide"
-msgstr ""
+msgstr "Vorheriger Slide"
 
 #: components/DefaultBody
 # defaultMessage: Select target
