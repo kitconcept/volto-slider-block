@@ -110,8 +110,12 @@ const SliderView = (props) => {
         {data.slides?.length > 0 && (
           <>
             <div className="slider-wrapper">
-              <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
-              <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
+              {!data.hideArrows && (
+                <>
+                  <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
+                  <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
+                </>
+              )}
 
               <div className="slider-viewport" ref={emblaRef}>
                 <div className="slider-container">
