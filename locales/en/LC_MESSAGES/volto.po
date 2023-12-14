@@ -62,15 +62,19 @@ msgstr ""
 msgid "Previous slide"
 msgstr ""
 
+#: components/DefaultBody
+# defaultMessage: Select target
+msgid "Select target"
+msgstr ""
+
 #: components/schema
 # defaultMessage: Slider
 msgid "Slider"
 msgstr ""
 
-#: components/DefaultBody
 #: components/schema
-# defaultMessage: Source
-msgid "Source"
+# defaultMessage: Target
+msgid "Target"
 msgstr ""
 
 #: components/schema

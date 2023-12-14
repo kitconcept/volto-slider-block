@@ -4,9 +4,9 @@ import { mergeSchemas } from '../helpers';
 import { v4 as uuid } from 'uuid';
 
 const messages = defineMessages({
-  Source: {
-    id: 'Source',
-    defaultMessage: 'Source',
+  Target: {
+    id: 'Target',
+    defaultMessage: 'Target',
   },
   Slider: {
     id: 'Slider',
@@ -63,7 +63,7 @@ export const itemSchema = (props) =>
 
       properties: {
         href: {
-          title: props.intl.formatMessage(messages.Source),
+          title: props.intl.formatMessage(messages.Target),
           widget: 'object_browser',
           mode: 'link',
           selectedItemAttrs: [
