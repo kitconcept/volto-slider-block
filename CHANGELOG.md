@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 6.0.0-alpha.1 (2023-12-15)
+
+### Bugfix
+
+- Fix a11y issues @sneridagh [#39](https://github.com/kitconcept/volto-slider-block/pull/39)
+
 ## 6.0.0-alpha.0 (2023-11-30)
 
 ### Breaking
