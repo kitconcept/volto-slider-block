@@ -25,6 +25,11 @@ msgstr "Item toevoegen"
 msgid "Description"
 msgstr "Omschrijving"
 
+#: components/DotsAndArrows
+# defaultMessage: Go to slide
+msgid "Go to slide"
+msgstr ""
+
 #: components/schema
 # defaultMessage: Headtitle
 msgid "Headtitle"
@@ -45,22 +50,36 @@ msgstr "Item"
 msgid "Items"
 msgstr "Items"
 
+#: components/DotsAndArrows
+# defaultMessage: Next slide
+msgid "Next slide"
+msgstr ""
+
 #: components/DefaultBody
 #: components/View
 # defaultMessage: Please choose an existing content as source for this element
 msgid "Please choose an existing content as source for this element"
 msgstr "Kies een bestaand item als bron voor dit element"
 
+#: components/DotsAndArrows
+# defaultMessage: Previous slide
+msgid "Previous slide"
+msgstr ""
+
+#: components/DefaultBody
+# defaultMessage: Select target
+msgid "Select target"
+msgstr ""
+
 #: components/schema
 # defaultMessage: Slider
 msgid "Slider"
 msgstr "Slider"
 
-#: components/DefaultBody
 #: components/schema
-# defaultMessage: Source
-msgid "Source"
-msgstr "Bron"
+# defaultMessage: Target
+msgid "Target"
+msgstr ""
 
 #: components/schema
 # defaultMessage: Title

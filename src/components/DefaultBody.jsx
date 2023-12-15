@@ -18,9 +18,9 @@ const messages = defineMessages({
     id: 'moreInfo',
     defaultMessage: 'More info',
   },
-  source: {
-    id: 'Source',
-    defaultMessage: 'Source',
+  selectTarget: {
+    id: 'Select target',
+    defaultMessage: 'Select target',
   },
 });
 
@@ -83,7 +83,7 @@ const SliderBody = ({
                 </Button>
               </Button.Group>
               <Input
-                placeholder={`${intl.formatMessage(messages.source)}...`}
+                placeholder={intl.formatMessage(messages.selectTarget)}
                 onClick={handleClick}
                 onFocus={(e) => e.target.blur()}
               />

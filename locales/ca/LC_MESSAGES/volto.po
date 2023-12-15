@@ -1,45 +1,47 @@
+# Víctor Fernández de Alba <victor a plone.org>, 2023
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-27T19:30:59.079Z\n"
-"PO-Revision-Date: 2016-10-22 16:41-0500\n"
-"Last-Translator: German <plone-i18n@lists.sf.net>\n"
-"Language: de\n"
-"Language-Team: German <plone-i18n@lists.sf.net>\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"PO-Revision-Date: 2019-07-02 00:11+0200\n"
+"Last-Translator: Víctor Fernández de Alba <victor@plone.org>\n"
+"Language: \n"
+"Language-Team: Català <plone-cat@lists.plone.org>\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
-"Language-Code: de\n"
-"Language-Name: Deutsch\n"
-"Preferred-Encodings: utf-8 latin1\n"
-"X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
+"Language-Code: ca\n"
+"Language-Name: Catalan\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: plone\n"
+"X-Is-Fallback-For: ca-ad ca-es ca-fr ca-it\n"
 
 #: components/schema
 # defaultMessage: Add item
 msgid "Add item"
-msgstr "Element hinzufügen"
+msgstr "Afegir element"
 
 #: components/schema
 # defaultMessage: Description
 msgid "Description"
-msgstr "Beschreibung"
+msgstr "Descripció"
 
 #: components/DotsAndArrows
 # defaultMessage: Go to slide
 msgid "Go to slide"
-msgstr "Gehe zu Slide"
+msgstr "Vés a slide"
 
 #: components/schema
 # defaultMessage: Headtitle
 msgid "Headtitle"
-msgstr "Überschrift"
+msgstr "Títol de capçalera"
 
 #: components/schema
 # defaultMessage: Image override
 msgid "Image override"
-msgstr "Bild überschreiben"
+msgstr "Imatge"
 
 #: components/schema
 # defaultMessage: Item
@@ -49,28 +51,28 @@ msgstr "Element"
 #: components/schema
 # defaultMessage: Items
 msgid "Items"
-msgstr "Elemente"
+msgstr "Elements"
 
 #: components/DotsAndArrows
 # defaultMessage: Next slide
 msgid "Next slide"
-msgstr "Nächster Slide"
+msgstr "Següent slide"
 
 #: components/DefaultBody
 #: components/View
 # defaultMessage: Please choose an existing content as source for this element
 msgid "Please choose an existing content as source for this element"
-msgstr "Bitte wählen sie einen existierenden Inhalt als Quelle für dieses Element aus"
+msgstr "Si us plau, escolleixi un contingut existent per aquest element"
 
 #: components/DotsAndArrows
 # defaultMessage: Previous slide
 msgid "Previous slide"
-msgstr "Vorheriger Slide"
+msgstr "Anterior slide"
 
 #: components/DefaultBody
 # defaultMessage: Select target
 msgid "Select target"
-msgstr "Ziel"
+msgstr "Selecciona un contingut"
 
 #: components/schema
 # defaultMessage: Slider
@@ -80,14 +82,14 @@ msgstr "Slider"
 #: components/schema
 # defaultMessage: Target
 msgid "Target"
-msgstr "Ziel"
+msgstr ""
 
 #: components/schema
 # defaultMessage: Title
 msgid "Title"
-msgstr "Titel"
+msgstr "Títol"
 
 #: components/DefaultBody
 # defaultMessage: More info
 msgid "moreInfo"
-msgstr "Mehr Info"
+msgstr "Més informació"

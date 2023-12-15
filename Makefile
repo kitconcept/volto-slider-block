@@ -22,7 +22,7 @@ RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
 PLONE_VERSION=6
-VOLTO_VERSION=17.6.0
+VOLTO_VERSION=17.7.0
 
 ADDON_NAME='@kitconcept/volto-slider-block'
 ADDON_PATH='volto-slider-block'
@@ -56,6 +56,8 @@ build-live: ## Build Addon live
 
 .PHONY: build-addon
 build-addon: ## Build Addon dev
+	@echo "$(GREEN)==> Removing node_modules $(RESET)"
+	rm -rf node_modules
 	@echo "$(GREEN)==> Build Addon development container $(RESET)"
 	${DEV_COMPOSE} build addon-dev
 

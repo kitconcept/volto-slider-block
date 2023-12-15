@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-11-24T15:56:27.444Z\n"
+"POT-Creation-Date: 2023-12-14T11:35:27.943Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -21,6 +21,11 @@ msgstr ""
 #: components/schema
 # defaultMessage: Description
 msgid "Description"
+msgstr ""
+
+#: components/DotsAndArrows
+# defaultMessage: Go to slide
+msgid "Go to slide"
 msgstr ""
 
 #: components/schema
@@ -43,10 +48,25 @@ msgstr ""
 msgid "Items"
 msgstr ""
 
+#: components/DotsAndArrows
+# defaultMessage: Next slide
+msgid "Next slide"
+msgstr ""
+
 #: components/DefaultBody
 #: components/View
 # defaultMessage: Please choose an existing content as source for this element
 msgid "Please choose an existing content as source for this element"
+msgstr ""
+
+#: components/DotsAndArrows
+# defaultMessage: Previous slide
+msgid "Previous slide"
+msgstr ""
+
+#: components/DefaultBody
+# defaultMessage: Select target
+msgid "Select target"
 msgstr ""
 
 #: components/schema
@@ -54,10 +74,9 @@ msgstr ""
 msgid "Slider"
 msgstr ""
 
-#: components/DefaultBody
 #: components/schema
-# defaultMessage: Source
-msgid "Source"
+# defaultMessage: Target
+msgid "Target"
 msgstr ""
 
 #: components/schema
