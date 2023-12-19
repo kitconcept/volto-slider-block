@@ -96,7 +96,9 @@ const SliderView = (props) => {
   return (
     <>
       <div
-        className={cx('block slider', className)}
+        className={cx('block slider', className, {
+          'single-slide': data.slides?.length === 1,
+        })}
         style={{ '--slider-container-width': `${sliderContainerWidth}px` }}
       >
         {(data.slides?.length === 0 || !data.slides) && isEditMode && (
