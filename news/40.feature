@@ -1,0 +1,1 @@
+Add `single-slide` classname to improve styling @danalvrz
