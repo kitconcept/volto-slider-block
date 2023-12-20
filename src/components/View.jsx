@@ -96,9 +96,7 @@ const SliderView = (props) => {
   return (
     <>
       <div
-        className={cx('block slider', className, {
-          'single-slide': data.slides?.length === 1,
-        })}
+        className={cx('block slider', className)}
         style={{ '--slider-container-width': `${sliderContainerWidth}px` }}
       >
         {(data.slides?.length === 0 || !data.slides) && isEditMode && (
@@ -112,7 +110,7 @@ const SliderView = (props) => {
         {data.slides?.length > 0 && (
           <>
             <div className="slider-wrapper">
-              {!data.hideArrows && (
+              {!data.hideArrows && data.slides?.length > 1 && (
                 <>
                   <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
                   <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
@@ -143,7 +141,7 @@ const SliderView = (props) => {
                 </div>
               </div>
             </div>
-
+            {data.slides?.length > 1 && (
             <div className="slider-dots">
               {scrollSnaps.map((_, index) => (
                 <DotButton
@@ -155,7 +153,7 @@ const SliderView = (props) => {
                   )}
                 />
               ))}
-            </div>
+            </div>)}
           </>
         )}
       </div>
