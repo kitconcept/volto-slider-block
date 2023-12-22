@@ -110,7 +110,7 @@ const SliderView = (props) => {
         {data.slides?.length > 0 && (
           <>
             <div className="slider-wrapper">
-              {!data.hideArrows && (
+              {!data.hideArrows && data.slides?.length > 1 && (
                 <>
                   <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
                   <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
@@ -141,19 +141,20 @@ const SliderView = (props) => {
                 </div>
               </div>
             </div>
-
-            <div className="slider-dots">
-              {scrollSnaps.map((_, index) => (
-                <DotButton
-                  key={index}
-                  index={index}
-                  onClick={() => scrollTo(index)}
-                  className={'slider-dot'.concat(
-                    index === selectedIndex ? ' slider-dot--selected' : '',
-                  )}
-                />
-              ))}
-            </div>
+            {data.slides?.length > 1 && (
+              <div className="slider-dots">
+                {scrollSnaps.map((_, index) => (
+                  <DotButton
+                    key={index}
+                    index={index}
+                    onClick={() => scrollTo(index)}
+                    className={'slider-dot'.concat(
+                      index === selectedIndex ? ' slider-dot--selected' : '',
+                    )}
+                  />
+                ))}
+              </div>
+            )}
           </>
         )}
       </div>

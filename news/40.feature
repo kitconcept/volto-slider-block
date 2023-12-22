@@ -1,0 +1,1 @@
+Add conditionals around arrow and dot buttons, and hide them, if there is only one slide @danalvrz
