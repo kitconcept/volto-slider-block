@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 6.1.0 (2023-12-22)
+
+### Feature
+
+- Add conditionals around arrow and dot buttons, and hide them, if there is only one slide @danalvrz [#40](https://github.com/kitconcept/volto-slider-block/pull/40)
+
 ## 6.0.0 (2023-12-18)
 
 ### Internal
