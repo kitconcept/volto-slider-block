@@ -34,7 +34,7 @@ msgstr "Gehe zu Slide"
 #: components/schema
 # defaultMessage: Headtitle
 msgid "Headtitle"
-msgstr "Überschrift"
+msgstr "Kopftitel"
 
 #: components/schema
 # defaultMessage: Image override
