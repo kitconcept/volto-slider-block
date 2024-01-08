@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 6.1.1 (2024-01-08)
+
+### Bugfix
+
+- Minor fix for German label translation, from Überschrift to Kopftitel @danalvrz [#41](https://github.com/kitconcept/volto-slider-block/pull/41)
+
 ## 6.1.0 (2023-12-22)
 
 ### Feature
