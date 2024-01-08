@@ -237,9 +237,9 @@ export const SliderBlockDataAdapter = ({
 
 # Credits
 
-<img alt="Forschungszentrum Jülich" src="https://github.com/kitconcept/volto-slider-block/raw/master/fz-juelich.svg" width="200px" />
+<img alt="Forschungszentrum Jülich" src="https://github.com/kitconcept/volto-slider-block/raw/main/fz-juelich.svg" width="200px" />
 
-<img alt="Deutsches Zentrum für Luft- und Raumfahrt" src="https://github.com/kitconcept/volto-slider-block/raw/master/dlr.svg" width="230px" />
+<img alt="Deutsches Zentrum für Luft- und Raumfahrt" src="https://github.com/kitconcept/volto-slider-block/raw/main/dlr.svg" width="230px" />
 
 The development of this plugin has been kindly sponsored by [Forschungszentrum Jülich](https://fz-juelich.de) and the [German Aerospace Center (DLR)](https://dlr.de).
 
