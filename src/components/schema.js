@@ -20,9 +20,9 @@ const messages = defineMessages({
     id: 'Description',
     defaultMessage: 'Description',
   },
-  imageOverride: {
-    id: 'Image override',
-    defaultMessage: 'Image override',
+  customImage: {
+    id: 'Custom image',
+    defaultMessage: 'Custom image',
   },
   item: {
     id: 'Item',
@@ -36,9 +36,9 @@ const messages = defineMessages({
     id: 'Add item',
     defaultMessage: 'Add item',
   },
-  head_title: {
-    id: 'Headtitle',
-    defaultMessage: 'Headtitle',
+  kicker: {
+    id: 'Kicker',
+    defaultMessage: 'Kicker',
   },
 });
 
@@ -78,7 +78,7 @@ export const itemSchema = (props) =>
           allowExternals: true,
         },
         head_title: {
-          title: props.intl.formatMessage(messages.head_title),
+          title: props.intl.formatMessage(messages.kicker),
         },
         title: {
           title: props.intl.formatMessage(messages.title),
@@ -88,7 +88,7 @@ export const itemSchema = (props) =>
           widget: 'textarea',
         },
         preview_image: {
-          title: props.intl.formatMessage(messages.imageOverride),
+          title: props.intl.formatMessage(messages.customImage),
           widget: 'object_browser',
           mode: 'image',
           allowExternals: true,
