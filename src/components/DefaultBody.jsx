@@ -10,9 +10,9 @@ import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   PleaseChooseContent: {
-    id: 'Please choose an existing content as source for this element',
+    id: 'Please choose an existing content as target for this element or select a custom image',
     defaultMessage:
-      'Please choose an existing content as source for this element',
+      'Please choose an existing content as target for this element or select a custom image',
   },
   moreInfo: {
     id: 'moreInfo',
@@ -67,11 +67,11 @@ const SliderBody = ({
   return (
     <div
       className={cx('grid-teaser-item top', {
-        'empty-slide': !href && isEditMode,
+        'empty-slide': !href && !image && isEditMode,
         'slide-visible': isActive,
       })}
     >
-      {!href && isEditMode && (
+      {!href && !image && isEditMode && (
         <Message>
           <div className="grid-teaser-item default">
             <img src={imageBlockSVG} alt="" />
@@ -91,12 +91,12 @@ const SliderBody = ({
           </div>
         </Message>
       )}
-      {href && (
+      {(href || image) && (
         <div className="teaser-item top">
           <MaybeWrap
-            condition={!isEditMode}
+            condition={!isEditMode && href}
             as={UniversalLink}
-            href={href['@id']}
+            href={href?.['@id']}
             target={
               data.openLinkInNewTab ||
               (openExternalLinkInNewTab && !isInternalURL(href['@id']))
@@ -105,7 +105,7 @@ const SliderBody = ({
             }
             tabIndex={!isActive ? '-1' : null}
           >
-            {(href?.hasPreviewImage || href.image_field || image) && (
+            {(href?.hasPreviewImage || href?.image_field || image) && (
               <div className="highlight-image-wrapper gradient">
                 <Image
                   item={image || href}

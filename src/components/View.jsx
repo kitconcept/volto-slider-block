@@ -10,9 +10,9 @@ import teaserTemplate from '../icons/teaser-template.svg';
 
 const messages = defineMessages({
   PleaseChooseContent: {
-    id: 'Please choose an existing content as source for this element',
+    id: 'Please choose an existing content as target for this element or select a custom image',
     defaultMessage:
-      'Please choose an existing content as source for this element',
+      'Please choose an existing content as target for this element or select a custom image',
   },
 });
 

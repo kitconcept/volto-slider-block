@@ -1,0 +1,1 @@
+Allow for slides to have no target link, as long as there is a custom image chosen. @danalvrz

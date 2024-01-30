@@ -17,6 +17,11 @@ msgid "Add item"
 msgstr ""
 
 #: components/schema
+# defaultMessage: Custom image
+msgid "Custom image"
+msgstr ""
+
+#: components/schema
 # defaultMessage: Description
 msgid "Description"
 msgstr ""
@@ -24,16 +29,6 @@ msgstr ""
 #: components/DotsAndArrows
 # defaultMessage: Go to slide
 msgid "Go to slide"
-msgstr ""
-
-#: components/schema
-# defaultMessage: Headtitle
-msgid "Headtitle"
-msgstr ""
-
-#: components/schema
-# defaultMessage: Image override
-msgid "Image override"
 msgstr ""
 
 #: components/schema
@@ -46,6 +41,11 @@ msgstr ""
 msgid "Items"
 msgstr ""
 
+#: components/schema
+# defaultMessage: Kicker
+msgid "Kicker"
+msgstr ""
+
 #: components/DotsAndArrows
 # defaultMessage: Next slide
 msgid "Next slide"
@@ -53,8 +53,8 @@ msgstr ""
 
 #: components/DefaultBody
 #: components/View
-# defaultMessage: Please choose an existing content as source for this element
-msgid "Please choose an existing content as source for this element"
+# defaultMessage: Please choose an existing content as target for this element or select a custom image
+msgid "Please choose an existing content as target for this element or select a custom image"
 msgstr ""
 
 #: components/DotsAndArrows

@@ -165,9 +165,19 @@
     max-width: 80px;
   }
 
-  .teaser-item.top .title .supertitle {
-    display: block;
-    margin-top: 10px;
+  .teaser-item.top {
+    display: flex;
+    flex-direction: column;
+
+    .title .supertitle {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+
+  .grid-teaser-item.top.empty-slide,
+  .grid-teaser-item.top.empty-slide .message {
+    height: 100%;
   }
 }
 
