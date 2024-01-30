@@ -4,7 +4,8 @@ import { BlockDataForm } from '@plone/volto/components';
 import { SliderSchema } from './schema';
 
 const SliderData = (props) => {
-  const { block, blocksConfig, data, onChangeBlock } = props;
+  const { block, blocksConfig, data, onChangeBlock, navRoot, contentType } =
+    props;
   const intl = useIntl();
   const schema = SliderSchema({ ...props, intl });
 
@@ -26,6 +27,8 @@ const SliderData = (props) => {
       onChangeBlock={onChangeBlock}
       formData={data}
       block={block}
+      navRoot={navRoot}
+      contentType={contentType}
     />
   );
 };
