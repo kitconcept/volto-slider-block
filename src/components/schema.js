@@ -12,6 +12,22 @@ const messages = defineMessages({
     id: 'Slider',
     defaultMessage: 'Slider',
   },
+  Autoplay: {
+    id: 'Autoplay',
+    defaultMessage: 'Autoplay',
+  },
+  AutoplayEnabled: {
+    id: 'Enable Autoplay?',
+    defaultMessage: 'Enable Autoplay?',
+  },
+  AutoplayDelay: {
+    id: 'Delay between transitions (milliseconds)',
+    defaultMessage: 'Delay between transitions (milliseconds)',
+  },
+  AutoplayJump: {
+    id: 'Do instant slide transitions?',
+    defaultMessage: 'Do instant slide transitions?',
+  },
   title: {
     id: 'Title',
     defaultMessage: 'Title',
@@ -110,6 +126,11 @@ export const SliderSchema = (props) =>
           title: 'Default',
           fields: ['slides'],
         },
+        {
+          id: 'autoplay',
+          title: props.intl.formatMessage(messages.Autoplay),
+          fields: ['autoplayEnabled', 'autoplayDelay', 'autoplayJump'],
+        },
       ],
       properties: {
         slides: {
@@ -119,6 +140,21 @@ export const SliderSchema = (props) =>
           activeObject: props.activeObject,
           setActiveObject: props.setActiveObject,
           default: [{ '@id': uuid() }],
+        },
+        autoplayEnabled: {
+          title: props.intl.formatMessage(messages.AutoplayEnabled),
+          default: false,
+          type: 'boolean',
+        },
+        autoplayDelay: {
+          title: props.intl.formatMessage(messages.AutoplayDelay),
+          type: 'integer',
+          default: 4000,
+        },
+        autoplayJump: {
+          title: props.intl.formatMessage(messages.AutoplayJump),
+          default: false,
+          type: 'boolean',
         },
       },
       required: [],

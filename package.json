@@ -99,7 +99,8 @@
   },
   "dependencies": {
     "deepmerge": "4.2.2",
-    "embla-carousel-react": "^8.0.0-rc15"
+    "embla-carousel-autoplay": "^8.0.0",
+    "embla-carousel-react": "^8.0.0"
   },
   "peerDependencies": {
     "@plone/volto": "^17.0.0-alpha.21"

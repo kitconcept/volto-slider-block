@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Message } from 'semantic-ui-react';
 import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
 import Body from './Body';
@@ -33,8 +34,15 @@ const SliderView = (props) => {
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
+  const autoplay =
+    data.autoplayEnabled !== undefined ? data.autoplayEnabled : false;
+  const autoplayOptions = {
+    delay: data.autoplayDelay,
+    jump: data.autoplayJump,
+  };
+  const plugins = isEditMode ? [] : autoplay ? [Autoplay(autoplayOptions)] : [];
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, plugins);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) {
