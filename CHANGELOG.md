@@ -8,6 +8,14 @@
 
 <!-- towncrier release notes start -->
 
+## 6.2.0 (2024-03-06)
+
+### Feature
+
+- Make navRoot and contentType props available to BlockDataForm @danalvrz [#43](https://github.com/kitconcept/volto-slider-block/pull/43)
+- Add Brazilian Portuguese translations [@ericof] [#44](https://github.com/kitconcept/volto-slider-block/pull/44)
+- Add Autoplay support to the slider block [@ericof] [#45](https://github.com/kitconcept/volto-slider-block/pull/45)
+
 ## 6.1.1 (2024-01-08)
 
 ### Bugfix

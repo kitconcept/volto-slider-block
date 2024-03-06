@@ -1,1 +1,0 @@
-Add Autoplay support to the slider block [@ericof]

@@ -1,1 +1,0 @@
-Add Brazilian Portuguese translations [@ericof]

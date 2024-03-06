@@ -1,1 +1,0 @@
-Make navRoot and contentType props available to BlockDataForm @danalvrz
