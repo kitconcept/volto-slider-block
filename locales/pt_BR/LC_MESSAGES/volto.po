@@ -1,100 +1,91 @@
-# Translation of volto.pot to Spanish
-# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"Project-Id-Version: Plone\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-24T15:56:27.444Z\n"
-"PO-Revision-Date: 2023-08-21 20:14-0400\n"
-"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
-"Language: es\n"
-"Language-Team: ES <LL@li.org>\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Preferred-Encodings: utf-8\n"
-"MIME-Version: 1.0\n"
-"Language-Code: es\n"
-"Language-Name: Español\n"
-"Domain: volto\n"
-"X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
-"X-Generator: Poedit 3.3.2\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
 
 #: components/schema
 # defaultMessage: Add item
 msgid "Add item"
-msgstr "Añadir elemento"
+msgstr "Adicionar item"
 
 #: components/schema
 # defaultMessage: Autoplay
 msgid "Autoplay"
-msgstr ""
+msgstr "Reprodução automática"
 
 #: components/schema
 # defaultMessage: Delay between transitions (milliseconds)
 msgid "Delay between transitions (milliseconds)"
-msgstr ""
+msgstr "Tempo entre cada transição (milisegundos)"
 
 #: components/schema
 # defaultMessage: Description
 msgid "Description"
-msgstr "Descripción"
+msgstr "Descrição"
 
 #: components/schema
 # defaultMessage: Do instant slide transitions?
 msgid "Do instant slide transitions?"
-msgstr ""
+msgstr "Realizar transições instantâneas?"
 
 #: components/schema
 # defaultMessage: Enable Autoplay?
 msgid "Enable Autoplay?"
-msgstr ""
+msgstr "Habilitar reprodução automática?"
 
 #: components/DotsAndArrows
 # defaultMessage: Go to slide
 msgid "Go to slide"
-msgstr "Ver slide"
+msgstr "Ir para o slide"
 
 #: components/schema
 # defaultMessage: Headtitle
 msgid "Headtitle"
-msgstr "Título principal"
+msgstr "Cabeçalho"
 
 #: components/schema
 # defaultMessage: Image override
 msgid "Image override"
-msgstr "Sobre-escritura de imagen"
+msgstr "Sobreescrever imagem"
 
 #: components/schema
 # defaultMessage: Item
 msgid "Item"
-msgstr "Elemento"
+msgstr "Item"
 
 #: components/schema
 # defaultMessage: Items
 msgid "Items"
-msgstr "Elementos"
+msgstr "Itens"
 
 #: components/DotsAndArrows
 # defaultMessage: Next slide
 msgid "Next slide"
-msgstr "Siguiente slide"
+msgstr "Próximo slide"
 
 #: components/DefaultBody
 #: components/View
 # defaultMessage: Please choose an existing content as source for this element
 msgid "Please choose an existing content as source for this element"
-msgstr "Elija un contenido existente como fuente para este elemento"
+msgstr "Por favor selecione um conteúdo existe para ser a referência deste elemento"
 
 #: components/DotsAndArrows
 # defaultMessage: Previous slide
 msgid "Previous slide"
-msgstr "Anterior slide"
+msgstr "Slide anterior"
 
 #: components/DefaultBody
 # defaultMessage: Select target
 msgid "Select target"
-msgstr ""
+msgstr "Selecione o destino"
 
 #: components/schema
 # defaultMessage: Slider
@@ -104,7 +95,7 @@ msgstr "Slider"
 #: components/schema
 # defaultMessage: Target
 msgid "Target"
-msgstr ""
+msgstr "Destino"
 
 #: components/schema
 # defaultMessage: Title
@@ -114,4 +105,4 @@ msgstr "Título"
 #: components/DefaultBody
 # defaultMessage: More info
 msgid "moreInfo"
-msgstr "Más información"
+msgstr "Saiba mais"

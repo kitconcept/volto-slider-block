@@ -22,9 +22,29 @@ msgid "Add item"
 msgstr "Element hinzufügen"
 
 #: components/schema
+# defaultMessage: Autoplay
+msgid "Autoplay"
+msgstr ""
+
+#: components/schema
+# defaultMessage: Delay between transitions (milliseconds)
+msgid "Delay between transitions (milliseconds)"
+msgstr ""
+
+#: components/schema
 # defaultMessage: Description
 msgid "Description"
 msgstr "Beschreibung"
+
+#: components/schema
+# defaultMessage: Do instant slide transitions?
+msgid "Do instant slide transitions?"
+msgstr ""
+
+#: components/schema
+# defaultMessage: Enable Autoplay?
+msgid "Enable Autoplay?"
+msgstr ""
 
 #: components/DotsAndArrows
 # defaultMessage: Go to slide
