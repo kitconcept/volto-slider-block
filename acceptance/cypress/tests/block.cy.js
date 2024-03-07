@@ -35,7 +35,7 @@ context('Block Acceptance Tests', () => {
     cy.get(
       '.objectbrowser-field[aria-labelledby="fieldset-default-field-label-href-0-slides-0"] button[aria-label="Open object browser"]',
     ).click();
-    cy.get('aside .breadcrumbs svg.home-icon').click({force: true});
+    cy.get('aside .breadcrumbs svg.home-icon').click();
     cy.findByLabelText('Select My Page').dblclick();
 
     // Second slide
@@ -47,7 +47,8 @@ context('Block Acceptance Tests', () => {
     cy.get(
       '.objectbrowser-field[aria-labelledby="fieldset-default-field-label-href-0-slides-1"] button[aria-label="Open object browser"]',
     ).click();
-    cy.get('aside .breadcrumbs svg.home-icon').click({ multiple: true });
+    cy.wait(1000);
+    cy.get('aside .breadcrumbs svg.home-icon').click();
     cy.findByLabelText('Select My Page').dblclick();
 
     cy.get('#toolbar-save').click();
@@ -87,7 +88,8 @@ context('Block Acceptance Tests', () => {
     cy.get(
       '.objectbrowser-field[aria-labelledby="fieldset-default-field-label-href-0-slides-1"] button[aria-label="Open object browser"]',
     ).click();
-    cy.get('aside .breadcrumbs svg.home-icon').click({ multiple: true });
+    cy.wait(1000);
+    cy.get('aside .breadcrumbs svg.home-icon').click();
     cy.findByLabelText('Select My Page').dblclick();
 
     cy.get('#toolbar-save').click();
