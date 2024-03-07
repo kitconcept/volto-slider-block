@@ -126,11 +126,15 @@ export const SliderSchema = (props) =>
           title: 'Default',
           fields: ['slides'],
         },
-        {
-          id: 'autoplay',
-          title: props.intl.formatMessage(messages.Autoplay),
-          fields: ['autoplayEnabled', 'autoplayDelay', 'autoplayJump'],
-        },
+        ...(config.blocks.blocksConfig.slider.enableAutoPlay
+          ? [
+              {
+                id: 'autoplay',
+                title: props.intl.formatMessage(messages.Autoplay),
+                fields: ['autoplayEnabled', 'autoplayDelay', 'autoplayJump'],
+              },
+            ]
+          : []),
       ],
       properties: {
         slides: {
