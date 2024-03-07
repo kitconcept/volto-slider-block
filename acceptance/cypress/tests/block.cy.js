@@ -87,7 +87,7 @@ context('Block Acceptance Tests', () => {
     cy.get(
       '.objectbrowser-field[aria-labelledby="fieldset-default-field-label-href-0-slides-1"] button[aria-label="Open object browser"]',
     ).click();
-    cy.get('aside .breadcrumbs svg.home-icon').click();
+    cy.get('aside .breadcrumbs svg.home-icon').click({ multiple: true });
     cy.findByLabelText('Select My Page').dblclick();
 
     cy.get('#toolbar-save').click();
