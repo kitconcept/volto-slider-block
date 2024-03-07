@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 6.3.0 (2024-03-07)
+
+### Feature
+
+- Enable autoPlay as opt-in. Documentation @sneridagh [#48](https://github.com/kitconcept/volto-slider-block/pull/48)
+
 ## 6.2.0 (2024-03-06)
 
 ### Feature
