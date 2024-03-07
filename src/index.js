@@ -17,6 +17,7 @@ const applyConfig = (config) => {
     mostUsed: true,
     sidebarTab: 1,
     dataAdapter: SliderBlockDataAdapter,
+    enableAutoPlay: false,
   };
   return config;
 };

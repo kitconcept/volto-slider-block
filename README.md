@@ -63,6 +63,16 @@ yarn start
 
 Go to http://localhost:3000, login, create a new page. The slider block will show up in the Volto blocks chooser.
 
+## Configuration options
+
+### `enableAutoPlay`
+
+This enables the autoplay controls in the block's settings.
+
+```js
+config.blocks.blocksConfig.slider.enableAutoPlay = true;
+```
+
 ## Upgrade Guide
 
 ### `volto-slider-block` 6.0.0
