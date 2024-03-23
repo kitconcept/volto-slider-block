@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 6.3.1 (2024-03-23)
+
+### Internal
+
+- Re-release with updated internal deps and peerDeps for Volto 18 @sneridagh [#0](https://github.com/kitconcept/volto-slider-block/pull/0)
+
 ## 6.3.0 (2024-03-07)
 
 ### Feature
