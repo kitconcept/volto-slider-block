@@ -26,7 +26,10 @@
     "release-major-alpha": "release-it major --preRelease=alpha",
     "release-alpha": "release-it --preRelease=alpha"
   },
-  "dependencies": {},
+  "dependencies": {
+    "embla-carousel-autoplay": "^8.0.0",
+    "embla-carousel-react": "^8.0.0"
+  },
   "peerDependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0"
