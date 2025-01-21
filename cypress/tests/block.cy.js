@@ -105,7 +105,7 @@ context('Block Acceptance Tests', () => {
 
     cy.get('.teaser-item-title').should('be.visible').contains('My Page');
 
-    cy.injectAxe();
+    cy.injectAxe({ axeCorePath: './node_modules/axe-core/axe.min.js' });
     cy.checkAccessibility();
   });
 });

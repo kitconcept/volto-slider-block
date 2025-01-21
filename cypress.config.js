@@ -8,6 +8,15 @@ module.exports = defineConfig({
   },
   e2e: {
     baseUrl: 'http://localhost:3000',
-    specPattern: 'cypress/tests/**/*.cy.{js,jsx,ts,tsx}',
+    specPattern: 'cypress/tests/*.cy.{js,jsx}',
+    supportFile: './cypress/support/e2e.js',
+    setupNodeEvents(on, config) {
+      on('task', {
+        table(message) {
+          console.table(message);
+          return null;
+        },
+      });
+    },
   },
 });
