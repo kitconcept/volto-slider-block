@@ -7,6 +7,31 @@ A slider block for volto
 [![Code analysis checks](https://github.com/kitconcept/volto-slider-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-slider-block/actions/workflows/code.yml)
 [![Unit tests](https://github.com/kitconcept/volto-slider-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-slider-block/actions/workflows/unit.yml)
 
+
+![kitconcept GmbH](https://github.com/kitconcept/volto-blocks/raw/main/kitconcept.png)
+
+The Volto Slider Block allows editors to add sliders to a Volto page. You can see it in action under [www.dlr.de](https://www.dlr.de/de) and [www.fz-juelich.de](https://www.fz-juelich.de/de).
+
+
+## Screenshot
+
+<img width="1375" alt="image" src="https://user-images.githubusercontent.com/486927/170819511-11b0012b-c3ab-4578-b110-85d51e6103ac.png">
+
+## Screencast
+
+https://user-images.githubusercontent.com/486927/170819371-6284d8e7-e5df-4893-9dab-cd06b1054505.mov
+
+
+## Volto Compatibility
+
+These are the recommended versions:
+
+| Version | Volto version |
+| ------- | ------------- |
+| >=5.0.0 | >=17.0.0-alpha.27 |
+| >=3.0.0 | >=16.0.0-rc.2 |
+| <=2.1.0 | <=16.0.0-a50  |
+
 ## Features
 
 <!-- List your awesome features here -->
