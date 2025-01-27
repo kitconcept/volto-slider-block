@@ -8,7 +8,10 @@ A slider block for volto
 [![Unit tests](https://github.com/kitconcept/volto-slider-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-slider-block/actions/workflows/unit.yml)
 
 
-![kitconcept GmbH](https://github.com/kitconcept/volto-blocks/raw/main/kitconcept.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://kitconcept.com/kitconcept-white.svg">
+  <img width="300" alt="kitconcept, GmbH" src="https://kitconcept.com/kitconcept-black.svg">
+</picture>
 
 The Volto Slider Block allows editors to add sliders to a Volto page. You can see it in action under [www.dlr.de](https://www.dlr.de/de) and [www.fz-juelich.de](https://www.fz-juelich.de/de).
 
