@@ -4,7 +4,8 @@
  */
 
 import merge from 'deepmerge';
-import { findIndex, map } from 'lodash';
+import findIndex from 'lodash/findIndex';
+import map from 'lodash/map';
 
 /**
  * Merge schemas

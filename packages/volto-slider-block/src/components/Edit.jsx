@@ -1,7 +1,7 @@
 import React from 'react';
-import { withBlockExtensions } from '@plone/volto/helpers';
+import { withBlockExtensions } from '@plone/volto/helpers/Extensions';
 import View from './View';
-import { SidebarPortal } from '@plone/volto/components';
+import SidebarPortal from '@plone/volto/components/manage/Sidebar/SidebarPortal';
 import Sidebar from './Sidebar';
 
 const SliderEdit = (props) => {

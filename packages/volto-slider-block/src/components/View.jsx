@@ -5,7 +5,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
 import Body from './Body';
-import { withBlockExtensions } from '@plone/volto/helpers';
+import { withBlockExtensions } from '@plone/volto/helpers/Extensions';
 import { DotButton, NextButton, PrevButton } from './DotsAndArrows';
 import teaserTemplate from '../icons/teaser-template.svg';
 
