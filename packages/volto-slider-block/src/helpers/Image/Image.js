@@ -1,4 +1,4 @@
-import { isInternalURL } from '@plone/volto/helpers';
+import { isInternalURL } from '@plone/volto/helpers/Url/Url';
 
 export function getTeaserImageURL({ href, image, scale = 'great' }) {
   if (image) {

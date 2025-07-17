@@ -1,6 +1,8 @@
-import { difference } from '@plone/volto/helpers';
-import { replaceItemOfArray } from '@plone/volto/helpers';
-import { compact } from 'lodash';
+import {
+  replaceItemOfArray,
+  difference,
+} from '@plone/volto/helpers/Utils/Utils.jsx';
+import compact from 'lodash/compact';
 
 export const SliderBlockDataAdapter = ({
   block,
