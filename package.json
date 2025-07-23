@@ -1,6 +1,6 @@
 {
   "name": "@kitconcept/volto-slider-block",
-  "version": "1.0.0-alpha.0",
+  "version": "6.4.0",
   "description": "A slider block for volto",
   "author": "kitconcept, GmbH",
   "homepage": "https://github.com/kitconcept/volto-slider-block",
@@ -35,7 +35,6 @@
     "storybook": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto storybook dev -p 6006 -c $(pwd)/.storybook",
     "storybook-build": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build-storybook -c $(pwd)/.storybook"
   },
-
   "dependencies": {
     "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*",

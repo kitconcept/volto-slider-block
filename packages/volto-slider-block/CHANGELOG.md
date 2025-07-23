@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 6.4.0 (2025-07-23)
+
+### Feature
+
+- Remove barrel import @iRohitSingh [#51](https://github.com/kitconcept/volto-slider-block/issue/51)
+
 ## 6.3.1 (2024-03-23)
 
 ### Internal
