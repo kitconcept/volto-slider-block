@@ -1,0 +1,31 @@
+import { defineConfig } from 'vitest/config';
+import voltoVitestConfig from '@plone/volto/vitest.config.mjs';
+import path from 'path';
+//asd
+export default defineConfig({
+  ...voltoVitestConfig,
+  resolve: {
+    alias: {
+      ...voltoVitestConfig.resolve.alias,
+      // Alias for absolute imports
+      '@kitconcept/volto-slider-block': path.resolve(__dirname, './src'),
+      '@kitconcept/volto-slider-block/': path.resolve(__dirname, './src/'),
+      '@kitconcept/volto-light-theme': path.resolve(
+        __dirname,
+        '../volto-light-theme/frontend/packages/volto-light-theme/src',
+      ),
+      '@kitconcept/volto-light-theme/': path.resolve(
+        __dirname,
+        '../volto-light-theme/frontend/packages/volto-light-theme/src/',
+      ),
+    },
+  },
+  server: {
+    fs: {
+      allow: [
+        '..',
+        path.resolve(__dirname, '../../../../../core/packages/volto'),
+      ],
+    },
+  },
+});
