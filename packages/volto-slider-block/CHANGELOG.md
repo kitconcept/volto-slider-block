@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 6.4.1 (2025-10-22)
+
+### Internal
+
+- Fixed image tag. @sneridagh 
+
 ## 6.4.0 (2025-07-23)
 
 ### Feature
