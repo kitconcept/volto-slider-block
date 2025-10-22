@@ -29,11 +29,13 @@ https://user-images.githubusercontent.com/486927/170819371-6284d8e7-e5df-4893-9d
 
 These are the recommended versions:
 
-| Version | Volto version |
-| ------- | ------------- |
-| >=5.0.0 | >=17.0.0-alpha.27 |
-| >=3.0.0 | >=16.0.0-rc.2 |
-| <=2.1.0 | <=16.0.0-a50  |
+| Version | Volto version | VLT version |
+| ------- | ------------- | ------------|
+| >=7.0.0 | >=19.0.0-alpha.0 | 7.x.x and 8.x.x |
+| >=6.0.0 | >=17.0.0-alpha.27 | 6.x.x |
+| >=5.0.0 | >=17.0.0-alpha.27 | N/A |
+| >=3.0.0 | >=16.0.0-rc.2 | N/A |
+| <=2.1.0 | <=16.0.0-a50  | N/A |
 
 ## Features
 

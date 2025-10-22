@@ -8,12 +8,30 @@ context('Block Acceptance Tests', () => {
       contentTitle: 'Document',
       path: '/',
     });
+    cy.fixture('halfdome2022.jpg', 'base64').then((fileContent) => {
+      cy.createContent({
+        contentType: 'Image',
+        contentId: 'my-image',
+        contentTitle: 'My Image',
+        bodyModifier(body) {
+          body.image = {
+            data: fileContent,
+            encoding: 'base64',
+            filename: 'image.png',
+            'content-type': 'image/png',
+          };
+          return body;
+        },
+      });
+    });
     cy.createContent({
       contentType: 'Document',
       contentId: 'page',
       contentTitle: 'My Page',
       path: '/',
-      image: true,
+      preview_image_link: {
+        '@id': '/my-image',
+      },
     });
     cy.autologin();
   });
