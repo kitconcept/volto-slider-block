@@ -5,5 +5,13 @@
     "url": "git@github.com:plone/volto.git",
     "https": "https://github.com/plone/volto.git",
     "tag": "19.0.0-alpha.9"
+  },
+  "volto-light-theme": {
+    "output": "packages",
+    "develop": true,
+    "package": "@kitconcept/volto-light-theme",
+    "url": "git@github.com:kitconcept/volto-light-theme.git",
+    "https": "https://github.com/kitconcept/volto-light-theme.git",
+    "branch": "main"
   }
 }
