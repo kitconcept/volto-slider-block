@@ -12,7 +12,7 @@
 
 ### Internal
 
-- Fixed image tag. @sneridagh 
+- Fixed image tag. @sneridagh
 
 ## 6.4.0 (2025-07-23)
 
