@@ -29,8 +29,8 @@
   (we are injecting the CSS property in the main slider wrapper)
   we can infer the height of the image, by using: */
   height: calc(
-    var(--slider-container-width) * 1 / var(--slider-images-aspect-ratio, 16/9)
-      ;
+    var(--slider-container-width) /
+      var(--slider-images-aspect-ratio, 1.7777777778)
   );
   padding: 0;
   border: 0;
