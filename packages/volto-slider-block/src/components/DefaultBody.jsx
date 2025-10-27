@@ -1,9 +1,9 @@
 import React from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
-import UniversalLink from '@plone/volto/components/manage/UniversalLink/UniversalLink';
 import MaybeWrap from '@plone/volto/components/manage/MaybeWrap/MaybeWrap';
-import { Input, Button, Message } from 'semantic-ui-react';
+import UniversalLink from '@plone/volto/components/manage/UniversalLink/UniversalLink';
+import { Button } from '@plone/components';
 import { isInternalURL } from '@plone/volto/helpers/Url/Url';
 import cx from 'classnames';
 import navTreeSVG from '@plone/volto/icons/nav.svg';
@@ -20,9 +20,13 @@ const messages = defineMessages({
     id: 'moreInfo',
     defaultMessage: 'More info',
   },
-  selectTarget: {
-    id: 'Select target',
-    defaultMessage: 'Select target',
+  source: {
+    id: 'Source',
+    defaultMessage: 'Source',
+  },
+  ButtonText: {
+    id: 'Continue reading',
+    defaultMessage: 'Continue reading',
   },
 });
 
@@ -75,25 +79,14 @@ const SliderBody = ({
       })}
     >
       {!href && isEditMode && (
-        <Message>
-          <div className="grid-teaser-item default">
-            {/* eslint-disable-next-line no-restricted-syntax */}
-            <img src={imageBlockSVG} alt="" />
-            <p>{intl.formatMessage(messages.PleaseChooseContent)}</p>
-            <div className="toolbar-inner">
-              <Button.Group>
-                <Button onClick={handleClick} icon basic>
-                  <Icon name={navTreeSVG} size="24px" />
-                </Button>
-              </Button.Group>
-              <Input
-                placeholder={intl.formatMessage(messages.selectTarget)}
-                onClick={handleClick}
-                onFocus={(e) => e.target.blur()}
-              />
-            </div>
-          </div>
-        </Message>
+        <div className="slider-default-placeholder">
+          <Image src={imageBlockSVG} alt="" />
+          <p>{intl.formatMessage(messages.PleaseChooseContent)}</p>
+          <Button onPress={handleClick}>
+            <Icon name={navTreeSVG} size="24px" />
+            {intl.formatMessage(messages.source)}
+          </Button>
+        </div>
       )}
       {href && (
         <div className="teaser-item top">
@@ -120,7 +113,12 @@ const SliderBody = ({
                 />
               </div>
             )}
-            <div className="teaser-item-title fix-width-issue">
+            <div
+              className={cx(
+                'teaser-item-title fix-width-issue',
+                `has--slider--flagAlign--${data.flagAlign}`,
+              )}
+            >
               <div className="title">
                 {data?.head_title && (
                   <span className="supertitle">{data?.head_title}</span>
@@ -128,6 +126,12 @@ const SliderBody = ({
                 <h2>{data?.nav_title || data?.title}</h2>
               </div>
               <p>{data?.description}</p>
+
+              {!data.hideButton && (
+                <Button tabIndex={'-1'}>
+                  {data.buttonText || intl.formatMessage(messages.ButtonText)}
+                </Button>
+              )}
             </div>
           </MaybeWrap>
         </div>
