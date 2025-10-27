@@ -8,6 +8,21 @@
 
 <!-- towncrier release notes start -->
 
+## 7.0.0-alpha.0 (2025-10-27)
+
+### Breaking
+
+- Removed SemanticUI. @sneridagh [#54.1](https://github.com/kitconcept/volto-slider-block/issue/54.1)
+- This add-on is VLT-first. @sneridagh [#54.2](https://github.com/kitconcept/volto-slider-block/issue/54.2)
+
+### Feature
+
+- Refresh teased slider item support. [#54.1](https://github.com/kitconcept/volto-slider-block/issue/54.1)
+- Added flagAlign support.
+  Added buttonText support.
+  Added hide buttonText support. [#54.2](https://github.com/kitconcept/volto-slider-block/issue/54.2)
+- Added Simple variant support. [#54.3](https://github.com/kitconcept/volto-slider-block/issue/54.3)
+
 ## 6.4.1 (2025-10-22)
 
 ### Internal

@@ -1,1 +1,0 @@
-Added Simple variant support.
