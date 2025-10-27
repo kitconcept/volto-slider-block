@@ -77,7 +77,7 @@ context('Block Acceptance Tests', () => {
       .should('be.visible')
       .and(($img) => {
         // "naturalWidth" and "naturalHeight" are set when the image loads
-        expect($img[0].naturalWidth).to.be.greaterThan(0);
+        expect(($img[0] as HTMLImageElement).naturalWidth).to.be.greaterThan(0);
       });
 
     cy.get('.teaser-item-title').should('be.visible').contains('My Page');
@@ -118,7 +118,7 @@ context('Block Acceptance Tests', () => {
       .should('be.visible')
       .and(($img) => {
         // "naturalWidth" and "naturalHeight" are set when the image loads
-        expect($img[0].naturalWidth).to.be.greaterThan(0);
+        expect(($img[0] as HTMLImageElement).naturalWidth).to.be.greaterThan(0);
       });
 
     cy.get('.teaser-item-title').should('be.visible').contains('My Page');
