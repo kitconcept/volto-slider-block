@@ -45,41 +45,6 @@ These are the recommended versions:
 
 To install your project, you must choose the method appropriate to your version of Volto.
 
-
-### Volto 17 and earlier
-
-Create a new Volto project (you can skip this step if you already have one):
-
-```
-npm install -g yo @plone/generator-volto
-yo @plone/volto my-volto-project --addon @kitconcept/volto-slider-block
-cd my-volto-project
-```
-
-Add `@kitconcept/volto-slider-block` to your package.json:
-
-```JSON
-"addons": [
-    "@kitconcept/volto-slider-block"
-],
-
-"dependencies": {
-    "@kitconcept/volto-slider-block": "*"
-}
-```
-
-Download and install the new add-on by running:
-
-```
-yarn install
-```
-
-Start volto with:
-
-```
-yarn start
-```
-
 ### Volto 18 and later
 
 Add `@kitconcept/volto-slider-block` to your `package.json`:
@@ -94,12 +59,6 @@ Add `@kitconcept/volto-slider-block` to your `volto.config.js`:
 
 ```javascript
 const addons = ['@kitconcept/volto-slider-block'];
-```
-
-If this package provides a Volto theme, and you want to activate it, then add the following to your `volto.config.js`:
-
-```javascript
-const theme = '@kitconcept/volto-slider-block';
 ```
 
 ## Test installation
@@ -129,6 +88,27 @@ config.blocks.blocksConfig.slider.enableAutoPlay = true;
 ```
 
 ## Upgrade Guide
+
+### `volto-slider-block` 7.0.0
+
+The block has been updated to support Volto 19 and VLT 7 and 8.
+It integrates all the improvements done in VLT during the last years.
+
+#### `@kitconcept/volto-light-theme`-first
+
+```{versionadded} 7.0.0
+```
+
+From this version onwards, this add-on assumes that you are using the `@kitconcept/volto-light-theme` theme.
+This add-on can be used without it, but some styles and functionalities may not work as expected, or may require additional configuration or customization.
+
+#### Complete removal of Semantic UI
+
+The block no longer depends on Semantic UI CSS.
+All the styles have been rewritten using plain CSS `@plone/components`.
+VLT adds `@plone/components` basic styles, so no additional configuration is needed.
+In case you are not using VLT, you may need to add `@plone/components` styles to your project.
+
 
 ### `volto-slider-block` 6.0.0
 

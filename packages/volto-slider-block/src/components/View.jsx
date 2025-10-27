@@ -1,21 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Message } from 'semantic-ui-react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import cx from 'classnames';
-import { defineMessages, useIntl } from 'react-intl';
 import Body from './Body';
-import { withBlockExtensions } from '@plone/volto/helpers/Extensions';
+import withBlockExtensions from '@plone/volto/helpers/Extensions/withBlockExtensions';
 import { DotButton, NextButton, PrevButton } from './DotsAndArrows';
-import teaserTemplate from '../icons/teaser-template.svg';
-
-const messages = defineMessages({
-  PleaseChooseContent: {
-    id: 'Please choose an existing content as source for this element',
-    defaultMessage:
-      'Please choose an existing content as source for this element',
-  },
-});
 
 const SliderView = (props) => {
   const {
@@ -28,7 +17,6 @@ const SliderView = (props) => {
     slideIndex,
     setSlideIndex,
   } = props;
-  const intl = useIntl();
 
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
@@ -104,18 +92,9 @@ const SliderView = (props) => {
   return (
     <>
       <div
-        className={cx('block slider', className)}
+        className={cx('block slider', data.variation || 'default', className)}
         style={{ '--slider-container-width': `${sliderContainerWidth}px` }}
       >
-        {(data.slides?.length === 0 || !data.slides) && isEditMode && (
-          <Message>
-            <div className="teaser-item default">
-              {/* eslint-disable-next-line no-restricted-syntax */}
-              <img src={teaserTemplate} alt="" />
-              <p>{intl.formatMessage(messages.PleaseChooseContent)}</p>
-            </div>
-          </Message>
-        )}
         {data.slides?.length > 0 && (
           <>
             <div className="slider-wrapper">

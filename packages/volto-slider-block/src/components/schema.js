@@ -52,9 +52,25 @@ const messages = defineMessages({
     id: 'Add item',
     defaultMessage: 'Add item',
   },
-  head_title: {
-    id: 'Headtitle',
-    defaultMessage: 'Headtitle',
+  kicker: {
+    id: 'head_title',
+    defaultMessage: 'Kicker',
+  },
+  kicker_description: {
+    id: 'The kicker is a line of text shown above the title.',
+    defaultMessage: 'The kicker is a line of text shown above the title.',
+  },
+  buttonText: {
+    id: 'Button text',
+    defaultMessage: 'Button text',
+  },
+  hideButton: {
+    id: 'Hide Button',
+    defaultMessage: 'Hide Button',
+  },
+  flagAlign: {
+    id: 'Flag align',
+    defaultMessage: 'Align',
   },
 });
 
@@ -73,6 +89,9 @@ export const itemSchema = (props) =>
             'title',
             'description',
             'preview_image',
+            'buttonText',
+            'hideButton',
+            'flagAlign',
           ],
         },
       ],
@@ -94,7 +113,8 @@ export const itemSchema = (props) =>
           allowExternals: true,
         },
         head_title: {
-          title: props.intl.formatMessage(messages.head_title),
+          title: props.intl.formatMessage(messages.kicker),
+          description: props.intl.formatMessage(messages.kicker_description),
         },
         title: {
           title: props.intl.formatMessage(messages.title),
@@ -108,6 +128,19 @@ export const itemSchema = (props) =>
           widget: 'object_browser',
           mode: 'image',
           allowExternals: true,
+        },
+        buttonText: {
+          title: props.intl.formatMessage(messages.buttonText),
+        },
+        hideButton: {
+          title: props.intl.formatMessage(messages.hideButton),
+          type: 'boolean',
+        },
+        flagAlign: {
+          widget: 'align',
+          title: props.intl.formatMessage(messages.flagAlign),
+          actions: ['left', 'right'],
+          default: 'left',
         },
       },
       required: [],

@@ -7,7 +7,7 @@ import { Button } from '@plone/components';
 import { isInternalURL } from '@plone/volto/helpers/Url/Url';
 import cx from 'classnames';
 import navTreeSVG from '@plone/volto/icons/nav.svg';
-import TeaserTemplateImg from './teaser-template.svg';
+import TeaserTemplateImg from '../components/teaser-template.svg';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -33,7 +33,7 @@ const messages = defineMessages({
 // eslint-disable-next-line no-restricted-syntax
 const DefaultImage = (props) => <img {...props} alt={props.alt || ''} />;
 
-const SliderBody = ({
+const SliderVariants = ({
   index,
   onChangeBlock,
   block,
@@ -41,7 +41,6 @@ const SliderBody = ({
   dataBlock,
   isEditMode,
   openObjectBrowser,
-  isActive,
 }) => {
   const intl = useIntl();
   const href = data.href?.[0];
@@ -75,7 +74,6 @@ const SliderBody = ({
     <div
       className={cx('grid-teaser-item top', {
         'empty-slide': !href && isEditMode,
-        'slide-visible': isActive,
       })}
     >
       {!href && isEditMode && (
@@ -89,18 +87,25 @@ const SliderBody = ({
         </div>
       )}
       {href && (
-        <div className="teaser-item top">
-          <MaybeWrap
-            condition={!isEditMode}
-            as={UniversalLink}
-            href={href['@id']}
-            target={
-              data.openLinkInNewTab ||
-              (openExternalLinkInNewTab && !isInternalURL(href['@id']))
-                ? '_blank'
-                : null
-            }
-            tabIndex={!isActive ? '-1' : null}
+        <MaybeWrap
+          condition={!isEditMode}
+          as={UniversalLink}
+          href={href['@id']}
+          className="link-container"
+          target={
+            data.openLinkInNewTab ||
+            (openExternalLinkInNewTab && !isInternalURL(href['@id']))
+              ? '_blank'
+              : null
+          }
+          tabIndex="-1"
+        >
+          <div
+            className={cx(
+              'teaser-item top',
+              `has--slider--flagAlign--${data.flagAlign}`,
+              dataBlock.variation,
+            )}
           >
             {(href?.hasPreviewImage || href.image_field || image) && (
               <div className="highlight-image-wrapper gradient">
@@ -113,19 +118,14 @@ const SliderBody = ({
                 />
               </div>
             )}
-            <div
-              className={cx(
-                'teaser-item-title fix-width-issue',
-                `has--slider--flagAlign--${data.flagAlign}`,
-              )}
-            >
+            <div className="teaser-item-title fix-width-issue">
               <div className="title">
                 {data?.head_title && (
                   <span className="supertitle">{data?.head_title}</span>
                 )}
                 <h2>{data?.nav_title || data?.title}</h2>
               </div>
-              <p>{data?.description}</p>
+              <p className="slider-description">{data?.description}</p>
 
               {!data.hideButton && (
                 <Button tabIndex={'-1'}>
@@ -133,11 +133,11 @@ const SliderBody = ({
                 </Button>
               )}
             </div>
-          </MaybeWrap>
-        </div>
+          </div>
+        </MaybeWrap>
       )}
     </div>
   );
 };
 
-export default SliderBody;
+export default SliderVariants;

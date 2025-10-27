@@ -2,7 +2,7 @@
   "name": "@kitconcept/volto-slider-block",
   "version": "6.4.1",
   "description": "Slider block for Plone 6 (Volto)",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "license": "MIT",
   "keywords": [
     "volto-addon",
@@ -27,17 +27,36 @@
     "release-alpha": "release-it --preRelease=alpha"
   },
   "dependencies": {
+    "@plone/components": "workspace:*",
     "deepmerge": "4.2.2",
     "embla-carousel-autoplay": "^8.0.0",
     "embla-carousel-react": "^8.0.0"
   },
   "peerDependencies": {
+    "classnames": "^2.5.1",
+    "lodash": "4.17.21",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-intl": "^3.12.1",
+    "react-redux": "8.1.2",
+    "react-toastify": "5.5.0",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
-    "@plone/scripts": "^3.6.1",
-    "release-it": "^17.1.1",
-    "vitest": "3.2.4"
+    "@plone/scripts": "^3.10.3",
+    "@plone/types": "workspace:*",
+    "@testing-library/cypress": "10.0.3",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.2.0",
+    "@types/node": "^24",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "lodash": "4.17.21",
+    "react-redux": "8.1.2",
+    "react-toastify": "5.5.0",
+    "release-it": "^19.0.3",
+    "typescript": "^5.7.3",
+    "uuid": "^13.0.0",
+    "vitest": "^3.1.2"
   }
 }
