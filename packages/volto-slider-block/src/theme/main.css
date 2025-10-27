@@ -1,13 +1,4 @@
-@toolbarWidth: 80px;
-@sidebarWidth: 375px;
-@collapsedWidth: 20px;
-
-@slider-images-aspect-ratio: var(--slider-images-aspect-ratio, 16/9);
-@slider-images-object-position: var(--slider-images-object-position, top left);
-
 :root {
-  --brand-primary: rgb(47, 112, 193);
-  --brand-secondary: rgb(116, 97, 195);
   --slider-dots-selected-bg: #000;
   --slider-dots-bg: #ececec;
 }
@@ -34,10 +25,13 @@
   position: absolute;
   z-index: 10;
   width: 50px;
-  // Since we are forcing the aspect ratio, if we know the slider container width (we do)
-  // (we are injecting the CSS property in the main slider wrapper)
-  // we can infer the height of the image, by using:
-  height: calc(var(--slider-container-width) * 1 / @slider-images-aspect-ratio);
+  /* Since we are forcing the aspect ratio, if we know the slider container width (we do)
+  (we are injecting the CSS property in the main slider wrapper)
+  we can infer the height of the image, by using: */
+  height: calc(
+    var(--slider-container-width) * 1 / var(--slider-images-aspect-ratio, 16/9)
+      ;
+  );
   padding: 0;
   border: 0;
   margin: 0;
@@ -67,10 +61,10 @@
 
 .slider-button-next {
   right: 0;
-  // In case you want to remove the buttons from the mobile view
-  // @media only screen and (max-width: $computer-width) {
-  //   display: none !important;
-  // }
+  /* In case you want to remove the buttons from the mobile view
+  @media only screen and (max-width: $computer-width) {
+    display: none !important;
+  } */
 }
 
 .slider-dot {
@@ -155,9 +149,9 @@
   .highlight-image-wrapper {
     img {
       width: 100%;
-      aspect-ratio: @slider-images-aspect-ratio;
+      aspect-ratio: var(--slider-images-aspect-ratio, 16/9);
       object-fit: cover;
-      object-position: @slider-images-object-position;
+      object-position: var(--slider-images-object-position, top left);
     }
   }
 
@@ -177,7 +171,7 @@
   }
 }
 
-// a11y hide the ones that are not visible
+/* a11y hide the ones that are not visible */
 .slick-slide {
   visibility: hidden;
 

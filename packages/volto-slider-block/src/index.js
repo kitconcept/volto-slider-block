@@ -3,8 +3,9 @@ import View from './components/View';
 import sliderSVG from '@plone/volto/icons/slider.svg';
 import { SliderBlockDataAdapter } from './components/adapter';
 import DefaultBody from './components/DefaultBody';
+import Simple from './variants/Simple';
 
-import './theme/main.less';
+import './theme/main.css';
 
 const applyConfig = (config) => {
   config.blocks.blocksConfig.slider = {
@@ -25,6 +26,11 @@ const applyConfig = (config) => {
         title: 'Default',
         isDefault: true,
         view: DefaultBody,
+      },
+      {
+        id: 'simple',
+        title: 'Simple',
+        view: Simple,
       },
     ],
   };
