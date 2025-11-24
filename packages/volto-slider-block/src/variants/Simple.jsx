@@ -115,6 +115,7 @@ const SliderVariants = ({
                   alt=""
                   loading="lazy"
                   responsive={true}
+                  sizes="auto, (max-width: 768px) 100vw, 600px"
                 />
               </div>
             )}
