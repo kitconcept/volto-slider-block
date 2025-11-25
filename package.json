@@ -36,11 +36,11 @@
     "storybook-build": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build-storybook -c $(pwd)/.storybook"
   },
   "dependencies": {
-    "@plone/registry": "workspace:*",
-    "@plone/volto": "workspace:*",
+    "@kitconcept/volto-bm3-compat": "1.0.0-alpha.1",
+    "@kitconcept/volto-light-theme": "8.0.0-alpha.7",
     "@kitconcept/volto-slider-block": "workspace:*",
-    "@kitconcept/volto-light-theme": "workspace:*",
-    "@kitconcept/volto-bm3-compat": "1.0.0-alpha.1"
+    "@plone/registry": "workspace:*",
+    "@plone/volto": "workspace:*"
   },
   "devDependencies": {
     "mrs-developer": "^2.2.0"
@@ -51,8 +51,15 @@
       "react-refresh": "^0.14.2"
     },
     "onlyBuiltDependencies": [
-      "lightningcss-cli"
+      "core-js",
+      "core-js-pure",
+      "cypress",
+      "es5-ext",
+      "esbuild",
+      "full-icu",
+      "lightningcss-cli",
+      "unrs-resolver"
     ]
   },
-  "packageManager": "pnpm@10.18.3"
+  "packageManager": "pnpm@10.20.0"
 }
