@@ -15,98 +15,143 @@ msgstr ""
 "Language-Name: Nederlands\n"
 "Preferred-Encodings: utf-8\n"
 
+#. Default: "Add item"
 #: components/schema
-# defaultMessage: Add item
 msgid "Add item"
 msgstr "Item toevoegen"
 
+#. Default: "Autoplay"
 #: components/schema
-# defaultMessage: Autoplay
 msgid "Autoplay"
 msgstr ""
 
+#. Default: "Button text"
 #: components/schema
-# defaultMessage: Delay between transitions (milliseconds)
+msgid "Button text"
+msgstr ""
+
+#. Default: "Continue reading"
+#: components/DefaultBody
+#: variants/Simple
+msgid "Continue reading"
+msgstr ""
+
+#. Default: "Delay between transitions (milliseconds)"
+#: components/schema
 msgid "Delay between transitions (milliseconds)"
 msgstr ""
 
+#. Default: "Description"
 #: components/schema
-# defaultMessage: Description
 msgid "Description"
 msgstr "Omschrijving"
 
+#. Default: "Do instant slide transitions?"
 #: components/schema
-# defaultMessage: Do instant slide transitions?
 msgid "Do instant slide transitions?"
 msgstr ""
 
+#. Default: "Enable Autoplay?"
 #: components/schema
-# defaultMessage: Enable Autoplay?
 msgid "Enable Autoplay?"
 msgstr ""
 
+#. Default: "Align"
+#: components/schema
+msgid "Flag align"
+msgstr ""
+
+#. Default: "Go to slide"
 #: components/DotsAndArrows
-# defaultMessage: Go to slide
 msgid "Go to slide"
 msgstr ""
 
+#. Default: "Hide Button"
 #: components/schema
-# defaultMessage: Headtitle
-msgid "Headtitle"
-msgstr "Kop"
+msgid "Hide Button"
+msgstr ""
 
+#. Default: "Image override"
 #: components/schema
-# defaultMessage: Image override
 msgid "Image override"
 msgstr "Afbeelding overschrijven"
 
+#. Default: "Invalid Slider source"
+#: components/Data
+msgid "Invalid Slider source"
+msgstr ""
+
+#. Default: "Item"
 #: components/schema
-# defaultMessage: Item
 msgid "Item"
 msgstr "Item"
 
+#. Default: "Items"
 #: components/schema
-# defaultMessage: Items
 msgid "Items"
 msgstr "Items"
 
+#. Default: "Next slide"
 #: components/DotsAndArrows
-# defaultMessage: Next slide
 msgid "Next slide"
 msgstr ""
 
+#. Default: "Please choose an existing content as source for this element"
 #: components/DefaultBody
-#: components/View
-# defaultMessage: Please choose an existing content as source for this element
+#: components/Edit
+#: variants/Simple
 msgid "Please choose an existing content as source for this element"
 msgstr "Kies een bestaand item als bron voor dit element"
 
+#. Default: "Previous slide"
 #: components/DotsAndArrows
-# defaultMessage: Previous slide
 msgid "Previous slide"
 msgstr ""
 
-#: components/DefaultBody
-# defaultMessage: Select target
-msgid "Select target"
+#. Default: "Refresh source content"
+#: components/Data
+msgid "Refresh source content"
 msgstr ""
 
+#. Default: "Reset the block"
+#: components/Data
+msgid "Reset the block"
+msgstr ""
+
+#. Default: "Slider"
 #: components/schema
-# defaultMessage: Slider
 msgid "Slider"
 msgstr "Slider"
 
+#. Default: "Source"
+#: components/DefaultBody
+#: components/Edit
+#: variants/Simple
+msgid "Source"
+msgstr ""
+
+#. Default: "Target"
 #: components/schema
-# defaultMessage: Target
 msgid "Target"
 msgstr ""
 
+#. Default: "The kicker is a line of text shown above the title."
 #: components/schema
-# defaultMessage: Title
+msgid "The kicker is a line of text shown above the title."
+msgstr ""
+
+#. Default: "Title"
+#: components/schema
 msgid "Title"
 msgstr "Titel"
 
+#. Default: "Kicker"
+#: components/schema
+msgid "head_title"
+msgstr ""
+
+#. Default: "More info"
 #: components/DefaultBody
-# defaultMessage: More info
+#: variants/Simple
 msgid "moreInfo"
 msgstr "Meer info"

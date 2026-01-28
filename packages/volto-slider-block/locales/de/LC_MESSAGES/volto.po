@@ -16,98 +16,143 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
 
+#. Default: "Add item"
 #: components/schema
-# defaultMessage: Add item
 msgid "Add item"
 msgstr "Element hinzufügen"
 
+#. Default: "Autoplay"
 #: components/schema
-# defaultMessage: Autoplay
 msgid "Autoplay"
-msgstr ""
+msgstr "Automatische Wiedergabe"
 
+#. Default: "Button text"
 #: components/schema
-# defaultMessage: Delay between transitions (milliseconds)
+msgid "Button text"
+msgstr "Button Text"
+
+#. Default: "Continue reading"
+#: components/DefaultBody
+#: variants/Simple
+msgid "Continue reading"
+msgstr "Weiterlesen"
+
+#. Default: "Delay between transitions (milliseconds)"
+#: components/schema
 msgid "Delay between transitions (milliseconds)"
-msgstr ""
+msgstr "Verzögerung zwischen den Übergängen(in Millisekunden)"
 
+#. Default: "Description"
 #: components/schema
-# defaultMessage: Description
 msgid "Description"
 msgstr "Beschreibung"
 
+#. Default: "Do instant slide transitions?"
 #: components/schema
-# defaultMessage: Do instant slide transitions?
 msgid "Do instant slide transitions?"
-msgstr ""
+msgstr "Slide ohne Übergang wechseln"
 
+#. Default: "Enable Autoplay?"
 #: components/schema
-# defaultMessage: Enable Autoplay?
 msgid "Enable Autoplay?"
-msgstr ""
+msgstr "Automatisches abspielen aktivieren?"
 
+#. Default: "Align"
+#: components/schema
+msgid "Flag align"
+msgstr "Ausrichtung"
+
+#. Default: "Go to slide"
 #: components/DotsAndArrows
-# defaultMessage: Go to slide
 msgid "Go to slide"
 msgstr "Gehe zu Slide"
 
+#. Default: "Hide Button"
 #: components/schema
-# defaultMessage: Headtitle
-msgid "Headtitle"
-msgstr "Kopftitel"
+msgid "Hide Button"
+msgstr "Button verstecken"
 
+#. Default: "Image override"
 #: components/schema
-# defaultMessage: Image override
 msgid "Image override"
 msgstr "Bild überschreiben"
 
+#. Default: "Invalid Slider source"
+#: components/Data
+msgid "Invalid Slider source"
+msgstr "Ungültige Slider-Quelle"
+
+#. Default: "Item"
 #: components/schema
-# defaultMessage: Item
 msgid "Item"
 msgstr "Element"
 
+#. Default: "Items"
 #: components/schema
-# defaultMessage: Items
 msgid "Items"
 msgstr "Elemente"
 
+#. Default: "Next slide"
 #: components/DotsAndArrows
-# defaultMessage: Next slide
 msgid "Next slide"
 msgstr "Nächster Slide"
 
+#. Default: "Please choose an existing content as source for this element"
 #: components/DefaultBody
-#: components/View
-# defaultMessage: Please choose an existing content as source for this element
+#: components/Edit
+#: variants/Simple
 msgid "Please choose an existing content as source for this element"
 msgstr "Bitte wählen sie einen existierenden Inhalt als Quelle für dieses Element aus"
 
+#. Default: "Previous slide"
 #: components/DotsAndArrows
-# defaultMessage: Previous slide
 msgid "Previous slide"
 msgstr "Vorheriger Slide"
 
-#: components/DefaultBody
-# defaultMessage: Select target
-msgid "Select target"
-msgstr "Ziel"
+#. Default: "Refresh source content"
+#: components/Data
+msgid "Refresh source content"
+msgstr "Quelle neu laden"
 
+#. Default: "Reset the block"
+#: components/Data
+msgid "Reset the block"
+msgstr "Block zurücksetzen"
+
+#. Default: "Slider"
 #: components/schema
-# defaultMessage: Slider
 msgid "Slider"
 msgstr "Slider"
 
+#. Default: "Source"
+#: components/DefaultBody
+#: components/Edit
+#: variants/Simple
+msgid "Source"
+msgstr "Quelle"
+
+#. Default: "Target"
 #: components/schema
-# defaultMessage: Target
-msgid "Target"
+msgid "Target"""
 msgstr "Ziel"
 
+#. Default: "The kicker is a line of text shown above the title."
 #: components/schema
-# defaultMessage: Title
+msgid "The kicker is a line of text shown above the title."
+msgstr "Der Kicker ist eine Textzeile, die oberhalb des Titels angezeigt wird."
+
+#. Default: "Title"
+#: components/schema
 msgid "Title"
 msgstr "Titel"
 
+#. Default: "Kicker"
+#: components/schema
+msgid "head_title"
+msgstr "Kicker"
+
+#. Default: "More info"
 #: components/DefaultBody
-# defaultMessage: More info
+#: variants/Simple
 msgid "moreInfo"
 msgstr "Mehr Info"
