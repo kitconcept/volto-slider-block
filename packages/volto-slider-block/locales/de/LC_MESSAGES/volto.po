@@ -24,7 +24,7 @@ msgstr "Element hinzufügen"
 #. Default: "Autoplay"
 #: components/schema
 msgid "Autoplay"
-msgstr "Automatische Wiedergabe"
+msgstr "Autoplay"
 
 #. Default: "Button text"
 #: components/schema
@@ -40,7 +40,7 @@ msgstr "Weiterlesen"
 #. Default: "Delay between transitions (milliseconds)"
 #: components/schema
 msgid "Delay between transitions (milliseconds)"
-msgstr "Verzögerung zwischen den Übergängen(in Millisekunden)"
+msgstr "Verzögerung zwischen den Übergängen (in Millisekunden)"
 
 #. Default: "Description"
 #: components/schema
@@ -50,7 +50,7 @@ msgstr "Beschreibung"
 #. Default: "Do instant slide transitions?"
 #: components/schema
 msgid "Do instant slide transitions?"
-msgstr "Slide ohne Übergang wechseln"
+msgstr "Slide ohne Übergang wechseln?"
 
 #. Default: "Enable Autoplay?"
 #: components/schema
@@ -60,7 +60,7 @@ msgstr "Automatisches abspielen aktivieren?"
 #. Default: "Align"
 #: components/schema
 msgid "Flag align"
-msgstr "Ausrichtung"
+msgstr "Flaggen Ausrichtung"
 
 #. Default: "Go to slide"
 #: components/DotsAndArrows
@@ -112,7 +112,7 @@ msgstr "Vorheriger Slide"
 #. Default: "Refresh source content"
 #: components/Data
 msgid "Refresh source content"
-msgstr "Quelle neu laden"
+msgstr "Inhaltsquelle aktualisieren"
 
 #. Default: "Reset the block"
 #: components/Data
@@ -133,7 +133,7 @@ msgstr "Quelle"
 
 #. Default: "Target"
 #: components/schema
-msgid "Target"""
+msgid "Target"
 msgstr "Ziel"
 
 #. Default: "The kicker is a line of text shown above the title."
