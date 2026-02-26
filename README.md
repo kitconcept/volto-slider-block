@@ -39,7 +39,15 @@ These are the recommended versions:
 
 ## Features
 
-<!-- List your awesome features here -->
+- **Slider block** — Registers a `slider` block that allows editors to add a full-width image slider to a Volto page.
+- **Embla Carousel** — Powered by [Embla Carousel](https://www.embla-carousel.com), a modern and extensible carousel library.
+- **Multiple slides** — Each slide supports a title, description, head title, and a linked image target from Plone content.
+- **Autoplay** — Optional autoplay support configurable via `enableAutoPlay` in the block settings.
+- **Navigation** — Previous/next arrow buttons and dot indicators for slide navigation.
+- **Block variations** — Supports Volto block variations to swap in custom slide view components.
+- **Schema enhancer** — Fully extensible via `schemaEnhancer` to add or remove fields per slide or for the block itself.
+- **Data adapter** — Includes a `dataAdapter` hook to react to data changes and sync field values automatically.
+- **volto-light-theme first** — Designed to work with `@kitconcept/volto-light-theme`; styles use plain CSS with `@plone/components`.
 
 ## Installation
 
