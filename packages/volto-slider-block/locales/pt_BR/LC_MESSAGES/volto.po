@@ -1,15 +1,22 @@
+#. Translation of volto.pot to Portuguese
+#. Matheus N.S. <matheusnsantana@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: Plone\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
+"POT-Creation-Date: 2026-01-28T14:59:45.903Z\n"
 "PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language: \n"
-"Language-Team: \n"
-"Content-Type: \n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Language: pt_BR\n"
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Language-Code: pt_BR\n"
+"Language-Name: Português do Brasil\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: volto\n"
 
 #. Default: "Add item"
 #: components/schema
@@ -24,13 +31,13 @@ msgstr "Reprodução automática"
 #. Default: "Button text"
 #: components/schema
 msgid "Button text"
-msgstr ""
+msgstr "Texto do botão"
 
 #. Default: "Continue reading"
 #: components/DefaultBody
 #: variants/Simple
 msgid "Continue reading"
-msgstr ""
+msgstr "Continuar lendo"
 
 #. Default: "Delay between transitions (milliseconds)"
 #: components/schema
@@ -55,7 +62,7 @@ msgstr "Habilitar reprodução automática?"
 #. Default: "Align"
 #: components/schema
 msgid "Flag align"
-msgstr ""
+msgstr "Alinhamento"
 
 #. Default: "Go to slide"
 #: components/DotsAndArrows
@@ -65,7 +72,7 @@ msgstr "Ir para o slide"
 #. Default: "Hide Button"
 #: components/schema
 msgid "Hide Button"
-msgstr ""
+msgstr "Ocultar botão"
 
 #. Default: "Image override"
 #: components/schema
@@ -75,7 +82,7 @@ msgstr "Sobreescrever imagem"
 #. Default: "Invalid Slider source"
 #: components/Data
 msgid "Invalid Slider source"
-msgstr ""
+msgstr "Fonte de Slider inválida"
 
 #. Default: "Item"
 #: components/schema
@@ -107,12 +114,12 @@ msgstr "Slide anterior"
 #. Default: "Refresh source content"
 #: components/Data
 msgid "Refresh source content"
-msgstr ""
+msgstr "Atualizar conteúdo fonte"
 
 #. Default: "Reset the block"
 #: components/Data
 msgid "Reset the block"
-msgstr ""
+msgstr "Redefinir bloco"
 
 #. Default: "Slider"
 #: components/schema
@@ -124,7 +131,7 @@ msgstr "Slider"
 #: components/Edit
 #: variants/Simple
 msgid "Source"
-msgstr ""
+msgstr "Fonte"
 
 #. Default: "Target"
 #: components/schema
@@ -134,7 +141,7 @@ msgstr "Destino"
 #. Default: "The kicker is a line of text shown above the title."
 #: components/schema
 msgid "The kicker is a line of text shown above the title."
-msgstr ""
+msgstr "O kicker é uma linha de texto exibida acima do título."
 
 #. Default: "Title"
 #: components/schema
@@ -144,7 +151,7 @@ msgstr "Título"
 #. Default: "Kicker"
 #: components/schema
 msgid "head_title"
-msgstr ""
+msgstr "Kicker"
 
 #. Default: "More info"
 #: components/DefaultBody
