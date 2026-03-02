@@ -8,6 +8,18 @@
 
 <!-- towncrier release notes start -->
 
+## 7.0.0-alpha.1 (2026-03-02)
+
+### Bugfix
+
+- Added sizes to `Image` component. @sneridagh [#58](https://github.com/kitconcept/volto-slider-block/issue/58)
+
+### Internal
+
+-  
+- Updated pt-br translations. @humanaice [#60](https://github.com/kitconcept/volto-slider-block/issue/60)
+- Update README adding features section. @humanaice [#62](https://github.com/kitconcept/volto-slider-block/issue/62)
+
 ## 7.0.0-alpha.0 (2025-10-27)
 
 ### Breaking
