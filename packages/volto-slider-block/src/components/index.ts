@@ -7,6 +7,58 @@ import DefaultBody from './DefaultBody';
 import { SliderSchema } from './schema';
 import type { BlockConfigBase } from '@plone/types';
 
+export const SLIDER_COLORS = [
+  {
+    name: 'slider-custom-color-1',
+    label: 'Grey',
+    style: {
+      '--flagColor': '#ECEBEB',
+    },
+  },
+  {
+    name: 'slider-custom-color-2',
+    label: 'Teal',
+    style: {
+      '--flagColor': '#306F7E',
+    },
+  },
+  {
+    name: 'slider-custom-color-3',
+    label: 'Sky Blue',
+    style: {
+      '--flagColor': '#91C9FA',
+    },
+  },
+  {
+    name: 'slider-custom-color-4',
+    label: 'Indigo',
+    style: {
+      '--flagColor': '#4B4BB8',
+    },
+  },
+  {
+    name: 'slider-custom-color-5',
+    label: 'Peach',
+    style: {
+      '--flagColor': '#F5C1A9',
+    },
+  },
+  {
+    name: 'slider-custom-color-6',
+    label: 'Yellow',
+    style: {
+      '--flagColor': '#EEE38D',
+    },
+  },
+  {
+    name: 'slider-custom-color-7',
+    label: 'Black',
+    style: {
+      '--flagColor': '#000',
+    },
+  },
+];
+
 const blockConfig: BlockConfigBase = {
   id: 'slider',
   title: 'Slider',
@@ -20,6 +72,7 @@ const blockConfig: BlockConfigBase = {
   dataAdapter: SliderBlockDataAdapter,
   enableAutoPlay: false,
   blockSchema: SliderSchema,
+  flagColors: SLIDER_COLORS,
   variations: [
     {
       id: 'default',

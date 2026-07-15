@@ -183,3 +183,13 @@
 .slick-active {
   visibility: visible;
 }
+
+.color-swatch-widget[class*='field-wrapper-flagColor'] {
+  div.react-aria-RadioGroup {
+    flex-wrap: wrap;
+  }
+  .color-swatch-option-handler {
+    background-color: var(--flagColor);
+    color: var(--flagColor-foreground);
+  }
+}
