@@ -1,0 +1,1 @@
+Slider block have flag color choices @Tishasoumya-02
