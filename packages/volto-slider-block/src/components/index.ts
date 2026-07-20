@@ -13,6 +13,7 @@ export const SLIDER_COLORS = [
     label: 'Grey',
     style: {
       '--flagColor': '#ECEBEB',
+      '--flagColor-foreground': '#000',
     },
   },
   {
@@ -20,6 +21,7 @@ export const SLIDER_COLORS = [
     label: 'Teal',
     style: {
       '--flagColor': '#306F7E',
+      '--flagColor-foreground': '#fff',
     },
   },
   {
@@ -27,6 +29,7 @@ export const SLIDER_COLORS = [
     label: 'Sky Blue',
     style: {
       '--flagColor': '#91C9FA',
+      '--flagColor-foreground': '#000',
     },
   },
   {
@@ -34,6 +37,7 @@ export const SLIDER_COLORS = [
     label: 'Indigo',
     style: {
       '--flagColor': '#4B4BB8',
+      '--flagColor-foreground': '#fff',
     },
   },
   {
@@ -41,6 +45,7 @@ export const SLIDER_COLORS = [
     label: 'Peach',
     style: {
       '--flagColor': '#F5C1A9',
+      '--flagColor-foreground': '#000',
     },
   },
   {
@@ -48,6 +53,7 @@ export const SLIDER_COLORS = [
     label: 'Yellow',
     style: {
       '--flagColor': '#EEE38D',
+      '--flagColor-foreground': '#000',
     },
   },
   {
@@ -55,6 +61,7 @@ export const SLIDER_COLORS = [
     label: 'Black',
     style: {
       '--flagColor': '#000',
+      '--flagColor-foreground': '#fff',
     },
   },
 ];
