@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@kitconcept/volto-bm3-compat": "1.0.0-alpha.1",
-    "@kitconcept/volto-light-theme": "8.0.0-alpha.7",
+    "@kitconcept/volto-light-theme": "8.0.0-alpha.13",
     "@kitconcept/volto-slider-block": "workspace:*",
     "@plone/registry": "workspace:*",
     "@plone/volto": "workspace:*"
