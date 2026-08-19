@@ -1,3 +1,4 @@
+
 # Volto Slider Block (@kitconcept/volto-slider-block)
 
 A slider block for volto
@@ -18,12 +19,11 @@ The Volto Slider Block allows editors to add sliders to a Volto page. You can se
 
 ## Screenshot
 
-<img width="1375" alt="image" src="https://user-images.githubusercontent.com/486927/170819511-11b0012b-c3ab-4578-b110-85d51e6103ac.png">
+<img width="2560" height="1354" alt="slider_preview" src="https://github.com/user-attachments/assets/d8293beb-4a18-4a4d-bdf1-2e3b4a768e5b" />
 
 ## Screencast
 
-https://user-images.githubusercontent.com/486927/170819371-6284d8e7-e5df-4893-9dab-cd06b1054505.mov
-
+https://github.com/user-attachments/assets/b4e75f93-5cfa-4037-894c-362c21b9ab5b
 
 ## Volto Compatibility
 
@@ -37,13 +37,12 @@ These are the recommended versions:
 | >=3.0.0 | >=16.0.0-rc.2 | N/A |
 | <=2.1.0 | <=16.0.0-a50  | N/A |
 
-#### `@kitconcept/volto-light-theme`-first
 
-```{versionadded} 7.0.0
-```
-
-From this version onwards, this add-on assumes that you are using the `@kitconcept/volto-light-theme` theme.
-This add-on can be used without it, but some styles and functionalities may not work as expected, or may require additional configuration or customization.
+> [!IMPORTANT]
+> #### `@kitconcept/volto-light-theme` required first
+> 
+> From version ```7.0.0``` onwards, this add-on assumes that you are using the `@kitconcept/volto-light-theme` theme.
+> This add-on can be used without it, but some styles and functionalities may not work as expected, or may require additional configuration or customization.
 
 ## Features
 
@@ -399,11 +398,9 @@ The project is licensed under the MIT license.
 ## Credits
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/kitconcept/volto-slider-block/raw/main/dlr_white.svg">
-  <img width="230" alt="DLR" src="https://github.com/kitconcept/volto-slider-block/raw/main/dlr.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/kitconcept/volto-slider-block/raw/README-update/dlr_white.svg">
+  <img width="230" alt="Deutsches Zentrum für Luft- und Raumfahrt" src="https://github.com/kitconcept/volto-slider-block/raw/README-update/dlr.svg">
 </picture>
-
-<img alt="Deutsches Zentrum für Luft- und Raumfahrt" src="https://github.com/kitconcept/volto-slider-block/raw/main/dlr.svg" width="230px" />
 
 <img alt="Forschungszentrum Jülich" src="https://github.com/kitconcept/volto-slider-block/raw/main/fz-juelich.svg" width="200px" />
 
