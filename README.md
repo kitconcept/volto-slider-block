@@ -37,6 +37,14 @@ These are the recommended versions:
 | >=3.0.0 | >=16.0.0-rc.2 | N/A |
 | <=2.1.0 | <=16.0.0-a50  | N/A |
 
+#### `@kitconcept/volto-light-theme`-first
+
+```{versionadded} 7.0.0
+```
+
+From this version onwards, this add-on assumes that you are using the `@kitconcept/volto-light-theme` theme.
+This add-on can be used without it, but some styles and functionalities may not work as expected, or may require additional configuration or customization.
+
 ## Features
 
 - **Slider block** — Registers a `slider` block that allows editors to add a full-width image slider to a Volto page.
@@ -102,13 +110,6 @@ config.blocks.blocksConfig.slider.enableAutoPlay = true;
 The block has been updated to support Volto 19 and VLT 7 and 8.
 It integrates all the improvements done in VLT during the last years.
 
-#### `@kitconcept/volto-light-theme`-first
-
-```{versionadded} 7.0.0
-```
-
-From this version onwards, this add-on assumes that you are using the `@kitconcept/volto-light-theme` theme.
-This add-on can be used without it, but some styles and functionalities may not work as expected, or may require additional configuration or customization.
 
 #### Complete removal of Semantic UI
 
