@@ -398,8 +398,8 @@ The project is licensed under the MIT license.
 ## Credits
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/kitconcept/volto-slider-block/raw/main/dlr_white.svg">
-  <img width="230" alt="Deutsches Zentrum für Luft- und Raumfahrt" src="https://github.com/kitconcept/volto-slider-block/raw/main/dlr.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/kitconcept/volto-slider-block/raw/README-update/dlr_white.svg">
+  <img width="230" alt="Deutsches Zentrum für Luft- und Raumfahrt" src="https://github.com/kitconcept/volto-slider-block/raw/README-update/dlr.svg">
 </picture>
 
 <img alt="Forschungszentrum Jülich" src="https://github.com/kitconcept/volto-slider-block/raw/main/fz-juelich.svg" width="200px" />
