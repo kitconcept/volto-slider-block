@@ -1,7 +1,7 @@
 
-# Volto Slider Block (@kitconcept/volto-slider-block)
+# Plone Slider Block (@kitconcept/volto-slider-block)
 
-A slider block for volto
+A slider block for Plone 6 (Volto)
 
 [![npm](https://img.shields.io/npm/v/@kitconcept/volto-slider-block)](https://www.npmjs.com/package/@kitconcept/volto-slider-block)
 [![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://kitconcept.github.io/volto-slider-block/)
