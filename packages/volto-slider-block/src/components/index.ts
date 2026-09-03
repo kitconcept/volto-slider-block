@@ -10,9 +10,9 @@ import type { BlockConfigBase } from '@plone/types';
 export const SLIDER_COLORS = [
   {
     name: 'slider-custom-color-1',
-    label: 'Grey',
+    label: 'White',
     style: {
-      '--flagColor': '#ECEBEB',
+      '--flagColor': '#fff',
       '--flagColor-foreground': '#000',
     },
   },
@@ -62,6 +62,14 @@ export const SLIDER_COLORS = [
     style: {
       '--flagColor': '#000',
       '--flagColor-foreground': '#fff',
+    },
+  },
+  {
+    name: 'slider-custom-color-8',
+    label: 'Grey',
+    style: {
+      '--flagColor': '#ECEBEB',
+      '--flagColor-foreground': '#000',
     },
   },
 ];

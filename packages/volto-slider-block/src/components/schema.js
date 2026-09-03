@@ -203,10 +203,7 @@ export const SliderSchema = (props) => {
 
   const flagColors = config.blocks.blocksConfig.slider.flagColors;
 
-  const defaultFlagColor =
-    props.data?.variation === 'simple'
-      ? 'slider-custom-color-1'
-      : 'slider-custom-color-7';
+  const defaultFlagColor = 'slider-custom-color-1';
 
   addStyling({ schema, intl: props.intl });
 
