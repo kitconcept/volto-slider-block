@@ -1,5 +1,6 @@
 import { defineMessages } from 'react-intl';
 import config from '@plone/volto/registry';
+import { addStyling } from '@plone/volto/helpers/Extensions/withBlockSchemaEnhancer';
 import { mergeSchemas } from '../helpers';
 import { v4 as uuid } from 'uuid';
 
@@ -71,6 +72,10 @@ const messages = defineMessages({
   flagAlign: {
     id: 'Flag align',
     defaultMessage: 'Align',
+  },
+  flagColor: {
+    id: 'flagColor',
+    defaultMessage: 'Flag color',
   },
 });
 
@@ -148,53 +153,70 @@ export const itemSchema = (props) =>
     config.blocks.blocksConfig.slider.extensions?.slideSchema || {},
   );
 
-export const SliderSchema = (props) =>
-  mergeSchemas(
-    {
-      title: props.intl.formatMessage(messages.Slider),
-      block: 'slider',
-      fieldsets: [
-        {
-          id: 'default',
-          title: 'Default',
-          fields: ['slides'],
-        },
-        ...(config.blocks.blocksConfig.slider.enableAutoPlay
-          ? [
-              {
-                id: 'autoplay',
-                title: props.intl.formatMessage(messages.Autoplay),
-                fields: ['autoplayEnabled', 'autoplayDelay', 'autoplayJump'],
-              },
-            ]
-          : []),
-      ],
-      properties: {
-        slides: {
-          widget: 'object_list',
-          title: props.intl.formatMessage(messages.items),
-          schema: itemSchema(props),
-          activeObject: props.activeObject,
-          setActiveObject: props.setActiveObject,
-          default: [{ '@id': uuid() }],
-        },
-        autoplayEnabled: {
-          title: props.intl.formatMessage(messages.AutoplayEnabled),
-          default: false,
-          type: 'boolean',
-        },
-        autoplayDelay: {
-          title: props.intl.formatMessage(messages.AutoplayDelay),
-          type: 'integer',
-          default: 4000,
-        },
-        autoplayJump: {
-          title: props.intl.formatMessage(messages.AutoplayJump),
-          default: false,
-          type: 'boolean',
-        },
+export const SliderSchema = (props) => {
+  const schema = {
+    title: props.intl.formatMessage(messages.Slider),
+    block: 'slider',
+    fieldsets: [
+      {
+        id: 'default',
+        title: 'Default',
+        fields: ['slides'],
       },
-      required: [],
+      ...(config.blocks.blocksConfig.slider.enableAutoPlay
+        ? [
+            {
+              id: 'autoplay',
+              title: props.intl.formatMessage(messages.Autoplay),
+              fields: ['autoplayEnabled', 'autoplayDelay', 'autoplayJump'],
+            },
+          ]
+        : []),
+    ],
+    properties: {
+      slides: {
+        widget: 'object_list',
+        title: props.intl.formatMessage(messages.items),
+        schema: itemSchema(props),
+        activeObject: props.activeObject,
+        setActiveObject: props.setActiveObject,
+        default: [{ '@id': uuid() }],
+      },
+      autoplayEnabled: {
+        title: props.intl.formatMessage(messages.AutoplayEnabled),
+        default: false,
+        type: 'boolean',
+      },
+      autoplayDelay: {
+        title: props.intl.formatMessage(messages.AutoplayDelay),
+        type: 'integer',
+        default: 4000,
+      },
+      autoplayJump: {
+        title: props.intl.formatMessage(messages.AutoplayJump),
+        default: false,
+        type: 'boolean',
+      },
     },
+    required: [],
+  };
+
+  const flagColors = config.blocks.blocksConfig.slider.flagColors;
+
+  const defaultFlagColor = 'slider-custom-color-1';
+
+  addStyling({ schema, intl: props.intl });
+
+  schema.properties.styles.schema.fieldsets[0].fields = ['flagColor'];
+  schema.properties.styles.schema.properties.flagColor = {
+    title: props.intl.formatMessage(messages.flagColor),
+    widget: 'color_picker',
+    colors: flagColors,
+    default: defaultFlagColor,
+  };
+
+  return mergeSchemas(
+    schema,
     config.blocks.blocksConfig.slider.extensions?.blockSchema || {},
   );
+};
