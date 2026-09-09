@@ -1,0 +1,120 @@
+// Flag color / flag align presentation for the slider block.
+// The `--flagColor` and `--flagColor-foreground` custom properties are provided
+// by the `flagColor` styleFieldDefinition utility (see src/components/index.ts).
+.block.slider {
+  .teaser-item {
+    .teaser-item-title {
+      background-color: color-mix(in srgb, var(--flagColor) 75%, transparent);
+      color: var(--flagColor-foreground, var(--theme-foreground-color));
+
+      @media only screen and (max-width: $computer-width) {
+        background: var(--flagColor);
+        color: var(--flagColor-foreground, var(--theme-foreground-color));
+      }
+      &.has--slider--flagAlign--right {
+        right: 0;
+      }
+
+      .title {
+        .supertitle {
+          @media only screen and (max-width: $computer-width) {
+            color: var(--flagColor-foreground, var(--theme-foreground-color));
+          }
+        }
+        h2 {
+          color: var(--flagColor-foreground, var(--theme-foreground-color));
+        }
+      }
+      p {
+        color: var(--flagColor-foreground, var(--theme-foreground-color));
+      }
+    }
+  }
+
+  .teaser-item button {
+    color: var(--flagColor-foreground, var(--theme-foreground-color));
+  }
+
+  &.simple {
+    background-color: var(--flagColor);
+
+    .slider-dots .slider-dot::after {
+      background: color-mix(
+        in srgb,
+        var(--flagColor-foreground, var(--theme-foreground-color)) 50%,
+        var(--flagColor)
+      );
+    }
+
+    .slider-dots .slider-dot--selected::after {
+      background: var(--flagColor-foreground, var(--theme-foreground-color));
+    }
+
+    .teaser-item {
+      background-color: var(--flagColor);
+
+      &.has--slider--flagAlign--right {
+        grid-template-areas: 'content images';
+        grid-template-columns: minmax(0, clamp(300px, 40vw, 600px)) minmax(
+            0,
+            1fr
+          );
+      }
+      &.has--slider--flagAlign--left {
+        grid-template-areas: 'images content';
+        grid-template-columns: minmax(0, 1fr) minmax(
+            0,
+            clamp(300px, 40vw, 600px)
+          );
+      }
+
+      @container slider (max-width: #{$layout-container-width}) {
+        #page-edit &,
+        #page-add & {
+          &.has--slider--flagAlign--right {
+            grid-template-columns: minmax(0, 60%) minmax(0, 40%);
+          }
+          &.has--slider--flagAlign--left {
+            grid-template-columns: minmax(0, 40%) minmax(0, 60%);
+          }
+        }
+      }
+
+      .teaser-item-title {
+        background: none;
+        color: var(--flagColor-foreground, var(--theme-foreground-color));
+
+        @media only screen and (max-width: $computer-width) {
+          background: var(--flagColor);
+          color: var(--flagColor-foreground, var(--theme-foreground-color));
+          .title > .supertitle,
+          button,
+          .title > h2,
+          p.slider-description {
+            color: var(
+              --flagColor-foreground,
+              var(--theme-foreground-color)
+            ) !important;
+          }
+        }
+
+        .title {
+          h2 {
+            color: var(--flagColor-foreground, var(--theme-foreground-color));
+          }
+        }
+        p {
+          color: var(--flagColor-foreground, var(--theme-foreground-color));
+        }
+      }
+    }
+    .slider-button {
+      svg.icon {
+        color: var(--flagColor-foreground, var(--theme-foreground-color));
+      }
+    }
+    button {
+      color: var(--flagColor-foreground, var(--theme-foreground-color));
+    }
+  }
+}
