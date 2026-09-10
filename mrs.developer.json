@@ -4,15 +4,16 @@
     "package": "@plone/volto",
     "url": "git@github.com:plone/volto.git",
     "https": "https://github.com/plone/volto.git",
-    "tag": "19.2.0"
+    "tag": "19.3.1"
   },
   "volto-light-theme": {
-    "output": "packages",
     "develop": true,
+    "output": "packages",
     "package": "@kitconcept/volto-light-theme",
     "url": "git@github.com:kitconcept/volto-light-theme.git",
     "https": "https://github.com/kitconcept/volto-light-theme.git",
-    "tag": "slider-flag"
+    "tag": "8.0.0a31",
+    "filterBlobs": true
   },
   "volto-bm3-compat": {
     "develop": true,
