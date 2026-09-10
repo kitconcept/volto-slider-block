@@ -8,10 +8,18 @@
   },
   "volto-light-theme": {
     "output": "packages",
-    "develop": false,
+    "develop": true,
     "package": "@kitconcept/volto-light-theme",
     "url": "git@github.com:kitconcept/volto-light-theme.git",
     "https": "https://github.com/kitconcept/volto-light-theme.git",
-    "tag": "8.0.0a31"
+    "tag": "8.0.0a32"
+  },
+  "volto-bm3-compat": {
+    "develop": true,
+    "output": "packages",
+    "package": "@kitconcept/volto-bm3-compat",
+    "url": "git@github.com:kitconcept/volto-bm3-compat.git",
+    "https": "https://github.com/kitconcept/volto-bm3-compat.git",
+    "tag": "1.0.0-alpha.1"
   }
 }

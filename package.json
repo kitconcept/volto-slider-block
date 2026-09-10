@@ -36,8 +36,8 @@
     "storybook-build": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build-storybook -c $(pwd)/.storybook"
   },
   "dependencies": {
-    "@kitconcept/volto-bm3-compat": "1.0.0-alpha.1",
-    "@kitconcept/volto-light-theme": "8.0.0-alpha.31",
+    "@kitconcept/volto-bm3-compat": "workspace:*",
+    "@kitconcept/volto-light-theme": "workspace:*",
     "@kitconcept/volto-slider-block": "workspace:*",
     "@plone/registry": "workspace:*",
     "@plone/volto": "workspace:*"
