@@ -8,6 +8,16 @@
 
 <!-- towncrier release notes start -->
 
+## 7.0.0-alpha.2 (2026-09-15)
+
+### Breaking
+
+- Slider block have flag color choices @Tishasoumya-02 
+
+### Internal
+
+- Update README to display the current slider-block in VLT. @TimoBroeskamp 
+
 ## 7.0.0-alpha.1 (2026-03-02)
 
 ### Bugfix
