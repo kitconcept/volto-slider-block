@@ -4,14 +4,23 @@
     "package": "@plone/volto",
     "url": "git@github.com:plone/volto.git",
     "https": "https://github.com/plone/volto.git",
-    "tag": "19.0.0-alpha.17"
+    "tag": "19.3.1"
   },
   "volto-light-theme": {
+    "develop": true,
     "output": "packages",
-    "develop": false,
     "package": "@kitconcept/volto-light-theme",
     "url": "git@github.com:kitconcept/volto-light-theme.git",
     "https": "https://github.com/kitconcept/volto-light-theme.git",
-    "tag": "8.0.0a7"
+    "branch": "main",
+    "filterBlobs": true
+  },
+  "volto-bm3-compat": {
+    "develop": true,
+    "output": "packages",
+    "package": "@kitconcept/volto-bm3-compat",
+    "url": "git@github.com:kitconcept/volto-bm3-compat.git",
+    "https": "https://github.com/kitconcept/volto-bm3-compat.git",
+    "tag": "1.0.0-alpha.1"
   }
 }

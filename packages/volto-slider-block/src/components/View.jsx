@@ -16,6 +16,7 @@ const SliderView = (props) => {
     onChangeBlock,
     slideIndex,
     setSlideIndex,
+    style,
   } = props;
 
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
@@ -93,7 +94,10 @@ const SliderView = (props) => {
     <>
       <div
         className={cx('block slider', data.variation || 'default', className)}
-        style={{ '--slider-container-width': `${sliderContainerWidth}px` }}
+        style={{
+          ...style,
+          '--slider-container-width': `${sliderContainerWidth}px`,
+        }}
       >
         {data.slides?.length > 0 && (
           <>

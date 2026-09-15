@@ -36,9 +36,9 @@
     "storybook-build": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build-storybook -c $(pwd)/.storybook"
   },
   "dependencies": {
-    "@kitconcept/volto-bm3-compat": "1.0.0-alpha.1",
-    "@kitconcept/volto-light-theme": "8.0.0-alpha.7",
     "@kitconcept/volto-slider-block": "workspace:*",
+    "@kitconcept/volto-bm3-compat": "workspace:*",
+    "@kitconcept/volto-light-theme": "workspace:*",
     "@plone/registry": "workspace:*",
     "@plone/volto": "workspace:*"
   },
@@ -48,7 +48,9 @@
   "pnpm": {
     "overrides": {
       "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
-      "react-refresh": "^0.14.2"
+      "react-refresh": "^0.14.2",
+      "@kitconcept/volto-light-theme": "workspace:*",
+      "@kitconcept/volto-bm3-compat": "workspace:*"
     },
     "onlyBuiltDependencies": [
       "core-js",
