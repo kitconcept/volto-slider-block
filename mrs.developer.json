@@ -12,7 +12,7 @@
     "package": "@kitconcept/volto-light-theme",
     "url": "git@github.com:kitconcept/volto-light-theme.git",
     "https": "https://github.com/kitconcept/volto-light-theme.git",
-    "tag": "8.0.0a31",
+    "branch": "main",
     "filterBlobs": true
   },
   "volto-bm3-compat": {
