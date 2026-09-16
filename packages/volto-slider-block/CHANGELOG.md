@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 7.0.0 (2026-09-16)
+
+### Internal
+
+- Final release of the package. @sneridagh 
+
 ## 7.0.0-alpha.2 (2026-09-15)
 
 ### Breaking
