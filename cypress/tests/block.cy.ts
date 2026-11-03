@@ -56,6 +56,8 @@ context('Block Acceptance Tests', () => {
     cy.get('aside .breadcrumbs svg.home-icon').click();
     cy.findByLabelText('Select My Page').dblclick();
 
+    cy.get('.block.slider .highlight-image-wrapper img').should('be.visible');
+
     // Second slide
     cy.findByText('Add item').click();
     // cy.findByLabelText('Show item #2').click();
@@ -70,6 +72,8 @@ context('Block Acceptance Tests', () => {
     cy.get('aside .breadcrumbs svg.home-icon').click();
     cy.findByLabelText('Select My Page').dblclick();
 
+    cy.get('.highlight-image-wrapper img').should('be.visible');
+
     cy.get('#toolbar-save').click();
     cy.wait('@save');
     cy.wait('@content');
@@ -81,6 +85,66 @@ context('Block Acceptance Tests', () => {
       });
 
     cy.get('.teaser-item-title').should('be.visible').contains('My Page');
+  });
+
+  it('shows preview images immediately after selecting slide targets', () => {
+    cy.visit('/document/edit');
+    cy.addNewBlock('slider');
+
+    // First slide, selected from the block placeholder.
+    cy.get('.slider-default-placeholder').findByText('Source').click();
+    cy.get('aside .breadcrumbs svg.home-icon').click();
+    cy.findByLabelText('Select My Page').dblclick();
+    cy.get('.block.slider .highlight-image-wrapper img').should('be.visible');
+
+    // Additional default slide.
+    cy.findByText('Add item').click();
+    cy.get('.block.slider .slider-default-placeholder')
+      .findByText('Source')
+      .click();
+    cy.get('aside .breadcrumbs svg.home-icon').click();
+    cy.findByLabelText('Select My Page').dblclick();
+    cy.get('.block.slider .slider-slide')
+      .eq(1)
+      .find('img')
+      .should('be.visible');
+
+    // Additional slide.
+
+    cy.findByText('Add item').click();
+    cy.get('.block.slider .slider-default-placeholder')
+      .findByText('Source')
+      .click();
+    cy.get('aside .breadcrumbs svg.home-icon').click();
+    cy.findByLabelText('Select My Page').dblclick();
+    cy.get('.block.slider .slider-slide')
+      .eq(2)
+      .find('img')
+      .should('be.visible');
+  });
+
+  it('shows slide text without a preview image before and after saving', () => {
+    cy.visit('/document/edit');
+    cy.addNewBlock('slider');
+    cy.get('.slider-default-placeholder').findByText('Source').click();
+    cy.get('aside .breadcrumbs svg.home-icon').click();
+    cy.findByLabelText('Select Document').dblclick();
+
+    cy.get('.block.slider .teaser-item-title')
+      .should('have.css', 'position', 'static')
+      .and('be.visible');
+    cy.get('.block.slider').findByText('Continue reading').should('be.visible');
+
+    cy.get('.block.slider').findByText('Continue reading').should('be.visible');
+
+    cy.get('#toolbar-save').click();
+    cy.url().should('not.include', '/edit');
+    cy.get('.block.slider').findByText('Continue reading').should('be.visible');
+
+    cy.get('.block.slider .teaser-item-title')
+      .should('have.css', 'position', 'static')
+      .and('be.visible');
+    cy.get('.block.slider').findByText('Continue reading').should('be.visible');
   });
 
   it('a11y', () => {
