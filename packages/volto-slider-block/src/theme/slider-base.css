@@ -274,3 +274,11 @@
     color: var(--flagColor-foreground);
   }
 }
+
+.block.slider.default .teaser-item:not(:has(.highlight-image-wrapper img)) {
+  .teaser-item-title {
+    position: static;
+    width: 100%;
+    transform: none;
+  }
+}

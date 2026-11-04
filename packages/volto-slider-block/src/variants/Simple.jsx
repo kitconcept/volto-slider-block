@@ -61,6 +61,7 @@ const SliderVariants = ({
             Description: document.Description,
             title: document.Title,
             image_field: document.image_field,
+            image_scales: document.image_scales,
             hasPreviewImage: document.hasPreviewImage,
           },
         ];
