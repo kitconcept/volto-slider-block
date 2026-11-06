@@ -37,6 +37,8 @@ These are the recommended versions:
 | >=3.0.0 | >=16.0.0-rc.2 | N/A |
 | <=2.1.0 | <=16.0.0-a50  | N/A |
 
+`@blocks-schema` support, which publishes the block schema and documentation through the Volto server, is only available with Volto 19.6 or later. The add-on keeps working on older Volto 19 releases without it.
+
 
 > [!IMPORTANT]
 > #### `@kitconcept/volto-light-theme` required first
