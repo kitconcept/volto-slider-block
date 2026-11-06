@@ -51,7 +51,11 @@ const SliderData = (props) => {
   } = props;
   const dispatch = useDispatch();
   const intl = useIntl();
-  const schema = SliderSchema({ ...props, intl });
+  const schema = SliderSchema({ intl });
+  // The object list follows the slide selected in the editor, so the sidebar
+  // and the block stay in sync. These are editor props, not schema inputs.
+  schema.properties.slides.activeObject = activeObject;
+  schema.properties.slides.setActiveObject = props.setActiveObject;
 
   const dataTransformer = (resp, data, activeObject) => {
     let hrefData = {
