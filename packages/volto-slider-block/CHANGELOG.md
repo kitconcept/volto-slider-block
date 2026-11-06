@@ -8,6 +8,17 @@
 
 <!-- towncrier release notes start -->
 
+## 7.1.0 (2026-11-06)
+
+### Feature
+
+- Added the documentation of the Slider block to the `@blocks-schema` endpoint of Volto 19.6, and moved the block to Volto 19.6.1 in the development setup. @ericof [#69](https://github.com/kitconcept/volto-slider-block/issue/69)
+
+### Bugfix
+
+- Fix slider text without preview images and show target preview images immediately after
+  selection @iRohitSingh [#image_preview](https://github.com/kitconcept/volto-slider-block/issue/image_preview)
+
 ## 7.0.0 (2026-09-16)
 
 ### Internal
