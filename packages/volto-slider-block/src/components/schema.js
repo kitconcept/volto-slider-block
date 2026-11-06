@@ -153,9 +153,9 @@ export const itemSchema = (props) =>
     config.blocks.blocksConfig.slider.extensions?.slideSchema || {},
   );
 
-export const SliderSchema = (props) => {
+export const SliderSchema = ({ intl }) => {
   const schema = {
-    title: props.intl.formatMessage(messages.Slider),
+    title: intl.formatMessage(messages.Slider),
     block: 'slider',
     fieldsets: [
       {
@@ -167,7 +167,7 @@ export const SliderSchema = (props) => {
         ? [
             {
               id: 'autoplay',
-              title: props.intl.formatMessage(messages.Autoplay),
+              title: intl.formatMessage(messages.Autoplay),
               fields: ['autoplayEnabled', 'autoplayDelay', 'autoplayJump'],
             },
           ]
@@ -176,24 +176,22 @@ export const SliderSchema = (props) => {
     properties: {
       slides: {
         widget: 'object_list',
-        title: props.intl.formatMessage(messages.items),
-        schema: itemSchema(props),
-        activeObject: props.activeObject,
-        setActiveObject: props.setActiveObject,
+        title: intl.formatMessage(messages.items),
+        schema: itemSchema({ intl }),
         default: [{ '@id': uuid() }],
       },
       autoplayEnabled: {
-        title: props.intl.formatMessage(messages.AutoplayEnabled),
+        title: intl.formatMessage(messages.AutoplayEnabled),
         default: false,
         type: 'boolean',
       },
       autoplayDelay: {
-        title: props.intl.formatMessage(messages.AutoplayDelay),
+        title: intl.formatMessage(messages.AutoplayDelay),
         type: 'integer',
         default: 4000,
       },
       autoplayJump: {
-        title: props.intl.formatMessage(messages.AutoplayJump),
+        title: intl.formatMessage(messages.AutoplayJump),
         default: false,
         type: 'boolean',
       },
@@ -205,11 +203,11 @@ export const SliderSchema = (props) => {
 
   const defaultFlagColor = 'slider-custom-color-1';
 
-  addStyling({ schema, intl: props.intl });
+  addStyling({ schema, intl });
 
   schema.properties.styles.schema.fieldsets[0].fields = ['flagColor'];
   schema.properties.styles.schema.properties.flagColor = {
-    title: props.intl.formatMessage(messages.flagColor),
+    title: intl.formatMessage(messages.flagColor),
     widget: 'color_picker',
     colors: flagColors,
     default: defaultFlagColor,
