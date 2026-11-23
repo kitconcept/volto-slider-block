@@ -14,6 +14,12 @@ declare module '@plone/types' {
       label: string;
       style: Record<string, string>;
     }>;
+    /**
+     * Keys that the blocks configuration of kitconcept-core may replace
+     * through the web, and the type of their value. Must stay identical to
+     * the declaration in kitconcept-core.
+     */
+    ttwConfigurable?: Record<string, string>;
   }
 }
 
@@ -23,7 +29,10 @@ const applyConfig = (config: ConfigType) => {
   config.registerUtility({
     name: 'flagColor',
     type: 'styleFieldDefinition',
-    method: (props: { data: any; container: any }) => SLIDER_COLORS,
+    // Read the colors from the block config at render time, so changes to it
+    // after startup (for example, through the web) are applied to the page too.
+    method: (props: { data: any; container: any }) =>
+      config.blocks.blocksConfig.slider?.flagColors || SLIDER_COLORS,
   });
 
   return config;

@@ -14,4 +14,4 @@ yarn.lock
 
 packages/volto-light-theme/
 packages/*
-!packages/volto-banner-block
+!packages/volto-slider-block

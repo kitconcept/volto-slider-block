@@ -88,6 +88,9 @@ const blockConfig: BlockConfigBase = {
   enableAutoPlay: false,
   blockSchema: SliderSchema,
   flagColors: SLIDER_COLORS,
+  // Lets the blocks configuration of kitconcept-core (`kitconcept.blocks.config`)
+  // replace the colors through the web.
+  ttwConfigurable: { flagColors: 'styleDefinitions' },
   variations: [
     {
       id: 'default',
