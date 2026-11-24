@@ -8,6 +8,16 @@
 
 <!-- towncrier release notes start -->
 
+## 7.2.0 (2026-11-24)
+
+### Feature
+
+- Let the blocks configuration of kitconcept-core (`kitconcept.blocks.config`) replace the flag colors through the web: list `flagColors` in `ttwConfigurable`, and read the colors from the block configuration when rendering the page. @sneridagh 
+
+### Internal
+
+- Fix the `.gitignore` ignoring new files in `packages/volto-slider-block`. @sneridagh 
+
 ## 7.1.0 (2026-11-06)
 
 ### Feature
